@@ -6,7 +6,9 @@
 
 1. 把所有文件下载到同一个文件夹内。
 2. 下载 TeXLive 最新版。
-3. 使用 XeLaTeX 引擎编译一次 HEU-Linear Algebra.tex 文件。
+3. 打开 texworks.exe，使用 XeLaTeX 引擎编译一次 HEU-Linear Algebra.tex 文件。
+   ![image](https://user-images.githubusercontent.com/59717096/197384468-ca3dee0e-bb65-4b02-b0d1-8fb1b6f7205c.png)
 4. 使用 XeLaTeX 引擎再编译一次 HEU-Linear Algebra.tex 文件。
 5. 使用 Biber 引擎编译一次 HEU-Linear Algebra.tex 文件。
+   ![image](https://user-images.githubusercontent.com/59717096/197384486-ba2a443d-fa2a-4f19-a5fc-023ac3799446.png)
 6. 使用 XeLaTeX 引擎再编译一次 HEU-Linear Algebra.tex 文件。
