@@ -1,0 +1,549 @@
+\section{2009}
+\begin{enumerate}[1~]
+\renewcommand{\labelenumi}{\textbf{\theenumi. }}
+\renewcommand{\Im}{\text{Im }}
+\item[一、]
+填空题 （每小题 4 分，共 20 分）
+\begin{enumerate}[1.~]
+\item
+满足 $\mathbb{Q} \subset \mathbb{F} \subset \mathbb{Q}[\sqrt{2}]$的数域 $\mathbb{F}$ 有（\quad）。
+\begin{solution}
+由 $ \mathbb{Q}(\sqrt{2})$ 的定义知，$ \mathbb{Q}(\sqrt{2})$ 是包含 $ \mathbb{Q}$ 和 $\sqrt{2}$ 的最小数域，因此 $\mathbb{F}$ 为 $\mathbb{Q}$或$ \mathbb{Q}(\sqrt{2})$。
+
+\end{solution}
+
+\item
+有理数域上以 $\sqrt { 2 } + \sqrt { 3 }$ 为根首项系数为 1 的不可约多项式是（\quad）。
+\begin{solution}
+设$t=\sqrt{2}+\sqrt{3}$，则$t^2=(\sqrt{2}+\sqrt{3})^2=5+2\sqrt{6}$，$t^4=(5+2\sqrt{6})^2=49+20\sqrt{6}$，于是$t^4-10t^2+1=0$。从而$t=\sqrt{2}+\sqrt{3}$是$f(x)=x^4-10x^2+1$的一个实根。把$f(x)$看作实数域上的多项式进行分解：\begin{align*}
+f(x)&=x^4-10x^2+1=x^4+2x^2+1-12x^2=(x^2+1)^2-(2\sqrt{3}x)^2\\
+&=(x^2+2\sqrt{3}x+1)(x^2-2\sqrt{3}x+1)\\
+&=[x-(\sqrt{2}-\sqrt{3})][x+(\sqrt{2}+\sqrt{3})][x-(\sqrt{2}+\sqrt{3})][x+(\sqrt{2}-\sqrt{3})].
+\end{align*}
+于是根据唯一因式分解定理得，$f(x)=x^4-10x^2+1$在$\mathbb{Q}[x]$上没有一次因式，也没有二次因式。从而$x^4-10x^2+1$在$\mathbb{Q}$上不可约。因此有理数域上以 $\sqrt { 2 } + \sqrt { 3 }$ 为根首项系数为 1 的不可约多项式是$x^4-10x^2+1$。
+\end{solution}
+
+\item
+$n$ 阶行列式$\left| \begin{array} { c c c c } { 1 + x _ { 1 } ^ { 2 } } & { x _ { 2 } x _ { 1 } } & { \cdots } & { x _ { n } x _ { 1 } } \\ { x _ { 1 } x _ { 2 } } & { 1 + x _ { 2 } ^ { 2 } } & { \cdots } & { x _ { n } x _ { 2 } } \\ { \vdots } & { \vdots } & { } & { \vdots } \\ { x _ { 1 } x _ { n } } & { x _ { 2 } x _ { n } } & { \cdots } & { 1 + x _ { n } ^ { 2 } } \end{array} \right|$的值为 （\quad）。
+\begin{solution}
+\begin{align*}
+&\left| \begin{array} { c c c c } { 1 + x _ { 1 } ^ { 2 } } & { x _ { 2 } x _ { 1 } } & { \cdots } & { x _ { n } x _ { 1 } } \\ { x _ { 1 } x _ { 2 } } & { 1 + x _ { 2 } ^ { 2 } } & { \cdots } & { x _ { n } x _ { 2 } } \\ { \vdots } & { \vdots } & { } & { \vdots } \\ { x _ { 1 } x _ { n } } & { x _ { 2 } x _ { n } } & { \cdots } & { 1 + x _ { n } ^ { 2 } } \end{array} \right|
+=\left|E_n+\left( \begin{array}{c}
+	x_1\\
+	x_2\\
+	\vdots\\
+	x_n\\
+\end{array} \right) \left( \begin{matrix}
+	x_1&		x_2&		\cdots&		x_n\\
+\end{matrix} \right) \right|\\
+&=\left|1+\left( \begin{matrix}
+	x_1&		x_2&		\cdots&		x_n\\
+\end{matrix} \right) \left( \begin{array}{c}
+	x_1\\
+	x_2\\
+	\vdots\\
+	x_n\\
+\end{array} \right) \right|=1+\sum_{i=1}^n x_i^2.
+\end{align*}
+\end{solution}
+
+\item
+若 $A$ 为可逆矩阵，则 $(A^{-1})^* = (\quad)A$。
+\begin{solution}
+$(A^{-1})^*=(A^*)^{-1}=|A^*|^{-1}(A^*)^*=||A|A^{-1}|^{-1}A=|A|^{1-n}A$。
+\end{solution}
+
+\item
+若 $V_1, V_2$ 为 $3$ 维线性空间中两个不同的 $2$ 维子空间，则 $\dim(V_1 + V_2) =$（\quad）。
+\begin{solution}
+由题意，有\[
+\dim V_1=\dim V_2=2, \dim (V_1\cap V_2)=1.
+\]
+所以\[
+\dim(V_1+V_2)=\dim V_1+\dim V_2-\dim(V_1\cap V_2)=3.
+\]
+\end{solution}
+
+\item
+令 $A \in \mathbb { R } ^ { n \times n } , A ^ { n - 1 } \neq 0 , A ^ { n } = 0$，则 $V = \{ f ( A ) | f ( x ) \in \mathbb { R } [ x ] \}$ 作为实数域上的线性空间其维数为 （\quad）。
+\begin{solution}
+易知$I, A, A^2, \dotsc, A^{n-1}$是$V$的一个基，故$\dim V=n$。
+\end{solution}
+
+\item
+$A \in \mathbb { R } ^ { m \times n }$，则线性方程组 $Ax = b$ 对任何向量$b \in \mathbb { R } ^ { m }$都有解的充要条件为（ \quad） 。
+\begin{solution}
+\begin{align*}
+&\text{线性方程组 $Ax = b$ 对任何向量$b \in \mathbb { R } ^ { m }$都有解}\\
+&\Longleftrightarrow \text{对任何向量$b \in \mathbb { R } ^ { m }$，${\rm rank}A={\rm rank}(A|b)$}\\
+&\Longleftrightarrow \text{对任何向量$b \in \mathbb { R } ^ { m }$，$b$可由$A$的列向量线性表出。}\\
+&\Longleftrightarrow \text{$\mathbb{R}^{m}\subset \mathcal{R}(A)$，其中$\mathcal{R}(A)$表示由$A$的列向量生成的线性空间。}\\
+&\Longleftrightarrow \text{$\dim \mathcal{R}(A)\ge\dim \mathbb{R}^m=m$。}\\
+&\Longleftrightarrow \text{$A$的列秩大于等于$m$。}\\
+&\Longleftrightarrow \text{$A$的秩大于等于$m$。}
+\end{align*}
+由题意，${\rm rank}A\le m$，所以\begin{align*}
+\text{线性方程组 $Ax = b$ 对任何向量$b \in \mathbb { R } ^ { m }$都有解}
+&\Longleftrightarrow \text{${\rm rank}A=m$。}
+\end{align*}
+\end{solution}
+
+\item
+若 $A$ 为 $3$ 阶实对称阵，其特征值为 $-3, 1, 4$，则当 $t$ 满足（ \quad）  时，$tE + A$ 正定。
+\begin{solution}
+$tE+A$的特征值为$t-3, t+1, t+4$，因此\begin{align*}
+tE+A\text{正定}&\Longleftrightarrow t-3>0\text{且}t+1>0\text{且}t+4>0\Longleftrightarrow t>3\text{且}t>-1\text{且}t>-4 \\
+&\Longleftrightarrow t>3.
+\end{align*}
+因此当$t>3$时，$tE+A$正定。
+\end{solution}
+
+\item
+令 $A\in \mathbb{R}^{4\times 4}$ 的特征值为 $1, 2, 3, 4$，则 ${\rm tr}(A^2) =$ （\quad）。
+\begin{solution}
+因为$A$的特征值为$1, 2, 3, 4$，所以$A^2$的特征值为$1, 4, 9, 16$，所以${\rm tr}(A^2)=30$。
+\end{solution}
+
+\item
+一切 $n$ 阶幂等阵 $(A^2 = A)$ 在复数域内按相似可分为 （ \quad） 类。
+\begin{solution}
+（复数域是多余的）因为幂等矩阵必可对角化，所以\[
+A\sim \left\{ \begin{array}{l}
+	\text{diag}\{E_r,0_{n-r}\},\ 1\le r=\text{rank}A\le n, \\
+	0,\ \text{rank}A=0.\\
+\end{array} \right. 
+\]
+所以一切 $n$ 阶幂等阵 $(A^2 = A)$ 在复数域内按相似可分为 $n+1$类。
+\end{solution}
+
+\end{enumerate}
+
+\item[二、]（15分）
+设 $V$ 为实数域 $\mathbb{R}$ 上的 $5$ 维线性空间，$\mathscr{A}$ 为其上的线性变换，且 $\mathscr{A}$ 在基 $\boldsymbol{\varepsilon} _ { 1 } , \boldsymbol{\varepsilon} _ { 2 } , \boldsymbol{\varepsilon} _ { 3 } , \boldsymbol{\varepsilon} _ { 4 } , \boldsymbol{\varepsilon} _ { 5 }$之下的矩阵为\[
+A=\left( \begin{matrix}
+	&		&		&		&		1\\
+	&		&		&		1&		\\
+	&		&		1&		&		\\
+	&		1&		&		&		\\
+	1&		&		&		&		\\
+\end{matrix} \right) .
+\]
+(1) 求 $V$ 的另一组基 $\boldsymbol{\alpha} _ { 1 } , \boldsymbol{\alpha} _ { 2 } , \boldsymbol{\alpha} _ { 3 } , \boldsymbol{\alpha} _ { 4 } , \boldsymbol{\alpha} _ { 5 }$，使 $\mathscr{A}$ 在此基下的矩阵为对角阵。\\
+(2) 求$A^n$。
+\begin{solution}
+(1) 因为\[
+\mathscr{A}(\boldsymbol{\varepsilon} _ { 1 } , \boldsymbol{\varepsilon} _ { 2 } , \boldsymbol{\varepsilon} _ { 3 } , \boldsymbol{\varepsilon} _ { 4 } , \boldsymbol{\varepsilon} _ { 5 })=(\boldsymbol{\varepsilon} _ { 1 } , \boldsymbol{\varepsilon} _ { 2 } , \boldsymbol{\varepsilon} _ { 3 } , \boldsymbol{\varepsilon} _ { 4 } , \boldsymbol{\varepsilon} _ { 5 }) \left( \begin{matrix}
+	&		&		&		&		1\\
+	&		&		&		1&		\\
+	&		&		1&		&		\\
+	&		1&		&		&		\\
+	1&		&		&		&		\\
+\end{matrix} \right).
+\]
+所以\[
+\left\{ \begin{array}{l}
+	\mathscr{A}\boldsymbol{\varepsilon} _1=\boldsymbol{\varepsilon} _5,\\
+	\mathscr{A}\boldsymbol{\varepsilon} _2=\boldsymbol{\varepsilon} _4,\\
+	\mathscr{A}\boldsymbol{\varepsilon} _3=\boldsymbol{\varepsilon} _3,\\
+	\mathscr{A}\boldsymbol{\varepsilon} _4=\boldsymbol{\varepsilon} _2,\\
+	\mathscr{A}\boldsymbol{\varepsilon} _5=\boldsymbol{\varepsilon} _1.\\
+\end{array} \right. 
+\]
+因此\[
+\left\{ \begin{array}{l}
+	\mathscr{A}(\boldsymbol{\varepsilon} _1+\boldsymbol{\varepsilon}_5)=(\boldsymbol{\varepsilon}_1+\boldsymbol{\varepsilon} _5),\\
+	\mathscr{A}(\boldsymbol{\varepsilon} _2+\boldsymbol{\varepsilon}_4)=(\boldsymbol{\varepsilon}_2+\boldsymbol{\varepsilon} _4),\\
+	\mathscr{A}\boldsymbol{\varepsilon} _3=\boldsymbol{\varepsilon} _3,\\
+	\mathscr{A}(\boldsymbol{\varepsilon} _1-\boldsymbol{\varepsilon}_5)=-(\boldsymbol{\varepsilon}_1-\boldsymbol{\varepsilon} _5),\\
+	\mathscr{A}(\boldsymbol{\varepsilon} _2-\boldsymbol{\varepsilon}_4)=-(\boldsymbol{\varepsilon}_2-\boldsymbol{\varepsilon} _4).\\
+\end{array} \right. 
+\]
+于是\[
+\mathscr{A}(\boldsymbol{\varepsilon} _1+\boldsymbol{\varepsilon}_5, \boldsymbol{\varepsilon} _2+\boldsymbol{\varepsilon}_4, \boldsymbol{\varepsilon} _3, \boldsymbol{\varepsilon} _1-\boldsymbol{\varepsilon}_5, \boldsymbol{\varepsilon} _2-\boldsymbol{\varepsilon}_4)=(\boldsymbol{\varepsilon} _1+\boldsymbol{\varepsilon}_5, \boldsymbol{\varepsilon} _2+\boldsymbol{\varepsilon}_4, \boldsymbol{\varepsilon} _3, \boldsymbol{\varepsilon} _1-\boldsymbol{\varepsilon}_5, \boldsymbol{\varepsilon} _2-\boldsymbol{\varepsilon}_4)\left( \begin{matrix}
+	1&		&		&		&		\\
+	&		1&		&		&		\\
+	&		&		1&		&		\\
+	&		&		&		-1&		\\
+	&		&		&		&		-1\\
+\end{matrix} \right).
+\]
+因此，取$(\boldsymbol{\alpha} _ { 1 } , \boldsymbol{\alpha} _ { 2 } , \boldsymbol{\alpha} _ { 3 } , \boldsymbol{\alpha} _ { 4 } , \boldsymbol{\alpha} _ { 5 })=(\boldsymbol{\varepsilon} _1+\boldsymbol{\varepsilon}_5, \boldsymbol{\varepsilon} _2+\boldsymbol{\varepsilon}_4, \boldsymbol{\varepsilon} _3, \boldsymbol{\varepsilon} _1-\boldsymbol{\varepsilon}_5, \boldsymbol{\varepsilon} _2-\boldsymbol{\varepsilon}_4)$即可。\\
+(2) 记\[
+B=(\boldsymbol{\varepsilon} _ { 1 } , \boldsymbol{\varepsilon} _ { 2 } , \boldsymbol{\varepsilon} _ { 3 } , \boldsymbol{\varepsilon} _ { 4 } , \boldsymbol{\varepsilon} _ { 5 }),
+\]
+\[
+C=(\boldsymbol{\varepsilon} _1+\boldsymbol{\varepsilon}_5, \boldsymbol{\varepsilon} _2+\boldsymbol{\varepsilon}_4, \boldsymbol{\varepsilon} _3, \boldsymbol{\varepsilon} _1-\boldsymbol{\varepsilon}_5, \boldsymbol{\varepsilon} _2-\boldsymbol{\varepsilon}_4).
+\]
+由(1)知\[
+B^{-1}C\left( \begin{matrix}
+	1&		&		&		&		\\
+	&		1&		&		&		\\
+	&		&		1&		&		\\
+	&		&		&		-1&		\\
+	&		&		&		&		-1\\
+\end{matrix} \right)C^{-1}B=A.
+\]
+因此\[
+A^n=B^{-1}C\left( \begin{matrix}
+	1&		&		&		&		\\
+	&		1&		&		&		\\
+	&		&		1&		&		\\
+	&		&		&		(-1)^n&		\\
+	&		&		&		&		(-1)^n\\
+\end{matrix} \right)C^{-1}B.
+\]
+又\[
+C=B\left( \begin{matrix}
+	1&		&		&		1&		\\
+	&		1&		&		&		1\\
+	&		&		1&		&		\\
+	&		1&		&		&		-1\\
+	1&		&		&		-1&		\\
+\end{matrix} \right).
+\]
+所以\begin{align*}
+A^n&=\left( \begin{matrix}
+	1&		&		&		1&		\\
+	&		1&		&		&		1\\
+	&		&		1&		&		\\
+	&		1&		&		&		-1\\
+	1&		&		&		-1&		\\
+\end{matrix} \right)
+\left( \begin{matrix}
+	1&		&		&		&		\\
+	&		1&		&		&		\\
+	&		&		1&		&		\\
+	&		&		&		(-1)^n&		\\
+	&		&		&		&		(-1)^n\\
+\end{matrix} \right)
+\left( \begin{matrix}
+	1&		&		&		1&		\\
+	&		1&		&		&		1\\
+	&		&		1&		&		\\
+	&		1&		&		&		-1\\
+	1&		&		&		-1&		\\
+\end{matrix} \right)^{-1}\\
+&=\frac12\left( \begin{matrix}
+	1+(-1)^n&		&		&		&1+(-1)^{n+1}		\\
+	&		1+(-1)^n&		&1+(-1)^{n+1}		&		\\
+	&		&		1&		&		\\
+	&		1+(-1)^{n+1}&		&1+(-1)^n		&		\\
+	1+(-1)^{n+1}&		&		&		&1+(-1)^n		\\
+\end{matrix} \right).
+\end{align*}
+
+\end{solution}
+
+\item[三、]（15分）
+设 $A \in \mathbb { R } ^ { n \times n } , R ( A ) = \{ A x | x \in \mathbb { R } ^ { n } \} , N ( A ) = \left\{ x \in \mathbb { R } ^ { n } | A x = 0 \right\}$。若 $A$ 与 $A^2$ 有相同的秩。求证：\\
+(1) 齐次线性方程组 $AX = 0$ 和 $A^2X = 0$ 同解。\\
+(2) $\mathbb { R } ^ { n } = R ( A ) \oplus N ( A )$。
+\begin{solution}
+（回忆错了。）\\
+(1) 显然$AX=0$的解是$A^2X=0$的解，下证$A^2X=0$的解也是$AX=0$的解。\\
+因为${\rm rank}(A^2)={\rm rank}A$，所以存在可逆矩阵$P$，使得\[
+PA^2=A.
+\]
+任取$A^2X=0$的一个解$B$，有\[
+A^2B=0,
+\]
+从而\[
+PA^2B=0,
+\]
+于是\[
+AB=0.
+\]
+因此$B$是$AX=0$的一个解。\\
+因此齐次线性方程组 $AX = 0$ 和 $A^2X = 0$ 同解。\\
+(2) （补充条件：$A=A^2$）任取一个向量$\boldsymbol{\alpha}\in \mathbb{R}^n$，有\[
+\boldsymbol{\alpha}={A}\boldsymbol{\alpha}+\boldsymbol{\alpha}-{A}\boldsymbol{\alpha}.
+\]
+因为\[
+A(\boldsymbol{\alpha}-{A}\boldsymbol{\alpha})=0,
+\]
+所以$
+\boldsymbol{\alpha}-{A}\boldsymbol{\alpha}\in N(A).
+$
+又$A\boldsymbol{\alpha}\in R(A)$，所以\[
+\mathbb { R } ^ { n } = R ( A ) + N ( A ).
+\]
+任取一个向量$\boldsymbol{\beta}\in R(A)\cap N(A)$，有\[
+A\boldsymbol{\beta}=0, \text{存在向量$\boldsymbol{\gamma}\in \mathbb{R}^n$，使得$A\boldsymbol{\gamma}=\boldsymbol{\beta}$。}
+\]
+因此\[
+A\boldsymbol{\gamma}=A^2\boldsymbol{\gamma}=A\boldsymbol{\beta}=0,
+\]
+于是\[
+\boldsymbol{\beta} = 0.
+\]
+从而$R(A)\cap N(A)=0$。\\
+因此\[
+\mathbb { R } ^ { n } = R ( A ) \oplus N ( A ).
+\]
+\end{solution}
+
+\item[四、]（15分）
+设 $V$ 为数域 $\mathbb{C}$ 上的 $n$ 维线性空间 $(n \ge 2)$，$\mathscr{A}$ 为其上的线性变换，$\mathscr{A}^{n-1}\ne 0, \mathscr{A}^{n} = 0$。 求证：$\mathscr{A}$ 在 $V$的某个基下的矩阵为\[
+\left( \begin{array} { c c c c c } { 0 } & { } & { } & { } & { } \\ { 1 } & { \ddots } & { } & { } & { } \\ { } & { \ddots } & { \ddots } & { } & { } \\ { } & { } & { 1 } & { 0 } & { } \\ { } & { } & { } & { 1 } & { 0 } \end{array} \right).
+\]
+\begin{proof}
+\begin{lemma}
+对任意的$\boldsymbol{\alpha}\in V$，$\boldsymbol{\alpha}\ne0$，$\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dotsc, \mathscr{A}^{n-1}\boldsymbol{\alpha}$线性无关，从而是$V$的一个基。
+\end{lemma}
+\begin{subproof}
+任取$\boldsymbol{\alpha}\in V$，$\boldsymbol{\alpha}\ne0$，设
+\begin{equation}\label{k0alpha}
+k_0\boldsymbol{\alpha}+k_1\mathscr{A}\boldsymbol{\alpha}+k_2\mathscr{A}^2\boldsymbol{\alpha}+\cdots+k_{n-1}\mathscr{A}^{n-1}\boldsymbol{\alpha}=0, k_0, k_1, k_2, \dotsc, k_{n-1}\in \mathbb{C}.
+\end{equation}
+\ref{k0alpha}式两边同时用$\mathscr{A}^{n-1}$作用之，得到\[
+k_0\mathscr{A}^{n-1}\boldsymbol{\alpha}=0.
+\]
+从而$k_0=0$。于是\ref{k0alpha}式变为\begin{equation}\label{k1alpha}
+k_1\mathscr{A}\boldsymbol{\alpha}+k_2\mathscr{A}^2\boldsymbol{\alpha}+\cdots+k_{n-1}\mathscr{A}^{n-1}\boldsymbol{\alpha}=0.
+\end{equation}
+\\
+\ref{k1alpha}式两端同时用$\mathscr{A}^{n-2}$作用之，得到\[
+k_1\mathscr{A}^{n-1}\boldsymbol{\alpha}=0.
+\]
+
+从而$k_1=0$，于是\ref{k1alpha}式变为\begin{equation}\label{k2alpha}
+k_2\mathscr{A}^2\boldsymbol{\alpha}+\cdots+k_{n-1}\mathscr{A}^{n-1}\boldsymbol{\alpha}=0.
+\end{equation}
+仿照上面的步骤，依次用$\mathscr{A}^{n-3}$，$\mathscr{A}^{n-4}$，$\dotsc$，$\mathscr{A}$作用之，可得\[
+k_0=k_1=k_2=\cdots=k_{n-1}=0.
+\]
+因此$\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dotsc, \mathscr{A}^{n-1}\boldsymbol{\alpha}$线性无关，断言成立。
+\end{subproof}
+因为\[
+\mathscr{A}(\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dotsc, \mathscr{A}^{n-1}\boldsymbol{\alpha})=(\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dotsc, \mathscr{A}^{n-1}\boldsymbol{\alpha})\left( \begin{array} { c c c c c } { 0 } & { } & { } & { } & { } \\ { 1 } & { \ddots } & { } & { } & { } \\ { } & { \ddots } & { \ddots } & { } & { } \\ { } & { } & { 1 } & { 0 } & { } \\ { } & { } & { } & { 1 } & { 0 } \end{array} \right).
+\]
+所以$\mathscr{A}$在基$\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dotsc, \mathscr{A}^{n-1}\boldsymbol{\alpha}$下的矩阵为$\left( \begin{array} { c c c c c } { 0 } & { } & { } & { } & { } \\ { 1 } & { \ddots } & { } & { } & { } \\ { } & { \ddots } & { \ddots } & { } & { } \\ { } & { } & { 1 } & { 0 } & { } \\ { } & { } & { } & { 1 } & { 0 } \end{array} \right)$。
+\end{proof}
+
+\item[五、]（15分）
+(1) 求证任何一个正定矩阵 $A = B^2$，$B$ 也为正定矩阵。\\
+(2) 求证任何一个可逆实矩阵 $A = QP$，$Q$ 为正定矩阵，$P$ 为正交阵。
+\begin{proof}
+(1) 参见2010年第六题。\\
+(2) 
+因为$A$是$n$级实可逆矩阵，所以$AA'$是正定矩阵。由(1)得，存在正定矩阵$Q$，使得\[
+AA'= Q^2.
+\]
+从而$A=Q^2{A'}^{-1}$。记$P=Q{A'}^{-1}$。由于\begin{align*}
+P'P&=A^{-1}Q'Q{A'}^{-1}=A^{-1}Q^2{A'}^{-1}=A^{-1}AA'{A'}^{-1}\\
+&=E_n.
+\end{align*}
+因此$P$是正交矩阵。从上述$A$的表示式得，$A=QP$。
+\end{proof}
+\begin{remark}
+注意极分解定理。
+\begin{theorem}[极分解定理]
+对于任一实可逆矩阵$A$，一定存在一个正交矩阵$T$和两个正定矩阵$S_1$，$S_2$，使得\[
+A=TS_1= S_2T,
+\]
+并且这两种分解的每一种都是唯一的。
+\end{theorem}
+\end{remark}
+
+\item[六、]（15分）
+设$\mathbb{F}$ 为数域, $A , B \in \mathbb { F } ^ { n 
+\times n } ( n \geq 1 ) : A + B = E _ { n } , A B = B A , A ^ 
+{ 2 } = A , B ^ { 2 } = B$。求证存在一个可逆矩阵 $P$ 使得\[
+P ^ { - 1 } A P = \left( \begin{matrix}
+	E_s&		\\
+	&		0\\
+\end{matrix} \right)  , 
+P ^ { - 1 } B P = \left( \begin{matrix}
+	0&		\\
+	&		E_t\\
+\end{matrix} \right) .
+\]
+这里 $s + t = n$。
+\begin{proof}
+首先证明四个引理。
+\begin{lemma}
+幂等矩阵一定可对角化，并且如果$n$级幂等矩阵$A$的秩为$r (r>0)$，那么\[
+A \sim \left( \begin{array} { l l } { I _ { r } } & { 0 } \\ { 0 } & { 0 } \end{array} \right).
+\]
+\end{lemma}
+\begin{subproof}
+若$r=n$，则$A$可逆。从$A^2=A$得出，$A=I$，结论显然成立。
+
+若$r=0$，则$A=0$。结论也成立。下面设$0<r<n$。
+
+注意到：当$0<r<n$时，幂等矩阵$A$的全部特征值是$0, 1$。
+
+对于特征值$0$，齐次线性方程组$(0I-A)X=0$的解空间$W_0$的维数等于$n-{\rm rank}(-A)=n-r$。
+
+由于$A$是幂等矩阵，因此${\rm rank}(A)+{\rm rank}(I-A)=n$。从而${\rm rank}(I-A)=n-r$。
+
+对于特征值$1$，齐次线性方程组$(I-A)X=0$的解空间$W_1$的维数等于$n-{\rm rank}(I-A)=n-(n-r)=r$。因此\[
+\operatorname { dim } W _ { 0 } + \operatorname { dim } W _ { 1 } = ( n - r ) + r = n.
+\]
+从而$A$可对角化。$A$的相似标准形中，特征值$1$在主对角线上出现的次数等于$W_1$的维数$r$，特征值$0$在主对角线上出现的次数等于$W_0$的维数$n-r$。因此\[
+A \sim \left( \begin{array} { l l } { I _ { r } } & { 0 } \\ { 0 } & { 0 } \end{array} \right).
+\]
+\end{subproof}
+
+\begin{lemma}
+数域$\mathbb{F}$上的幂等矩阵的秩等于它的迹。
+\end{lemma}
+\begin{subproof}
+设$A$是数域$\mathbb{F}$上$n$级幂等矩阵，且${\rm rank}(A)=r>0$。则据引理1得\[
+A \sim \left( \begin{array} { l l } { I _ { r } } & { 0 } \\ { 0 } & { 0 } \end{array} \right).
+\]
+由于相似的矩阵有相等的迹，因此\[
+\operatorname { tr } ( A ) = \operatorname { tr } \left( \begin{array} { c c } { I _ { r } } & { 0 } \\ { 0 } & { 0 } \end{array} \right) = r = \operatorname { rank } ( A ).
+\]
+若$A=0$，则${\rm tr}(0)=0={\rm rank}(0)$。
+\end{subproof}
+
+\begin{lemma}
+ 如果域$\mathbb{F}$上的$n$级矩阵$A$与$B$都是可对角化的，且$AB=BA$，那么存在域$\mathbb{F}$上一个$n$级可逆矩阵$S$，使得$S^{-1}AS$与$S^{-1}BS$都为对角矩阵。
+\end{lemma}
+\begin{subproof}
+已知$A$可对角化，设$A$的所有不同的特征值为$\lambda _ { 1 } , \lambda _ { 2 } , \dotsc , \lambda _ { s }$，
+其中$\lambda_i$的重数为$n_i, i=1, 2, \dotsc, s$。
+于是存在域 $\mathbb{F}$ 上的一个 $n$ 级可逆矩阵 $P$，
+使得 $P ^ { - 1 } A P = \operatorname { diag } \left\{ \lambda _ { 1 } I _ { n _ { 1 }} , \lambda _ { 2 } I _ { n _ { 2 } } , \dotsc , \lambda _ { s } I _ { n _ { s } } \} \right.$。
+
+记 $D=P^{-1}AP$，令 $G=P^{-1}BP$，由于 $AB=BA$，因此\[
+D G = \left( P ^ { - 1 } A P \right) \left( P ^ { - 1 } B P \right) = P ^ { - 1 } A B P = P ^ { - 1 } B A P = \left( P ^ { - 1 } B P \right) \left( P ^ { - 1 } A P \right) = G D.
+\]
+
+由于 $D = \operatorname { diag } \left\{ \lambda _ { 1 } I _{ n _ { 1 } } , \lambda _ { 2 } I _ { n _ { 2 } } , \dotsc , 
+\lambda , I _ { n _ { n } } \right\}$，且$\lambda _ { 1 } , 
+\lambda _ { 2 } , \dotsc , \lambda _ { s }$，两两不等，因此
+$G = \operatorname { diag } \left\{ B _ { 1 } , B _ { 2 } , 
+\dotsc , B _ { s } \right\}$，其中 $B_i$ 是 $n_i$ 级矩阵，
+$i=1, 2, \dotsc, s$。由于 $B$ 可对角化，因此 $G=P^{-1}BP$ 也可对角化。
+从而 $G$ 的最小多项式 $m_G(x)$在$\mathbb{F}[x]$中可以分解
+成不同的一次因式的乘积。设$B_i$的最小多项式为$m_i(\lambda), i=1, 2, \dotsc, s$，则\[
+m _ { G } ( \lambda ) = \left[ m _ { 1 } ( \lambda ) , m _ { 2 } ( \lambda ) , \dotsc , m _ { s } ( \lambda ) \right].
+\]
+于是$m _ { i } ( \lambda ) \left| m _ { G } ( \lambda )
+\right.$，从而$m_i(\lambda)$在$\mathbb{F}[\lambda]$中也
+可分解成不同的一次因式的乘积，因此$B_i$可对角化，于是存在域$
+\mathbb{F}$上$n$级可逆矩阵$Q$，使得$Q_i^{-1}B_iQ_i$为
+对角矩阵，$i=1, 2, \dotsc, s$。
+令\[
+ { Q } = \operatorname { diag } \left\{  { Q } _ { 1 } ,  { Q } _ { 2 } , \dotsc ,  { Q } \right\},
+\]
+则$Q ^ { - 1 } G Q = \operatorname { diag } \left\{ Q _ { 1 } ^ { - 1 } B _ { 1 } Q _ { 1 } , Q _ { 2 } ^ { - 1 } B _ { 2 } Q _ { 2 } , \dotsc , Q ^ { - 1 } B , Q _ { 3 } \right\}$为对角矩阵。令$S=PQ$，则\begin{align*}
+&S ^ { - 1 } B S = Q ^ { - 1 } P ^ { - 1 } B P Q = Q ^ { - 1 } G Q\\
+&S ^ { - 1 } A S = Q ^ { - 1 } P ^ { - 1 } A P Q = Q ^ { - 1 } \operatorname { diag } \left\{ \lambda _ { 1 } I _ { n _ { 1 } } , \lambda _ { 2 } I _ { n _ { 2 } } , \dotsc , \lambda _ { i } I _ { n _ { 1 } } \right\} Q\\
+&= \operatorname { diag } \left\{ Q _ { 1 } ^ { - 1 } \left( \lambda _ { 1 } I _ { n _ { 1 } } \right) Q _ { 1 } , Q _ { 2 } ^ { - 1 } \left( \lambda _ { 2 } I _ { n _ { 2 } } \right) Q _ { 2 } , \dotsc , Q _ { s } ^ { - 1 } \left( \lambda _ { s } I _ { n _ { j } } \right) Q _ { s } \right\}\\
+&= \operatorname { diag } \left\{ \lambda _ { 1 } I _ { n _ { 1 } } , \lambda _ { 2 } I _ { n _ { 2 } } , \dotsc , \lambda , I _ { n } \right\}.
+\end{align*}
+于是$S^{-1}BS$和$S^{-1}AS$都是对角矩阵。
+\end{subproof}
+
+\begin{lemma}\label{midengchongyao}
+设$V$是域$\mathbb{F}$上$n$维线性空间，$\mathscr{A}$是$V$上的一个线性变换。证明：$\mathscr{A}$是幂等变换的充分必要条件是\[
+\operatorname { rank } ( \mathscr { A } ) + \operatorname { rank } ( \mathscr { A } - \mathscr { I } ) = n.
+\]
+\end{lemma}
+\begin{subproof}
+$V$上的线性变换$\mathscr{A}$是幂等变换$\Longleftrightarrow \mathscr{A}(\mathscr{A}-\mathscr{I})=0$.\\
+考虑域$\mathbb{F}$上的一元多项式$f(x)=x(x-1)$，由于$(x, x-1)=1$，因此，Ker $f ( \mathscr { A } ) = \operatorname { Ker } \mathscr { A } \oplus \operatorname { Ker } ( \mathscr { A } - \mathscr { I } )$，从而\begin{align*}
+\text{$\mathscr{A}$是幂等变换}&\Longleftrightarrow
+\mathscr{A}(\mathscr{A}-\mathscr{I})=0\\
+&\Longleftrightarrow f(\mathscr{A})=0\\
+&\Longleftrightarrow V = \mathrm { Ker } \mathscr { A } \oplus \mathrm { Ker } ( \mathscr { A } - \mathscr { I } )\\
+&\Longleftrightarrow \operatorname { dim } V = \operatorname { dim } ( \operatorname { Ker } \mathscr { A } ) + \operatorname { dim } ( \operatorname { Ker } ( \mathscr { A } - \mathscr { I } ) )\\
+&\Longleftrightarrow \operatorname { rank } ( \mathscr { A } ) + \operatorname { rank } ( \mathscr { A } - \mathscr { I } ) = n.
+\end{align*}
+其中倒数第二个$\Longleftrightarrow$的“$\Longleftarrow$”理由是： ${\rm Ker}\mathscr { A } + \operatorname { Ker } ( \mathscr { A } - \mathscr { I } )$是直和，因此$\dim({\rm Ker} \mathscr{A}\oplus \operatorname { Ker } ( \mathscr { A } - \mathscr { I } ) = \operatorname { dim } ( \mathrm { Ker } \mathscr { A } ) + \operatorname { dim } ( \operatorname { Ker } ( \mathscr { A } - \mathscr { I } ) )$。于是$\operatorname { dim } V = \operatorname { dim } ( \operatorname { Ker } \mathscr { A } \oplus \operatorname { Ker } ( \mathscr { A } - \mathscr { I } ) )$。
+从而$V = \operatorname { Ker } \mathscr { A } \oplus \operatorname { Ker } ( \mathscr { A } - \mathscr { I } )$。
+\end{subproof}
+
+回到原题。因为 $A$ 和 $B$ 都是幂等矩阵，所以 $A$ 和 $B$ 都可对角化，又因为 $AB = BA$，所以 $A$ 和 $B$ 可以同时对角化。故存在可逆矩阵 $P$，使得\[
+P ^ { - 1 } A P = \left( \begin{matrix}
+	E_s&		\\
+	&		0\\
+\end{matrix} \right)  , 
+P ^ { - 1 } B P = \left( \begin{matrix}
+	0&		\\
+	&		E_t\\
+\end{matrix} \right) .
+\]
+其中 $s = {\rm rank}(A)$，$t = {\rm rank}(B)$。 由引理\ref{midengchongyao} 知\[
+{\rm rank}(A) + {\rm rank}(B) = {\rm rank}(A) + {\rm rank}(E_n - A) = n.
+\]
+所以 $s + t = n$。证毕。
+\end{proof}
+
+\item[七、]（15分）
+设 $A, B$ 为 $n$ 阶方阵，$A$ 为 $n$ 阶幂零阵，求证\[
+| A + B | = | B |.
+\]
+\begin{proof}
+因为$A$是$n$阶幂零矩阵，所以\[
+A^{n-1}\ne 0, A^n=0.
+\]
+于是\[
+A^{n-1}(A+B)=A^n+A^{n-1}B=A^{n-1}B.
+\]
+因此\[
+|A^{n-1}||A+B|=|A^{n-1}||B|.
+\]
+故\[
+| A + B | = | B |.
+\]
+\end{proof}
+
+\item[八、]（15 分）
+设 $A \in \mathbb { C } ^ { n \times n }$ 可逆. 求证矩阵方程 $A X A ^ { T } - X = 0$ 仅有零解的充要条件为 $A$ 的任何两个特征值的乘积不为 1。
+\begin{proof}
+\begin{lemma}
+设$A$，$B$是$n$级复矩阵。则矩阵方程$AX-XB=0$只有零解的充分必要条件是：$A$与$B$没有公共的特征值。
+\end{lemma}
+\begin{subproof}
+必要性。假设$A$与$B$有公共的特征值$\lambda$，则存在$\boldsymbol { \boldsymbol{\alpha} } \in \mathbb { C } ^ { n }$且$\boldsymbol{\alpha} \neq 0$使得$A \boldsymbol{\alpha} =\lambda_0 \boldsymbol {\boldsymbol{\alpha}}$
+由于
+\[
+\left| \lambda _ { 0 } I - B ^ { \prime } \right| = \left| \left( \lambda _ { 0 } I - B \right) ^ { \prime } \right| = \left| \lambda _ { 0 } I - B \right| = 0,
+\]
+因此$\lambda_0$也是$B’$的一个特征值，从而存在$\boldsymbol { \beta } \in \mathbb { C } ^ { n }$且$\boldsymbol { \beta }\ne 0$，使得$B ^ { \prime } \boldsymbol { \beta } = \lambda _ { 0 } \boldsymbol { \beta }$。于是$\boldsymbol { \beta } ^ { \prime } B = \lambda _ { 0 } \boldsymbol { \beta } ^ { \prime }$。
+从而
+\[
+A \left( \boldsymbol{\alpha}\boldsymbol{ \beta} ^ { \prime } \right) - \left( \boldsymbol{\alpha}\boldsymbol{ \beta} ^ { \prime } \right) B = \lambda _ { 0 }
+\boldsymbol{\alpha} \boldsymbol{\beta} ^ { \prime } - 
+\boldsymbol{\alpha} \lambda _ { 0 } \boldsymbol{\beta} ^ 
+{ \prime } = 0.
+\]
+因此$ \boldsymbol{\alpha}  \boldsymbol{ \beta } ^ { \prime }$是矩阵方程$AX-XB=0$的一个解。\\
+由于$\boldsymbol{\alpha} \neq 0 , \boldsymbol{\beta} \neq 
+0$，因此$\boldsymbol{\alpha}$的某个分量$a_i\ne0$，$B$的
+某个分量$b_i\ne 0$。从而$\boldsymbol{\alpha\beta}'$的$(i, j)
+$元$a_ib_j\ne 0$，因此$\boldsymbol{\alpha\beta}'\ne0$，于
+是$\boldsymbol{\alpha\beta}'$是$AX-XB=0$的一个非零解。\\
+充分性。设$A$与$B$没有公共的特征值，则$A$的特征多项式
+$f(\lambda)$与$B$的特征多项式$g(\lambda)$没有公共的复根，
+从而$f(\lambda)$与$g(\lambda)$在$\mathbb{C}[\lambda]
+$中互素。于是存在$u ( \lambda ) , v ( \lambda ) \in \mathbb{ 
+C } [ \lambda ]$，使得$u ( \lambda ) f ( \lambda ) + v ( 
+\lambda ) g ( \lambda ) = 1$。$\lambda$用$A$代入，得
+\[
+u ( A ) f ( A ) + v ( A ) g ( A ) = I.
+\]
+由于$f(A)=0$，因此$g(A)$可逆。设$n\times m$级复矩阵$
+\mathbb{C}$是矩阵方程$AX-XB=0$的一个解，则$AC=CB$。设
+\[
+g ( \lambda ) = \lambda ^ { m } + b _ { m - 1 } \lambda ^ 
+{ m - 1 } + \cdots + b _ { 1 } \lambda + b _ { 0 },
+\]
+则
+\begin{align*}
+g ( A ) C & = \left( A ^ { m } + b _ { m - 1 } A ^ { m - 1 } 
++ \cdots + b _ { 1 } A + b _ { 0 } I \right) C \\ 
+& = C \left( B ^ { m } + b _ { m - 1 } B ^ { m - 1 } + 
+\cdots + b _ { 1 } B + b _ { 0 } I \right) \\
+&=C \cdot g ( B ) = C \cdot 0 = 0.
+\end{align*}
+两边左乘$g(A)^{-1}$，即得$C=0$。因此$AX-XB=0$只有零解。
+\end{subproof}
+由引理知，命题显然成立。
+\end{proof}
+\end{enumerate}
+\endinput

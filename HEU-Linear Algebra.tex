@@ -1,0 +1,69 @@
+\documentclass{article}
+\author{张祥振}
+\title{哈尔滨工程大学\\硕士研究生入学考试高等代数历年试题参考解答}
+
+\usepackage[a4paper,left=2.5cm,right=2.5cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bclogo}
+\usepackage[style=numeric,backend=biber,backref=true]{biblatex}
+\usepackage{delarray}% 矩阵，数组，行列式。。。
+\usepackage{enumerate}
+\usepackage{extarrows}% 长等号
+\usepackage{fancyhdr}% 空白页
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{makecell}
+\usepackage{mathtools}% 定义dcases环境的宏包
+\usepackage{mathrsfs}
+\usepackage{multirow}% 列表
+\usepackage{paralist}
+\usepackage{texnames}
+\usepackage{wasysym}
+\usepackage{xcolor}
+\usepackage{xeCJK}
+\usepackage{yhmath}
+
+\addbibresource{ref.bib}
+
+\newtheorem{theorem}{\sffamily\bfseries{定理}}[section]
+\newtheorem{lemma}{\sffamily\bfseries{引理}}[section]
+\newtheorem{remark}{\sffamily\bfseries{注}}[section]
+
+\linespread{1.5}
+
+\renewcommand{\proofname}{证明}
+\newenvironment{solution}{\renewcommand{\proofname}{解}\begin{proof}}{\end{proof}}
+\newenvironment{subsolution}{\renewcommand{\proofname}{解}\begin{proof}}{\end{proof}}
+\newenvironment{subproof}{\renewcommand{\proofname}{证明}\begin{proof}}{\end{proof}}
+
+\renewcommand{\ker}{\operatorname{Ker}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\x}{\boldsymbol{x}}
+\newcommand{\y}{\boldsymbol{y}}
+
+\begin{document}
+\maketitle
+\renewcommand{\contentsname}{目录}
+\tableofcontents
+\nocite{*} % 显示未被引用的参考文献
+\include{preclude}
+\include{2004}
+\include{2005}
+\include{2006}
+\include{2007}
+\include{2008}
+\include{2009}
+\include{2010}
+\include{2011}
+\include{2012}
+\include{2013}
+\include{2014}
+\include{2015}
+\include{2016}
+\include{2017}
+\include{2019}
+
+\printbibliography[heading=bibintoc, title=参考文献]
+\end{document}

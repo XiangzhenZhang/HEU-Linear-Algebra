@@ -1,0 +1,326 @@
+\section{2012}
+\begin{enumerate}[1~]
+\renewcommand{\labelenumi}{\textbf{\theenumi. }}
+\renewcommand{\Im}{\text{Im }}
+\item[一、]
+填空题 （每小题 4 分，共 20 分）
+\begin{enumerate}[1.~]
+\item
+三阶行列式有两个元素为 $4$，其余为 $\pm 1$，则此行列式可能的最大值为（\quad）。 
+\begin{solution}
+$\left| \begin{matrix}
+	4&		1&		1\\
+	-1&		4&		-1\\
+	-1&		-1&		1\\
+\end{matrix} \right|=19$
+\end{solution}
+\item
+$\boldsymbol{\gamma} _ { 1 } , \boldsymbol{\gamma} _ { 2 } , \boldsymbol{\alpha} , \boldsymbol{\beta}$皆为三维列向量，$A = \left( \boldsymbol{\alpha} , 2 \boldsymbol{\gamma} _ { 1 } , 3 \boldsymbol{\gamma} _ { 2 } \right) , B = \left( \boldsymbol{\beta} , \boldsymbol{\gamma} _ { 1 } , 2 \boldsymbol{\gamma} _ { 2 } \right)$ 且 $| A | = 18 , | B | = 4$，则 $|A - B| =$（\quad）。 
+\begin{solution}
+$|A-B|=|(\boldsymbol{\alpha}-\boldsymbol{\beta}, \boldsymbol{\gamma}_1, \boldsymbol{\gamma}_2)|=|(\boldsymbol{\alpha}, \boldsymbol{\gamma}_1, \boldsymbol{\gamma}_2)|-|(\boldsymbol{\beta}, \boldsymbol{\gamma}_1, \boldsymbol{\gamma}_2)|=\frac16 |A|- \frac12 |B|=3-2=1$。
+\end{solution}
+
+\item
+三阶方阵 $A$ 的特征值为 $1 , - 1, 2$，则 $A ^ { 2 } + 4 A ^ { - 1 }$ 的特征值（\quad）。 
+
+\begin{solution}
+显然，$5, -3, 6$。
+\end{solution}
+
+\item
+若不可约多项式 $ p(x) $ 是 $ f^{(k)}(x)$ 的 $s$ 重因子，且 $p ( x ) | f ( x )$，那么 $ p(x) $（ \quad ）$f(x)$ 的 $s + k$ 重因子。
+
+\begin{solution}
+设 $p(x)$ 是 $f(x)$ 的 $t$ 重因式，则 $p(x)$ 是 $f^{(k)}(x)$ 的 $t - k$ 重因式，因此 $t - k =s$，所以 $p(x)$ 是 $f(x)$ 的 $s+ k$ 重因式。
+\end{solution}
+
+\item
+设 
+$$
+A = \left( \begin{matrix} { 0 } & { a } & { 9 } \\ { 0 } & { 6 } & { 0 } \\ { 4 } & { 2 b } & { 0 } \end{matrix} \right)
+$$
+相似于对角阵，则 $a$ 与 $b$ 的关系式为（\quad）。
+
+\begin{solution}
+矩阵 $A$ 的特征多项式为\[
+f(\lambda) = (\lambda + 6) (\lambda - 6)^2.
+\]
+因为 $A$ 相似于对角阵，所以 $A$ 的最小多项式为 \[
+m(\lambda) = (\lambda + 6) (\lambda - 6).
+\]
+因此 $(A + 6 I) (A - 6 I) = 0$，即\[
+\left( \begin{matrix}
+	0&		6a+18b&		0\\
+	0&		0&		0\\
+	0&		4a+12b&		0\\
+\end{matrix} \right) =0.
+\]
+于是 $a + 3b = 0$。
+\end{solution}
+
+\item
+设 $\mathbb{R}^2$ 中的内积为 
+$$
+(\boldsymbol{\alpha} , \boldsymbol{\beta} ) = \boldsymbol{\alpha} ^ { \prime } A \boldsymbol{\beta} , A = \left( \begin{array} { l l } { 2 } & { 1 } \\ { 1 } & { 2 } \end{array} \right),
+$$
+则
+$$
+\left(\begin{array} { l } { 1 } \\ { 0 } \end{array} \right) , \left( \begin{array} { l } { 0 } \\ { 1 } \end{array} \right)
+$$
+在此内积之下的度量矩阵为 （\quad）。 
+
+\begin{solution}
+设所求的度量矩阵为 $B$，记 $\boldsymbol{\alpha}_1=(1, 0)', \boldsymbol{\alpha}_2=(0, 1)'$，则\[
+A=
+\left( \begin{matrix}
+	\left( \boldsymbol{\alpha} _1,\boldsymbol{\alpha} _1 \right)&		\left( \boldsymbol{\alpha} _1,\boldsymbol{\alpha} _2 \right)\\
+	\left( \boldsymbol{\alpha} _2,\boldsymbol{\alpha} _1 \right)&		\left( \boldsymbol{\alpha} _2,\boldsymbol{\alpha} _2 \right)\\
+\end{matrix} \right) =\left( \begin{matrix}
+	\boldsymbol{\alpha} _1'A\boldsymbol{\alpha} _1&		\boldsymbol{\alpha} _1'A\boldsymbol{\alpha} _2\\
+	\boldsymbol{\alpha} _2'A\boldsymbol{\alpha} _1&		\boldsymbol{\alpha} _2'A\boldsymbol{\alpha} _2\\
+\end{matrix} \right) =\left( \begin{matrix}
+	2&		1\\
+	1&		2\\
+\end{matrix} \right) .
+\]
+\end{solution}
+\item
+令$A \in \mathbb { R } ^ { 4 \times 4 }$ 的特征值为 $1, 2, 3, 4$， 则$\operatorname { tr } \left( A ^ { 2 } \right) =$（\quad）。 
+\begin{solution}
+$1+4+9+16=30$。
+\end{solution}
+\item
+设$A , B \in \mathbb { R } ^ { m \times n }$，在矩阵方程 $AX = B$ 有解的充要条件为 （\quad）。
+ \begin{solution}
+${\rm rank}(A)={\rm rank}(A\ B)$。
+\end{solution}
+\item
+设 $A$ 为正交矩阵, 且 $|A| = -1$，则 $A$ 必有特征值为（\quad）。 
+\begin{solution}
+$-1$。若全为$1$，则 $|A|=1$。
+\end{solution}
+\item
+ 向量组 $\boldsymbol{\alpha} _ { 1 } = ( 1,1 , k ) , \boldsymbol{\alpha} _ { 2 } = ( 1 , k , 1 ) , \boldsymbol{\alpha} _ { 3 } = ( k , 1,1 )$ 是线性无关的，则 $k$（\quad）。 
+ \begin{solution}
+\[|(\boldsymbol{\alpha}_1', \boldsymbol{\alpha}_2', \boldsymbol{\alpha}_3')|=\left|
+\begin{array}{ccc}
+ 1 & 1 & k \\
+ 1 & k & 1 \\
+ k & 1 & 1 \\
+\end{array}
+\right|=(k-1)^2(k+2).\]
+所以 $k\ne1$且$k\ne -2$。
+\end{solution}
+\end{enumerate}
+
+\item[二、]（15分）
+设
+\[
+A = \left( \begin{array} { c c c } { a } & { 1 } & { 2 } \\ { 1 } & { b } & { 1 } \\ { 1 } & { 3 b } & { 1 } \end{array} \right).
+\]
+$B$ 是三阶非零方阵，且 $AB = O$，求 $a, b$ 以及 $B$ 的秩。
+\begin{solution}
+对矩阵$A$作初等行变换得\[
+A\rightarrow \left( \begin{matrix}
+	1&		0&		1\\
+	0&		1&		2-a\\
+	0&		0&		-b\left( 2-a \right)\\
+\end{matrix} \right) 。
+\]
+所以 ${\rm rank}(A)\ge 2$。\\
+又 $B$ 是三阶非零方阵，所以  ${\rm rank}{B}\ge 1$，于是由 Sylvester 不等式得\[
+{\rm rank}(A) + {\rm rank}(B) \le 3.
+\]
+因此 ${\rm rank}(A)\le 2$，所以 ${\rm rank}(A) = 2$，即 $b=0$ 且 $a=2$，此时${\rm rank}(B) = 1$。
+\end{solution}
+\item[三、]（15分）
+设 $A$ 是 $n$ 阶正定矩阵，$B$ 为 $n$ 阶实方阵，证明：\\
+(1) 若 $B$ 正定，则 $AB$ 的特征值皆大于 $0$。\\
+(2) 若 $B$ 正定，且 $AB = BA$，则 $AB$ 正定。
+\begin{proof}
+(1) 因为 $A$，$B$都是 $n$ 阶正定矩阵，所以存在正定矩阵 $ S $，$ T $，使得\[
+S^{-1} (AB) S = S^{-1} S^2 T^2 S = S T^2 S = (TS)'(TS) =: C.
+\]
+因为 $C' = (TS)'(TS) = C$，所以 $C$ 是实对称矩阵。\\
+又对任意 $ n $ 维非零实向量 $\boldsymbol{x}$，由 $TS$ 可逆知 $TS\boldsymbol{x}\ne0$，故\[
+\boldsymbol{x}'C\boldsymbol{x} = \boldsymbol{x}' (TS)'(TS)\boldsymbol{x} = (TS\boldsymbol{x})'(TS\boldsymbol{x}) > 0.
+\]
+因此 $C$ 是正定矩阵，从而 $C$ 的特征值全大于零。因为 $AB$ 与 $C$ 相似，所以 $AB$ 的特征值全大于零。\\
+(2) 因为 $AB = AB$，所以\[
+(AB)'=B'A'=BA=AB.
+\]
+所以 $AB$ 是实对称矩阵。由 (1) 知 $AB$ 的特征值全大于零，故 $AB$ 是正定矩阵。
+\end{proof}
+\item[四、]
+$A$ 为 $n$ 阶方阵，如果 $A^2 = A$，其中 $E$ 是 $n$ 阶单位矩阵。
+
+\item[五、]
+设\[
+A = \left( \begin{array} { c c c } { 1 } & { 4 } & { 2 } \\ { 0 } & { - 3 } & { 4 } \\ { 0 } & { 4 } & { 3 } \end{array} \right).
+\]
+试求 $A^n$。
+\begin{solution}
+矩阵 $A$ 的特征多项式为\[
+|\lambda I-A|=\left(
+\begin{array}{ccc}
+ \lambda-1 & -4 & -2 \\
+ 0 & \lambda+3 & -4 \\
+ 0 & -4 & \lambda-3 \\
+\end{array}
+\right) = (\lambda+5) (\lambda-1) (\lambda-5).
+\]
+所以 $A$ 的特征值为 $-5$，$1$，$5$。\\
+解线性方程组$(-5I-A)x=0$，得一个基础解系：\[
+\boldsymbol{\xi}_1=(1, -2, 1)'.
+\]
+解线性方程组$(1I-A)x=0$，得一个基础解系：\[
+\boldsymbol{\xi}_1=(1, 0, 0)'.
+\]
+解线性方程组$(5I-A)x=0$，得一个基础解系：\[
+\boldsymbol{\xi}_1=\left(1, \frac12, 1\right)'.
+\]
+令\[
+P=\left( \begin{matrix}
+	1&		1&		1\\
+	-2&		0&		\frac{1}{2}\\
+	1&		0&		1\\
+\end{matrix} \right) ,
+\]
+则\[
+P^{-1}AP={\rm diag}\{-5, 1, 5\}.
+\]
+因此\begin{align*}
+A^n&=\left[ P\left( \begin{matrix}
+	-5&		0&		0\\
+	0&		1&		0\\
+	0&		0&		5\\
+\end{matrix} \right) P^{-1}\right]^n=P\left( \begin{matrix}
+	(-5)^n&		0&		0\\
+	0&		1&		0\\
+	0&		0&		5^n\\
+\end{matrix} \right) P^{-1}\\
+&=\left( \begin{matrix}
+	1&		1&		1\\
+	-2&		0&		\frac{1}{2}\\
+	1&		0&		1\\
+\end{matrix} \right)
+\left( \begin{matrix}
+	(-5)^n&		0&		0\\
+	0&		1&		0\\
+	0&		0&		5^n\\
+\end{matrix} \right)
+\left(
+\begin{array}{ccc}
+ 0 & -\frac{2}{5} & \frac{1}{5} \\
+ 1 & 0 & -1 \\
+ 0 & \frac{2}{5} & \frac{4}{5} \\
+\end{array}
+\right) \\
+&=\left(
+\begin{array}{ccc}
+ 1 & 2\cdot 5^{n-1}-2 (-1)^n 5^{n-1} & -1+4\cdot 5^{n-1}+(-1)^n 5^{n-1} \\
+ 0 & 5^{n-1}+4 (-1)^n 5^{n-1} & 2\cdot 5^{n-1}-2 (-1)^n 5^{n-1} \\
+ 0 & 2\cdot 5^{n-1}-2 (-1)^n 5^{n-1} & 4\cdot 5^{n-1}+(-1)^n 5^{n-1} \\
+\end{array}
+\right).
+\end{align*}
+\end{solution}
+\item[六、]
+设 $A$ 为 $n$ 阶实方阵，已知 $A$ 的特征值全为实数，且\[
+A A ^ { T } = A ^ { T } A.
+\]
+证明：$A$ 必为对称矩阵。
+\begin{proof}
+\begin{lemma}\label{shijuzhenzhengjiaoxiangsishangsanjiao}
+$n$ 级实矩阵 $A$ 正交相似于一个上三角矩阵的充分必要条件是：$A$ 的特征多项式在复数域中的根都是实数。
+\end{lemma}
+\begin{subproof}
+必要性。设 $n$ 级实矩阵 $A$ 正交相似于一个上三角矩阵 $B = (b_{ij})$，则 \[
+|x I - A| = |I - B| = (\lambda - b_1) (\lambda - b_2) \cdots (\lambda - b_m).\]
+这表明 $|A I - A|$ 的根 $b_{11}, b_{22}, \dots, b_{nn}$ 都是实数。
+
+充分性。对实矩阵的级数作数学归纳法。$n = 1$ 时，显然命题为真。假设对于 $n - 1$ 级实矩阵命题为真，现在来看 $n$ 级实矩阵 $A$。由于 $A$ 的特征多项式在复数域中的根都是实数，因此可以取 $A$ 的一个特征值 $\lambda_1$。设 $\boldsymbol{\eta}_1$ 是 $A$ 的属于 $\lambda_1$ 的一个特征向量，且 $|\lambda| = 1$。把 $\boldsymbol{\eta}_1$ 扩充成 $\mathbb{R}^n$ 的一个基，然后经过施密特正交化和单位化，得到 $\mathbb{R}^n$ 的一个标准正交基：
+$\boldsymbol{\eta}_{1}, \boldsymbol{\eta}_{2}, \dots, \boldsymbol{\eta}_{n}$。令 $T_1 = (\boldsymbol{\eta}_{1}, \boldsymbol{\eta}_{2}, \dots, \boldsymbol{\eta}_{n})$，则 $T_1$ 是正交矩阵。
+\[
+T_1^{-1} A T_1 = T_1^{-1}(A\boldsymbol{\eta}_{1}, A\boldsymbol{\eta}_{2}, \dots, A\boldsymbol{\eta}_{n}) = (T_1^{-1} \lambda_1 \boldsymbol{\eta}_{1}, T_1^{-1} A\boldsymbol{\eta}_{2}, \dots, T_1^{-1}A\boldsymbol{\eta}_{n}).
+\]
+由于 $T_1^{-1}T_1 = I$，因此 $T_1^{-1} \boldsymbol{\eta}_1 = \boldsymbol{\varepsilon_1}$。从而
+\[
+T_1^{-1}AT_1=\left( \begin{matrix}
+	\lambda _1&		\boldsymbol{\boldsymbol{\alpha} }\\
+	0&		B\\
+\end{matrix} \right) ,
+\]
+于是 $|\lambda I-A| = (\lambda - \lambda_1) |\lambda I - B|$。因此 $n - 1$ 级实矩阵 $B$ 的特征多项式在复数域中的根都是实数。从而对 $B$ 可用归纳假设：存在 $n - 1$ 级正交矩阵 $T_2$，使得 $T_2^{-1} B T_2$ 为上三角矩阵。
+
+令
+\[
+T = T_1 \left( \begin{matrix}
+	1&		\boldsymbol{\boldsymbol{\alpha} }\\
+	0&		T_2\\
+\end{matrix} \right) ,
+\]
+则 $T$ 是 $n$ 级正交矩阵，且
+\begin{align*}
+ T^{-1} A T 
+ &=\left( \begin{array}{cc}{1} & {\mathbf{0}} \\ 
+ {\mathbf{0}} & {T_{2}}\end{array}\right)^{-1} 
+ T_{1}^{-1} A T_{1} 
+ \left( \begin{array}{cc}{1} & {\mathbf{0}} \\ 
+ {\mathbf{0}} & {T_{2}}\end{array}\right)
+ =\left( \begin{array}{cc}{1} & {\mathbf{0}} \\ 
+ {\mathbf{0}} & {T_{2}^{-1}}\end{array}\right) 
+ \left( \begin{array}{cc}{\lambda_{1}} & {\boldsymbol{\boldsymbol{\alpha}}} \\ 
+ {\mathbf{0}} & {B}\end{array}\right) 
+ \left( \begin{array}{cc}{1} & {\mathbf{0}} \\ 
+ {\mathbf{0}} & {T_{2}}\end{array}\right) \\ 
+ &=\left( \begin{array}{cc}{\lambda_{1}} & {\boldsymbol{\boldsymbol{\alpha}} T_{2}} \\ 
+ {\mathbf{0}} & {T_{2}^{-1} B T_{2}}\end{array}\right) 
+\end{align*}
+因此 $T^{-1} A T$ 是上三角矩阵。
+
+据数学归纳法原理，对一切正整数 $n$，此命题为真。
+\end{subproof}
+由引理 \eqref{shijuzhenzhengjiaoxiangsishangsanjiao} 得，存在 $n$ 级正交矩阵 $T$，使得 $T^{-1} A T = B$，其中 $B = (b_{ij})$ 是上三角矩阵。从而 $T'A'(T^{-1})' = B'$，即 $T^{-1} A' T = B'$。由于 $AA' = A'A$，因此 $BB' = B' B$。于是\begin{equation}\label{bikbki}
+\sum_{k = 1}^n  b_{ik}^2 = \sum_{k = 1}^n b_{ki}^2, i = 1, 2, \dots ,n.
+\end{equation}
+当 $i = 1$ 时， \eqref{bikbki} 式成为\begin{equation*}\label{b1k2b11}
+\sum_{k = 1}^n b_{1k}^2 = b_{11}^2.
+\end{equation*}
+由此推出，$b_{12}^2 + b_{13}^2 + \cdots + b_{1n}^2 = 0$。从而 $b_{12} = b_{13} = \cdots = b_{1n} = 0$。
+
+当 $i = 2$ 时， \eqref{bikbki} 式成为
+\begin{equation*}
+\sum_{k = 1}^n b_{2k}^2 = b_{12}^2 + b_{22}^2 = b_{22}^2.
+\end{equation*}
+由此推出，$b_{23} = b_{24} = \cdots = b_{2n} = 0$。
+
+依次下去，可得\[
+b_{34} = \cdots = b_{3n} = 0, \dots , b_{n-1, n} = 0.
+\]
+因此 $B$ 是对角矩阵。由于 $A$ 正交相似于对角矩阵 $B$，因此 $A$ 是对称矩阵。
+\end{proof}
+
+\item[七、]
+设\[
+A = \left( \begin{array} { c c c } { a } & { 1 } & { 2 } \\ { 1 } & { b } & { 1 } \\ { 1 } & { 3 b } & { 1 } \end{array} \right).
+\]
+$B$ 是三阶非零方阵，且 $AB = O$，求 $a, b$ 以及 $B$ 的秩。
+\begin{solution}
+重复。
+\end{solution}
+\item[八、]（15 分）
+设$A、B$ 为 $n$ 元实对称矩阵，且 $B$ 正定，求证：存在一个实可逆阵 $P$ 使得 $P^TAP$ 和 $P^TBP$ 同时为对角阵。
+\begin{proof}
+由于 $B$ 是 $n$ 元正定矩阵。因此 $A \simeq I$。从而存在 $n$ 元实可逆矩阵 $P_1$，使得 $P_1^TBP_1 = I$。\\
+由于 $(P_1^T AP_1)^T = P_1^T A^T P_1 = P_1^T AP_1$，因此 $P_1^T AP_1$ 是 $n$ 元实对称矩阵。于是存在 $n$ 级正交矩阵 $T$，使得\[
+T ^ T \left( P _ { 1 } ^ T A P _ { 1 } \right) T = T ^ { - 1 } \left( P _ { 1 } ^ T A P _ { 1 } \right) T = \operatorname { diag } \left\{ \mu _ { 1 } , \mu _ { 2 } , \dots , \mu _ { n } \right\}.
+\]
+令$P=P_1 T$，则$P$是实可逆矩阵，且使得\begin{align*}
+P ^ T B P &= \left( P _ { 1 } T \right) ^ T B \left( P _ { 1 } T \right) = T ^ T \left( P _ { 1 } ^ T B P _ { 1 } \right) T = T ^ T I T = I,\\
+P ^ T A P &= T ^ T \left( P _ { 1 } ^ T A P _ { 1 } \right) T = \operatorname { diag } \left\{ \mu _ { 1 } , \mu _ { 2 } , \dots , \mu _ { n } \right\}.
+\end{align*}
+\end{proof}
+
+\end{enumerate}
+\endinput

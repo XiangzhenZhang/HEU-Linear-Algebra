@@ -1,0 +1,542 @@
+\section{2005}
+\begin{enumerate}[1~]
+\renewcommand{\labelenumi}{\textbf{\theenumi. }}
+\renewcommand{\Im}{\text{Im }}
+\renewcommand{\u}{\boldsymbol{u}}
+\item[一、]
+填空题 （每小题 4 分，共 20 分）
+\begin{enumerate}[1.~]
+\item
+若$\mathbb{P}$为同时包含$\mathbb{Q}$和$\sqrt[3]{2}$的最小数域，则$\mathbb{P}$作为$\mathbb{Q}$上的线性空间的维数是（\quad）。
+\begin{solution}
+\begin{theorem}
+设$\mathbb{K}/\mathbb{F}$是域扩张，$\boldsymbol{\alpha} \in \mathbb{K}$且$\boldsymbol{\alpha}$是$\mathbb{F}$上的代数元。如果$\boldsymbol{\alpha}$在$\mathbb{F}$上的极小多项式$m(x)$的次数为$n$，那么\[
+[\mathbb{F}(\boldsymbol{\alpha}):\mathbb{F}]=n,
+\]
+并且$1, \boldsymbol{\alpha}, \boldsymbol{\alpha}^2, \dots, \boldsymbol{\alpha}^{n-1}$是$\mathbb{F}(\boldsymbol{\alpha})/\mathbb{F}$的一个基。
+\end{theorem}
+\begin{proof}
+假如$1, \boldsymbol{\alpha}, \boldsymbol{\alpha}^2, \dots, \boldsymbol{\alpha}^{n-1}$在$\mathbb{F}$上线性相关，则有$\mathbb{F}$中不全为0的元素$b_0, b_1, b_2, \dots, b_{n-1}$，使得\[
+b_0+b_1\boldsymbol{\alpha}+b_2\boldsymbol{\alpha}^2+\cdots+b_{n-1}\boldsymbol{\alpha}^{n-1}=0.
+\]
+令$g(x)=b_0+b_1x+b_2x^2+\cdots+b_{n-1}x^{n-1}$，则$g(\boldsymbol{\alpha})=0$，且$g(x)\ne 0$。这与$m(x)$是$\boldsymbol{\alpha}$在$\mathbb{F}$上的极小多项式矛盾。因此$1, \boldsymbol{\alpha}, \boldsymbol{\alpha}^2, \dots, \boldsymbol{\alpha}^{n-1}$在$\mathbb{F}$上线性无关。\\
+又由于\[
+\mathbb{F}(\boldsymbol{\alpha})=\mathbb{F}[\boldsymbol{\alpha}]=\{c_0+c_1\boldsymbol{\alpha}+c_2\boldsymbol{\alpha}^2+\cdots+c_{n-1}\boldsymbol{\alpha}^{n-1}|c_i\in\mathbb{F}, i=0, 1, 2, \dots, n-1\},
+\]
+因此$1, \boldsymbol{\alpha}, \boldsymbol{\alpha}^2, \dots, \boldsymbol{\alpha}^{n-1}$是$\mathbb{F}(\boldsymbol{\alpha})$的一个基。从而\[
+[\mathbb{F}(\boldsymbol{\alpha}):\mathbb{F}]=n.
+\]
+\end{proof}
+因为$\mathbb{P}$为同时包含$\mathbb{Q}$和$\sqrt[3]{2}$的最小数域，所以$\mathbb{P}=\mathbb{Q}(\sqrt[3]{2})=\{a+b\sqrt[3]{2}|a, b\in\mathbb{Q}\}$。在定理中令$\mathbb{K}=\mathbb{Q}(\sqrt[3]{2})$，$\mathbb{F}=\mathbb{Q}$，$\boldsymbol{\alpha}=\sqrt[3]{2}$，则由$
+\sqrt[3]{2}\text{在$\mathbb{Q}$上的极小多项式为}x^3-2
+$
+得\[
+[\mathbb{Q}(\sqrt[3]{2}):\mathbb{Q}]=3.
+\]
+所以$\mathbb{P}$作为$\mathbb{Q}$上的线性空间的维数是3。（相关知识可看\cite{qiujin}）
+\end{solution}
+
+\item
+多项式$x ^ { 7 } + 2 x ^ { 6 } + 6 x ^ { 2 } + 2$在复数域内所有根之间的关系是（\quad）。
+\begin{solution}
+设\[
+f(x)=x ^ { 7 } + 2 x ^ { 6 } + 6 x ^ { 2 } + 2,
+\]
+则\[
+f^{\prime} (x)=7x^6+12x^5+12x.
+\]
+显然$f^{\prime}(x)\nmid f(x)$，所以$(f'(x), f(x))=1$，因此$f(x)$无重根，故多项式$x ^ { 7 } + 2 x ^ { 6 } + 6 x ^ { 2 } + 2$在复数域内的所有根互不相等。
+\end{solution}
+
+\item
+行列式 
+$$
+\left| \begin{array} { c c c c } { 1 + a } & { 1 } & { 1 } & { 1 } \\ { 1 } & { 1 + b } & { 1 } & { 1 } \\ { 1 } & { 1 } & { 1 + c } & { 1 } \\ { 1 } & { 1 } & { 1 } & { 1 + d } \end{array} \right|
+$$
+的值为（\quad）。
+\begin{solution}
+%拆。
+%\begin{align*}
+%\left| \begin{array} { c c c c } { 1 + a } & { 1 } & { 1 } & { 1 } \\ { 1 } & { 1 + b } & { 1 } & { 1 } \\ { 1 } & { 1 } & { 1 + c } & { 1 } \\ { 1 } & { 1 } & { 1 } & { 1 + d } \end{array} \right|
+%&=\left| \begin{array} { c c c c } { 1  } & { 1 } & { 1 } & { 1 } \\ { 1 } & { 1 + b } & { 1 } & { 1 } \\ { 1 } & { 1 } & { 1 + c } & { 1 } \\ { 1 } & { 1 } & { 1 } & { 1 + d } \end{array} \right|+\left| \begin{array} { c c c c } {  a } & { 1 } & { 1 } & { 1 } \\ { 1 } & { 1 + b } & { 1 } & { 1 } \\ { 1 } & { 1 } & { 1 + c } & { 1 } \\ { 1 } & { 1 } & { 1 } & { 1 + d } \end{array} \right|\\
+%&=\underset{\text{有2列全为1或有3列全为1或有4列全为}1}{\underbrace{0}}\\
+%&+\left( \left| \begin{matrix}
+%	1&		1&		1&		1\\
+%	1&		b&		1&		1\\
+%	1&		1&		c&		1\\
+%	1&		1&		1&		d\\
+%\end{matrix} \right|+\left| \begin{matrix}
+%	a&		1&		1&		1\\
+%	1&		1&		1&		1\\
+%	1&		1&		c&		1\\
+%	1&		1&		1&		d\\
+%\end{matrix} \right|+\left| \begin{matrix}
+%	a&		1&		1&		1\\
+%	1&		b&		1&		1\\
+%	1&		1&		1&		1\\
+%	1&		1&		1&		d\\
+%\end{matrix} \right|+\left| \begin{matrix}
+%	a&		1&		1&		1\\
+%	1&		b&		1&		1\\
+%	1&		1&		c&		1\\
+%	1&		1&		1&		1\\
+%\end{matrix} \right| \right) +\left| \begin{matrix}
+%	a&		1&		1&		1\\
+%	1&		b&		1&		1\\
+%	1&		1&		c&		1\\
+%	1&		1&		1&		d\\
+%\end{matrix} \right|\\
+%&=0+((b-1)(c-1)(d-1)-(a-1)(c-1)(d-1)+(a-1)(b-1)(d-1)-(a-1)(b-1)(c-1))+
+%\end{align*}
+若$a=0$，易得行列式值为$bcd$；\\
+若$b=0$，易得行列式值为$acd$；\\
+若$c=0$，易得行列式值为$abd$；\\
+若$d=0$，易得行列式值为$abc$；\\
+若$a, b, c, d$都不为0，则
+\begin{align*}
+&\left| \begin{array} { c c c c } { 1 + a } & { 1 } & { 1 } & { 1 } \\ { 1 } & { 1 + b } & { 1 } & { 1 } \\ { 1 } & { 1 } & { 1 + c } & { 1 } \\ { 1 } & { 1 } & { 1 } & { 1 + d } \end{array} \right|
+=\left| \begin{matrix}
+	1+a&		1&		1&		1\\
+	1&		1+b&		1&		1\\
+	1&		1&		1+c&		1\\
+	1&		1&		1&		1+d\\
+\end{matrix} \right|\xlongequal{\text{将第一行的}\left( -1 \right) \text{倍加到其余各行}}{}\\
+&\left| \begin{matrix}
+	1+a&		1&		1&		1\\
+	-a&		b&		0&		0\\
+	-a&		0&		c&		0\\
+	-a&		0&		0&		d\\
+\end{matrix} \right|\xlongequal[\text{将第二列的}\left( \frac{a}{b} \right) \text{倍加到第一列，将第三列的}\left( \frac{a}{c} \right) \text{倍加到第一列，将第四列的}\left( \frac{a}{d} \right) \text{倍加到第一列}]{}\\
+&\left| \begin{matrix}
+	1+a+\frac{a}{b}+\frac{a}{c}+\frac{a}{d}&		1&		1&		1\\
+	0&		b&		0&		0\\
+	0&		0&		c&		0\\
+	0&		0&		0&		d\\
+\end{matrix} \right|=abcd+abc+abd+acd+bcd.
+\end{align*}
+当$a=0$或$b=0$或$c=0$或$d=0$时，上式依然成立，因此行列式为$abcd+abc+abd+acd+bcd$。
+\end{solution}
+
+\item
+设$n$阶方阵$A$的秩为${r}$，且满足$A^2=A$，则$|2E-A|=$（\quad）。
+\begin{solution}
+因为$A$是幂等矩阵，${\rm rank}(A)=r$，所以存在$n$阶可逆矩阵$P$，使得\[
+PAP^{-1}=\left( \begin{matrix}
+	E_r&		\\
+	&		0\\
+\end{matrix} \right):=\Lambda.
+\]
+所以\[
+|2E-A|=|2E-\Lambda|=2^{n-r}.
+\]
+\end{solution}
+
+\item
+向量组$\boldsymbol{\alpha} _ { 1 } ,  \boldsymbol{\alpha} _ { 2 } ,  \boldsymbol{\alpha} _ { 3 } ,  \boldsymbol{\alpha} _ { 4 } \in \mathbb{R} ^ { 4 }$线性无关，则向量组$\boldsymbol{\alpha} _ { 1 } + \boldsymbol{\alpha} _ { 2 } ,  \boldsymbol{\alpha} _ { 2 } + \boldsymbol{\alpha} _ { 3 } ,  \boldsymbol{\alpha} _ { 3 } + \boldsymbol{\alpha} _ { 4 } ,  \boldsymbol{\alpha} _ { 4 } + \boldsymbol{\alpha} _ { 1 }$的
+线性相关性为（\quad）。
+\begin{solution}
+因为\[
+(\boldsymbol{\alpha} _ { 1 } + \boldsymbol{\alpha} _ { 2 } , \boldsymbol{\alpha} _ { 2 } + \boldsymbol{\alpha} _ { 3 } , \boldsymbol{\alpha} _ { 3 } + \boldsymbol{\alpha} _ { 4 } ,  \boldsymbol{\alpha} _ { 4 } + \boldsymbol{\alpha} _ { 1 })=(\boldsymbol{\alpha} _ { 1 } , \boldsymbol{\alpha} _ { 2 } , \boldsymbol{\alpha} _ { 3 } , \boldsymbol{\alpha} _ { 4 })\left( \begin{matrix}
+	1&		&		&		1\\
+	1&		1&		&		\\
+	&		1&		1&		\\
+	&		&		1&		1\\
+\end{matrix} \right) ,
+\]
+\[
+\left| \begin{matrix}
+	1&		&		&		1\\
+	1&		1&		&		\\
+	&		1&		1&		\\
+	&		&		1&		1\\
+\end{matrix} \right|=0.
+\]
+所以，向量组$\boldsymbol{\alpha} _ { 1 } + \boldsymbol{\alpha} _ { 2 } ,  \boldsymbol{\alpha} _ { 2 } + \boldsymbol{\alpha} _ { 3 } ,  \boldsymbol{\alpha} _ { 3 } + \boldsymbol{\alpha} _ { 4 } ,  \boldsymbol{\alpha} _ { 4 } + \boldsymbol{\alpha} _ { 1 }$线性相关。
+\end{solution}
+
+\item
+设$A$、$B$为$m\times n$矩阵，则两个齐次线性方程组$AX =0$和$BX=0$同解的充分必要条件为$ r(A)=r(B)=$（\quad）。
+\begin{solution}
+显然，\[
+r(A)=r(B)=r\left(\left[ \begin{array}{c}
+	A\\
+	B\\
+\end{array} \right] \right).
+\]
+\end{solution}
+
+\item
+设$\mathscr{A}$为$3$维线性空间$V$中的线性变换，则$\dim \mathscr{A}(V)$与$\dim\Ker\mathscr{A}$的关系是（\quad）。
+\begin{solution}
+因为$V$是有限维的线性空间，所以$\mathscr{A}(V)$和$\Ker\mathscr{A}$都是有限维的。由于\[
+V/\Ker\mathscr{A}\cong\mathscr{A}(V).
+\]
+所以$\mathscr{A}(V)$是有限维的，且\[
+\dim V-\dim\Ker\mathscr{A}=\dim\mathscr{A}V.
+\]
+因此，$\dim\mathscr{A}(V)+\dim\Ker\mathscr{A}=3$。
+\end{solution}
+
+\item
+设$A$为$n$阶方阵，则$A$与$A^T$的关系是（\quad）。
+\begin{solution}
+\begin{lemma}
+设$J_n(a)$是对角元素为$a$的$n$级Jordan块，则$J_n(a)\sim J_n(a)'$。
+\end{lemma}
+\begin{subproof}
+由于\[
+\left( \begin{array} { c c c c c } { 0 } & { 0 } & { \cdots } & { 0 } & { 1 } \\ { 0 } & { 0 } & { \cdots } & { 1 } & { 0 } \\ { \vdots } & { \vdots } & { } & { \vdots } & { \vdots } \\ { 0 } & { 1 } & { \cdots } & { 0 } & { 0 } \\ { 1 } & { 0 } & { \cdots } & { 0 } & { 0 } \end{array} \right) \left( \begin{array} { c } { \boldsymbol{\gamma} _ { 1 } } \\ { \boldsymbol{\gamma} _ { 2 } } \\ { \vdots } \\ { \boldsymbol{\gamma} _ { n } } \end{array} \right) = \left( \begin{array} { c } { \boldsymbol{\gamma} _ { n } } \\ { \boldsymbol{\gamma} _ { n - 1 } } \\ { \vdots } \\ { \boldsymbol{\gamma} _ { 2 } } \\ { \boldsymbol{\gamma} _ { 1 } } \end{array} \right),
+\]
+\[
+\left( \boldsymbol { \boldsymbol{\alpha} } _ { 1 } , \boldsymbol { \boldsymbol{\alpha} } _ { 2 } , \dots , \boldsymbol { \boldsymbol{\alpha} } _ { n } \right) \left( \begin{array} { c c c c c } { 0 } & { 0 } & { \cdots } & { 0 } & { 1 } \\ { 0 } & { 0 } & { \cdots } & { 1 } & { 0 } \\ { \vdots } & { \vdots } & { } & { \vdots } & { \vdots } \\ { 0 } & { 1 } & { \cdots } & { 0 } & { 0 } \\ { 1 } & { 0 } & { \cdots } & { 0 } & { 0 } \end{array} \right) = \left( \boldsymbol { \boldsymbol{\alpha} } _ { n } , \boldsymbol { \boldsymbol{\alpha} } _ { n - 1 } , \dots , \boldsymbol { \boldsymbol{\alpha} } _ { 2 } , \boldsymbol { \boldsymbol{\alpha} } _ { 1 } \right),
+\]
+因此\[
+\left( \begin{array} { c c c c c } { 0 } & { 0 } & { \cdots } & { 0 } & { 1 } \\ { 0 } & { 0 } & { \cdots } & { 1 } & { 0 } \\ { \vdots } & { \vdots } & { } & { \vdots } & { \vdots } \\ { 0 } & { 1 } & { \cdots } & { 0 } & { 0 } \\ { 1 } & { 0 } & { \cdots } & { 0 } & { 0 } \end{array} \right) \left( \begin{array} { c c c c c } { 0 } & { 0 } & { \cdots } & { 0 } & { 1 } \\ { 0 } & { 0 } & { \cdots } & { 1 } & { 0 } \\ { \vdots } & { \vdots } & { } & { \vdots } & { \vdots } \\ { 0 } & { 1 } & { \cdots } & { 0 } & { 0 } \\ { 1 } & { 0 } & { \cdots } & { 0 } & { 0 } \end{array} \right) = \left( \begin{array} { c c c c c } { 1 } & { 0 } & { \cdots } & { 0 } & { 0 } \\ { 0 } & { 1 } & { \cdots } & { 0 } & { 0 } \\ { \vdots } & { \vdots } & { } & { \vdots } & { \vdots } \\ { 0 } & { 0 } & { \cdots } & { 1 } & { 0 } \\ { 0 } & { 0 } & { \cdots } & { 0 } & { 1 } \end{array} \right) = I
+\]
+\[
+\left( \begin{array} { c c c c c } { 0 } & { 0 } & { \cdots } & { 0 } & { 1 } \\ { 0 } & { 0 } & { \cdots } & { 1 } & { 0 } \\ { \vdots } & { \vdots } & { } & { \vdots } & { \vdots } \\ { 0 } & { 1 } & { \cdots } & { 0 } & { 0 } \\ { 1 } & { 0 } & { \cdots } & { 0 } & { 0 } \end{array} \right)^{-1}
+\left( \begin{array} { c c c c c c } { a } & { 1 } &0& { \cdots } & { 0 } & { 0 } \\ { 0 } & { a } &1& { \cdots } & { 0 } & { 0 } \\ { \vdots } & { \vdots } &{ \vdots } & { } & { \vdots } & { \vdots } \\ { 0 } & { 0 } &0& { \cdots } & { a } & { 1 } \\ { 0 } & { 0 } &0& { \cdots } & { 0 } & { a } \end{array} \right)
+= \left( \begin{array} { c c c c c } { 0 } & { 0 } & { \cdots } & { 0 } & { 1 } \\ { 0 } & { 0 } & { \cdots } & { 1 } & { 0 } \\ { \vdots } & { \vdots } & { } & { \vdots } & { \vdots } \\ { 0 } & { 1 } & { \cdots } & { 0 } & { 0 } \\ { 1 } & { 0 } & { \cdots } & { 0 } & { 0 } \end{array} \right) 
+\]
+\[
+= \left( \begin{array} { c c c c c } { 0 } & { 0 } & { \cdots } & { 0 } & { 1 } \\ { 0 } & { 0 } & { \cdots } & { 1 } & { 0 } \\ { \vdots } & { \vdots } & { } & { \vdots } & { \vdots } \\ { 0 } & { 1 } & { \cdots } & { 0 } & { 0 } \\ { 1 } & { 0 } & { \cdots } & { 0 } & { 0 } \end{array} \right) \left( \begin{array} { c c c c c c } { 0 } & { 0 } & { \cdots } & { 0 } & { 1 } & { a } \\ { 0 } & { 0 } & { \cdots } & { 1 } & { a } & { 0 } \\ { \vdots } & { \vdots } & { } & { \vdots } & { \vdots } \\ { 1 } & { a } & { \cdots } & { 0 } & { 0 } & { 0 } \\ { a } & { 0 } & { \cdots } & { 0 } & { 0 } & { 0 } \end{array} \right) = \left( \begin{array} { c c c c c c } { a } & { 0 } & { \cdots } & { 0 } & { 0 } & { 0 } \\ { 1 } & { a } & { \cdots } & { 0 } & { 0 } & { 0 } \\ { \vdots } & { \vdots } & { } & { \vdots } & { \vdots } & { \vdots } \\ { 0 } & { 0 } & { \cdots } & { 1 } & { a } & { 0 } \\ { 0 } & { 0 } & { \cdots } & { 0 } & { 1 } & { a } \end{array} \right).
+\]
+从而$J_n(a)\sim J_n(a)'$。
+\end{subproof}
+\begin{lemma}
+任一 $n$ 级复矩阵 $A$ 与 $A'$ 相似。
+\end{lemma}
+\begin{subproof}
+由于$A$是复数域上的矩阵，因此$A$有Jordan 标准形\[
+J = 
+\operatorname { diag } \left\{ J _ { r _ { 1 } } \left( 
+\lambda _ { 1 } \right) , J _ { r _ { 2 } } \left( \lambda _ { 
+2 } \right) , \cdots , J _ { r _ { m } } \left( \lambda _ { m 
+} \right) \right\},
+\]
+其中$\lambda _ { 1 } , \lambda _ { 2 } , 
+\dots , \lambda _ { m }$可能有相同的，$r _ { 1 } + r _ { 2 
+} + \dots + r _ { m } = n $。据引理1得，$J _ { r _ { i } } 
+\left( \lambda _ { i } \right) \sim J _ { r _ { i } } \left( 
+\lambda _ { i } \right) ^ { \prime }$，且可逆矩阵$P _ { i } 
+= \left\{ \boldsymbol{\varepsilon} _ { r _ { i } } , \boldsymbol{\varepsilon} _ { r _ { i 
+} } - 1 , \dots , \boldsymbol{\varepsilon} _ { 2 } , \boldsymbol{\varepsilon} _ { 1 } 
+\right\}$使得$P _ { i } ^ { - 1 } J _ { r _ { i } } \left( 
+\lambda _ { i } \right) P _ { i } = J _ { r _ { i } } \left( 
+\lambda _ { i } \right) ^ { \prime }$。令$P = 
+\operatorname { diag } \left\{ P _ { 1 } , P _ { 2 } , \dots 
+, P _ { m } \right\}$，则$P ^ { - 1 } J P = J ^ { \prime }
+$。从而$J \sim J ^ { \prime }$。由于$A\sim J$，因此
+$A'\sim J'$。从而$A\sim A'$。
+\end{subproof}
+\begin{lemma}
+数域$\mathbb{K}$上$n$级矩阵$A$与$B$相似当且仅当把它们看成复矩阵后相似。
+\end{lemma}
+\begin{subproof}
+设数域$\mathbb{K}$上$n$级矩阵$A$的不变因子为$d _ { 1 } ( \lambda ) , d _ { 2 } ( \lambda ) , \dots , d _ { n } ( \lambda )$。把$A$看成复矩阵后，不变因子仍然是$d _ { 1 } ( \lambda ) , d _ { 2 } ( \lambda ) , \dots , d _ { n } ( \lambda )$。因此
+\begin{align*}
+&\text{数域$\mathbb{K}$上的$n$级矩阵$A$与$B$相似}\\
+\Longleftrightarrow &\text{$A$与$B$有相同的不变因子}\\
+\Longleftrightarrow &\text{把$A$与$B$看成复矩阵后相似。}
+\end{align*}
+\end{subproof}
+由引理知，$A$与$A^T$相似。
+\end{solution}
+
+\item
+设$A$为$n$阶实反对称阵，$\boldsymbol{x}$是非零的$n$维列向量，则$\boldsymbol{x}^TA\boldsymbol{x}$为（\quad）。
+\begin{solution}
+因为\[
+\boldsymbol{x}^TA\boldsymbol{x}=(\boldsymbol{x}^TA\boldsymbol{x})^T=-\boldsymbol{x}^TA\boldsymbol{x}.
+\]
+所以$\boldsymbol{x}^TA\boldsymbol{x}=0$。
+\end{solution}
+
+\item
+$A$为$n$阶是正交阵，$\lambda$为其特征值，则$\left| \lambda ^ { - 1 } E - A \right| =$（\quad）。
+\begin{solution}
+\begin{align*}
+|\lambda^{-1}E-A|&=|\lambda^{-1}AA^T-A|=\frac{1}{\lambda^n}|AA^T-\lambda A|=\frac{1}{\lambda^n}|A||A^T-\lambda E|\\
+&=\frac{(-1)^n}{\lambda^n}|\lambda E-A^T|=0.
+\end{align*}
+\end{solution}
+\end{enumerate}
+
+\item[二、]（15分）
+在$\mathbb{R}^3$中，线性变换$\mathscr{A}$定义为
+$$
+\left\{ \begin{array} { l } { A \boldsymbol{\beta} _ { 1 } = ( 1,0,0 ) } \\ { A \boldsymbol{\beta} _ { 2 } = ( 3,3,2 ) } \\ { A \boldsymbol{\beta} _ { 3 } = ( 3,3,1 ) } \end{array} \right.,
+$$
+其中 
+$$
+\left\{ \begin{array} { l } { \boldsymbol{\beta} _ { 1 } = ( 1,0,0 ) } \\ { \boldsymbol{\beta} _ { 2 } = ( 1,1,0 ) } \\ { \boldsymbol{\beta} _ { 3 } = ( 1,1,1 ) } \end{array} \right..
+$$
+
+(1) 求 $\mathscr{A}$ 在基 $\boldsymbol{\beta} _ { 1 } ,  \boldsymbol{\beta} _ { 2 } ,  \boldsymbol{\beta} _ { 3 }$ 下的矩阵 $B$；
+
+(2) 求 $\mathscr{A}$ 的特征值与特征向量。
+
+\begin{solution}
+(1) 因为\[
+\mathscr{A}\left( \begin{array}{c}
+	\boldsymbol{\beta} _1\\
+	\boldsymbol{\beta} _2\\
+	\boldsymbol{\beta} _3\\
+\end{array} \right) =\left( \begin{array}{c}
+	\mathscr{A}\boldsymbol{\beta} _1\\
+	\mathscr{A}\boldsymbol{\beta} _2\\
+	\mathscr{A}\boldsymbol{\beta} _3\\
+\end{array} \right) =B\left( \begin{array}{c}
+	\boldsymbol{\beta} _1\\
+	\boldsymbol{\beta} _2\\
+	\boldsymbol{\beta} _3\\
+\end{array} \right) .
+\]
+所以\[
+B=\left( \begin{array}{c}
+	\mathscr{A}\boldsymbol{\beta} _1\\
+	\mathscr{A}\boldsymbol{\beta} _2\\
+	\mathscr{A}\boldsymbol{\beta} _3\\
+\end{array} \right) ^{-1}\left( \begin{array}{c}
+	\boldsymbol{\beta} _1\\
+	\boldsymbol{\beta} _2\\
+	\boldsymbol{\beta} _3\\
+\end{array} \right) =\left( \begin{matrix}
+	1&		0&		0\\
+	3&		3&		2\\
+	3&		3&		1\\
+\end{matrix} \right) \left( \begin{matrix}
+	1&		0&		0\\
+	1&		1&		0\\
+	1&		1&		1\\
+\end{matrix} \right)^{-1} =\left(
+\begin{array}{ccc}
+ 1 & 0 & 0 \\
+ 0 & 1 & 2 \\
+ 0 & 2 & 1 \\
+\end{array}
+\right).
+\]
+(2) $B$的特征多项式为\[
+f(\lambda)=|\lambda I-B|=(x+1)(x-1)(x-3).
+\]
+所以$B$的特征值为$-1$，$1$，3。\\
+解线性方程组$(-I-A)x=0$，得一个基础解系：\[
+\boldsymbol{\xi}_1=(0, -1, 1)'.\]
+解线性方程组$(\frac13I-A)x=0$，得一个基础解系：\[
+\boldsymbol{\xi}_2=(1, 0, 0)'.\]
+解线性方程组$(-I-A)x=0$，得一个基础解系：\[
+\boldsymbol{\xi}_3=(0, 1, 1)'.\]
+因此，$\mathscr{A}$的特征值为$-1$，$1$，3。$\mathscr{A}$的属于特征值$-1$的特征向量为 $k(0, -1, 1)', k\in\mathbb{R}, k\ne 0$，$\mathscr{A}$的属于特征值 $1$ 的特征向量为$l(1, 0, 0)', l\in\mathbb{R}, l\ne 0$，$\mathscr{A}$ 的属于特征值 $3$ 的特征向量为 $m(0, 1, 1)', m\in\mathbb{R}, m\ne 0$。
+\end{solution}
+
+\item[三、]（15分）
+设 $\mathscr{A}$ 为数域 $\mathbb{K}$ 上的 2 维线性空间$V$上的非零的幂零线性变换，求证在 $V$ 的某个基下 $\mathscr{A}$ 的矩阵为 $\left( \begin{smallmatrix} {0} & { 0 } \\ { 1 } & { 0 } \end{smallmatrix} \right)$。
+\begin{proof}
+任取 $\boldsymbol{\alpha} \in V$，先证 $\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}$ 是线性无关的。
+
+设\[
+k_1\boldsymbol{\alpha}+k_2\mathscr{A}\boldsymbol{\alpha}=0, k_1, k_2\in \mathbb{K}.
+\]
+因为 $\mathscr{A}$ 是幂零线性变换，所以 $\mathscr{A}^2=0$，所以\[
+k_1\mathscr{A}\boldsymbol{\alpha}=0.
+\]
+所以$k_1=0$，从而$k_2=0$，所以$\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}$是线性 无关的。于是$\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}$是$V$的一个基。\\
+因为\[
+\mathscr{A}(\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha})=(\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha})\left( \begin{array} { l l } { 0 } & { 0 } \\ { 1 } & { 0 } \end{array} \right).
+\]
+所以$\mathscr{A}$在$\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}$下的矩阵为$\left( \begin{smallmatrix} { 0 } & { 0 } \\ { 1 } & { 0 } \end{smallmatrix} \right)$。
+\end{proof}
+
+\item[四、]（15分）
+用二次型的理论求三元实函数$f ( x , y , z ) = 2 x ^ { 2 } + 2 x y + 2 x z + 2 y ^ { 2 } + 2 y z + 2 z ^ { 2 }$在单位球面上的最大值和最小值，并求最大值点和最小值点。
+\begin{solution}
+先用正交变换化二次型为标准型。\\
+二次型的矩阵为\[
+A=\left( \begin{matrix}
+	2&		1&		1\\
+	1&		2&		1\\
+	1&		1&		2\\
+\end{matrix} \right).
+\]
+矩阵$A$的特征多项式为\[
+f(\lambda)=|\lambda E-A|=(x-1)^2(x-4).
+\]
+所以矩阵$A$的特征值为 $1$（$2$ 重），$4$（$1$ 重）。\\
+解线性方程组$(E-A)X=0$，得一个基础解系\[
+\boldsymbol{\xi}_1 = (1, 0, -1)', \boldsymbol{\xi}_2 = (1, -1, 0)'.
+\]
+解线性方程组$(4E-A)X=0$，得一个基础解系\[
+\boldsymbol{\xi}_3 = (1, 1, 1)'.
+\]
+用 Schmidt 正交化法把$\boldsymbol{\xi}_1, \boldsymbol{\xi}_2$化为正交向量：\begin{align*}
+\boldsymbol{\xi}_1'&=(1, 0, -1)',\\
+\boldsymbol{\xi}_2'&=\boldsymbol{\xi}_2-\frac{(\boldsymbol{\xi}_2, \boldsymbol{\xi}_1')}{(\boldsymbol{\xi}_1', \boldsymbol{\xi}_1')}\boldsymbol{\xi}_1'=\left(\frac12, -\frac32, \frac12\right)'.
+\end{align*}
+把$\boldsymbol{\xi}_1', \boldsymbol{\xi}_2', \boldsymbol{\xi}_3$单位化得\begin{align*}
+\boldsymbol{\eta}_1&=\frac{\boldsymbol{\xi}_1'}{|\boldsymbol{\xi}_1'|}=\left(\frac{\sqrt{2}}{2}, 0, -\frac{\sqrt{2}}{2}\right)',\\
+\boldsymbol{\eta}_2&=\frac{\boldsymbol{\xi}_2'}{|\boldsymbol{\xi}_2'|}=\left(\frac{\sqrt{11}}{11}, \frac{-3\sqrt{11}}{11}, \frac{\sqrt{11}}{11}\right)',\\
+\boldsymbol{\eta}_3&=\frac{\boldsymbol{\xi}_3}{|\boldsymbol{\xi}_3|}=\left(\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}\right)'.
+\end{align*}
+令$T=(\boldsymbol{\eta}_1, \boldsymbol{\eta}_2, \boldsymbol{\eta}_3)$，则$T$是正交矩阵，且\[
+TAT'={\rm diag}\{1, 1, 4\}.
+\]
+因此，作正交变换\[
+\left\{ \begin{array}{l}
+	x=\frac{\sqrt{2}}{2}x'+\frac{\sqrt{11}}{11}y'+\frac{\sqrt{3}}{3}z',\\
+	y=-\frac{3\sqrt{11}}{11}y'+\frac{\sqrt{3}}{3}z',\\
+	z=-\frac{\sqrt{2}}{2}x'+\frac{\sqrt{11}}{11}y'+\frac{\sqrt{3}}{3}z'.\\
+\end{array} \right. 
+\]
+后，原二次型$f(x, y, z)$在新的坐标系下的表达式为\[
+f(x, y, z)={x^{\prime}}^2+{y^{\prime}}^2+4{z^{\prime}}^2.
+\]
+而单位球面经过正交变换后仍是单位球面，因此只需求${x^{\prime}}^2+{y^{\prime}}^2+4{z^{\prime}}^2$在单位球面上的最大值。\\
+因为
+\[
+{x^{\prime}}^2+{y^{\prime}}^2+{z^{\prime}}^2=1,
+\]
+所以
+\[
+{x^{\prime}}^2+{y^{\prime}}^2+4{z^{\prime}}^2=1+3{z^{\prime}}^2.
+\]
+因此$f(x, y, z)$的最大值为$4$，此时$(x', y', z')=(0, 0, 1)\text{或}(0, 0, -1)$，于是$(x, y, z)'=T(x', y', z')'=\left(\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}\right)'\text{或}\left(\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}, -\frac{\sqrt{3}}{3}\right)'$；最小值为$1$，此时$(x', y', z')=(x', y', 0), x'^2+y'^2=1$，于是$(x, y, z)'=T(x', y', z')'=\left( \frac{\sqrt{2}}{2}x'+\frac{\sqrt{11}}{11}y',-\frac{3\sqrt{11}}{11}y',-\frac{\sqrt{2}}{2}x'+\frac{\sqrt{11}}{11}y' \right)' $，其中$x', y'$可取满足$x'^2+y'^2=1$的一切实数。\\
+综上所述，$f(x, y, z)$在单位球面上的最大值为$4$，最小值为$1$，最大值点为\[
+(x, y, z)=\left(\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}\right)'\text{或}\left(\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}, -\frac{\sqrt{3}}{3}\right)',
+\]
+最小值点为\[
+(x, y, z)=\left( \frac{\sqrt{2}}{2}x'+\frac{\sqrt{11}}{11}y',-\frac{3\sqrt{11}}{11}y',-\frac{\sqrt{2}}{2}x'+\frac{\sqrt{11}}{11}y' \right),
+\]
+其中$x', y'$可取满足$x'^2+y'^2=1$的一切实数。
+\end{solution}
+
+\item[五、]（15分）
+设$A$、$B$为$n$维向量空间$V$上的线性变换，且$AB=A+B$。\\
+(1) 求证$A-E$与$B-E$都可逆；\\
+(2) 求证$AB=BA$。
+\begin{proof}
+(1) 因为$AB=A+B$，所以$(A-E)(B-E)=E$，所以$A-E$与$B-E$都可逆。\\
+(2) 因为$(A-E)(B-E)=E$，所以$(B-E)(A-E)=E$，所以$BA=B+A$，所以$AB=BA$。
+\end{proof}
+
+\item[六、]（15分）
+设$A$为$n$维线性空间$V$上的线性变换，求证$V =\mathscr{A}(V)\oplus \Ker \mathscr{A}$的充分必要条件是$\operatorname { Ker } \mathscr{A} ^ { 2 } = \mathrm { Ker } \mathscr{A}$。
+\begin{proof}
+必要性。显然$\Ker \mathscr{A} \subset \Ker \mathscr{A}^2$，下证$\Ker \mathscr{A}^2 \subset \Ker \mathscr{A}$。\\
+任取一个向量$\boldsymbol{\alpha}\in\Ker\mathscr{A}^2$，有\[
+\mathscr{A}^2\boldsymbol{\alpha}=0.
+\]
+从而$\mathscr{A}\boldsymbol{\alpha}\in\Ker\mathscr{A}$。\\
+由于$V=\mathscr{A}(V)\oplus \Ker \mathscr{A}$，所以\[
+\mathscr{A}(V)\cap \Ker \mathscr{A}=0.
+\]
+因为$\mathscr{A}\boldsymbol{\alpha}\in\mathscr{A}V$，所以\[
+\mathscr{A}\boldsymbol{\alpha}\in\mathscr{A}V \cap \Ker\mathscr{A}=0.
+\]
+从而$\boldsymbol{\alpha}\in\Ker\mathscr{A}$。于是$\operatorname { Ker } \mathscr{A} ^ { 2 } = \mathrm { Ker } \mathscr{A}$。\\
+充分性。由于\[
+V / \mathrm { Ker } \mathscr { A } \cong  \mathscr { A }V.
+\]
+所以\[
+\dim V=\dim \mathscr{A}V+\dim\Ker\mathscr{A}.
+\]
+任取一个向量$\boldsymbol{\alpha}\in\mathscr{A}V\cap\Ker\mathscr{A}$，有\[
+\mathscr{A}\boldsymbol{\alpha}=0, \text{存在}\boldsymbol{\beta}\in V, \text{使得} \boldsymbol{\alpha}=\mathscr{A}\boldsymbol{\beta}.
+\]
+因此\[
+\mathscr{A}^2\boldsymbol{\beta}=\mathscr{A}\boldsymbol{\alpha}=0.
+\]
+因为$\Ker\mathscr{A}^2=\Ker\mathscr{A}$，所以\[
+\boldsymbol{\alpha}=\mathscr{A}\boldsymbol{\beta}=0.
+\]
+从而$\mathscr{A}V\cap\Ker\mathscr{A}=0$，于是$V=\mathscr{A}V\oplus\Ker\mathscr{A}$。
+\end{proof}
+
+\item[七、]（15分）
+设$A$为$n$阶实对称阵，$\lambda _ { 1 } , \dots , \lambda _ {  { m } }$为$A$的一切不同特征值；若非零$n$维实列向量$\boldsymbol{\beta}$与特征值$\lambda _ { 1 } , \dots , \lambda _ {  { m } - 1 }$的特征向量都正交，求证$\boldsymbol{\beta}$为对应特征值$\lambda_m$的特征向量。
+\begin{proof}
+因为$A$是实对称矩阵，所以$A$可以对角化。于是
+\[
+V=V_{\lambda_{1}}\oplus V_{\lambda_{2}}\oplus\cdots\oplus V_{\lambda_{m}}.
+\]
+设\[
+\boldsymbol{\beta}=\boldsymbol{\beta}_1+\boldsymbol{\beta}_2+\cdots+\boldsymbol{\beta}_m, \boldsymbol{\beta}_i\in V_{\lambda_{i}}, i=1, 2, \dots, m.
+\]
+则\[
+(\boldsymbol{\beta}, \boldsymbol{\beta}_i)=0, i=1, 2, \dots, m-1.
+\]
+又$V_{\lambda_{i}}\perp V_{\lambda_{j}}, i, j=1, 2, \dots, m, i\ne j$，所以\[
+\boldsymbol{\beta}=\boldsymbol{\beta}_m.
+\]
+因此$\boldsymbol{\beta}$为对应特征值$\lambda_m$的特征向量。
+\end{proof}
+
+\item[八、]（15 分）
+设$A$为$n$阶实对称阵，且对任何非零$n$维实列向量$x$有$x^TAx\ne 0$，求证$A$正定或负定。
+\begin{proof}
+反证，假设$A$既不是正定矩阵也不是负定矩阵。因为$A$为$n$阶实对称阵，所以存在可逆矩阵$P$，使得\[
+PAP^{\prime}=\left( \begin{matrix}
+	E_s&		&		\\
+	&		-E_t&		\\
+	&		&		0\\
+\end{matrix} \right) .
+\]
+取$\x=\left( 1,\underset{s-1\text{个}}{\underbrace{0,\dots ,0}},1,0\dotsc ,0 \right) $，$\y=P\x$，则$\y\ne0$，且$\y^T A \y=0$，矛盾。
+\end{proof}
+
+\item[九、]（15 分）
+设$V$为复数域上的$n$维线性空间，$\mathscr{A}$为$V$上的线性变换，$\lambda$为一个复数；令$V _ { \lambda } = \{ v \in V | ( A - \lambda E ) ^ { k } v = 0 ( \exists k \geq 1 ) \}$。\\
+(1) 求证$\lambda$为$A$的特征值的充分必要条件为$V _ { \lambda } \ne \{ 0 \}$；\\
+(2) 求证$V_{\lambda}$为$\mathscr{A}$的不变子空间；\\
+(3) 求证当$V _ { \lambda } \ne \{ 0 \}$时，$\mathscr{A}$在$V_{\lambda}$上没有与$\lambda$不同的特征值。
+\begin{proof}
+(1) 必要性。设$\lambda$为$A$的特征值，$\boldsymbol{\alpha}$为$A$的属于$\lambda$的特征向量，则\[
+(A-\lambda E)\boldsymbol{\alpha}=0.
+\]
+因此，$V_{\lambda}\ne \{0\}$。\\
+充分性。设$V _ { \lambda } \ne \{ 0 \}$，则存在$k\ge 1$，使得\[
+\{ v \in V | ( A - \lambda E ) ^ { k } v = 0 ( \exists k \ge 1 ) \}\ne 0.
+\]
+因此存在非零向量$\boldsymbol{\alpha}\in V$，使得\[
+(A-\lambda E)(A-\lambda E)^{k-1} \boldsymbol{\alpha}=0.
+\]
+显然$(A-\lambda E)^{k-1} \boldsymbol{\alpha}\ne 0$，所以$\lambda$为$A$的特征值。
+
+(2) 显然 $V_{\lambda}$ 是 $\mathscr{A}$ 的子空间，下证它是 $\mathscr{A}$ 的不变子空间。为此，先证对任意的$ k\in\mathbb{N}^*$， $\mathscr{A}$与$(\mathscr{A}-\lambda E)^k$ 可交换。
+
+$k=1$时，显然。
+
+假设$\mathscr{A}(\mathscr{A}-\lambda E)^{k-1}=(\mathscr{A}-\lambda E)^{k-1}\mathscr{A}$，则\[
+\mathscr{A}(\mathscr{A}-\lambda E)^{k}=\mathscr{A}(\mathscr{A}-\lambda E)^{k-1}(\mathscr{A}-\lambda E)=(\mathscr{A}-\lambda E)^{k-1}\mathscr{A}(\mathscr{A}-\lambda E)=(\mathscr{A}-\lambda E)^{k}\mathscr{A}.
+\]
+由数学归纳法原理得，$\mathscr{A}(\mathscr{A}-\lambda E)^{k}=(\mathscr{A}-\lambda E)^{k}\mathscr{A}$对任意$k\in\mathbb{N}^*$都成立。
+
+任取一个向量$\boldsymbol{\alpha}\in V_{\lambda}$，有\[
+(\mathscr{A}-\lambda E)^{k}(\mathscr{A}\boldsymbol{\alpha})=\mathscr{A}(\mathscr{A}-\lambda E)^{k}\boldsymbol{\alpha}=0.
+\]
+因此$\mathscr{A}\boldsymbol{\alpha}\in V_{\lambda}$，所以$V_{\lambda}$为$\mathscr{A}$的不变子空间。
+
+(3) 先证明$\lambda$是$\mathscr{A}$在$V_{\lambda}$上的特征值。这只需证明$\Ker(\mathscr{A}-\lambda E)\subset V_{\lambda}$。注意到对任意的$k\ge 1$，\[
+\Ker(\mathscr{A}-\lambda E)\subset \Ker(\mathscr{A}-\lambda E)^k.
+\]
+因此，$\Ker(\mathscr{A}-\lambda E)\subset V_{\lambda}$。\\
+再设存在复数$\mu\ne\lambda$是$\mathscr{A}$在$V_{\lambda}$上的特征值。因为对任意的$k\ge 1$，$x-\mu$与$(x-\lambda)^k$互素，因此存在$f(x), g(x)\in\mathbb{C}[x]$，使得\[
+f(x)(x-\mu)+g(x)(x-\lambda)^k=1.
+\]
+任取一个$\mathscr{A}$的属于$\mu$的特征向量$\u$，由 Hamilton-Cayley 定理得\[
+\u=f(\mathscr{A})(\mathscr{A}-\mu E)\u+g(\mathscr{A})(\mathscr{A}-\lambda E)\u=0+0=0.
+\]
+这与$\u$是特征向量矛盾。因此，$\mathscr{A}$在$V_{\lambda}$上没有与$\lambda$不同的特征值。
+\end{proof}
+
+\item[十、]（12 分）
+若$A$，$B$为$m\times n$矩阵，试用三种不同的方法证明（每个方法 $4$ 分）$r ( A + B ) \le r ( A ) + r ( B ) $。
+\begin{proof}
+证法一。设$A=(\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \dots, \boldsymbol{\alpha}_n)$，$B=(\boldsymbol{\beta}_1, \boldsymbol{\beta}_2, \dots, \boldsymbol{\beta}_n)$，其中$\boldsymbol{\alpha}_i, \boldsymbol{\beta}_i, i=1, 2, \dots, n$是$m$维列向量。则\[
+A+B=(\boldsymbol{\alpha}_1+\boldsymbol{\beta}_1, \boldsymbol{\alpha}_2+\boldsymbol{\beta}_2, \dots, \boldsymbol{\alpha}_n+\boldsymbol{\beta}_n).
+\]
+因为向量组 $\boldsymbol{\alpha}_1+\boldsymbol{\beta}_1, \boldsymbol{\alpha}_2+\boldsymbol{\beta}_2, \dots, \boldsymbol{\alpha}_n+\boldsymbol{\beta}_n$ 可以由向量组 $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \dots, \boldsymbol{\alpha}_n, \boldsymbol{\beta}_1, \boldsymbol{\beta}_2, \dots, \boldsymbol{\beta}_n$ 线性表出，所以向量组$\boldsymbol{\alpha}_1+\boldsymbol{\beta}_1, \boldsymbol{\alpha}_2+\boldsymbol{\beta}_2, \dots, \boldsymbol{\alpha}_n+\boldsymbol{\beta}_n$的秩小于等于向量组$\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \dots, \boldsymbol{\alpha}_n, \boldsymbol{\beta}_1, \boldsymbol{\beta}_2, \dots, \boldsymbol{\beta}_n$的秩，因此$r(A+B)\le r(A)+r(B)$。\\
+证法二。
+\end{proof}
+\end{enumerate}
+\endinput

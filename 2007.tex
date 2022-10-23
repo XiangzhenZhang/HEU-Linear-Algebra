@@ -1,0 +1,386 @@
+\section{2007}
+\begin{enumerate}[1~]
+\renewcommand{\labelenumi}{\textbf{\theenumi. }}
+\renewcommand{\Im}{\text{Im }}
+\item[一、]
+填空题 （每小题 4 分，共 20 分）
+\begin{enumerate}[1.~]
+\item
+若 $\mathbb{F}$ 为同时包含 $\mathbb{Q}$ 和 $\{\sqrt{2}, \sqrt{3}\}$ 的最小的数域，则 $\mathbb{F}$ 作为 $\mathbb{Q}$ 上的线性空间有基 $1$，$\sqrt{2}$，$\sqrt{3}$，（\quad）。
+\begin{solution}
+由题意，$\mathbb{F} = \mathbb{Q}(\sqrt{2}, \sqrt{3}) = \mathbb{Q}(\sqrt{2})(\sqrt{3})$，
+因为 $\sqrt{3}$ 在 $\mathbb{Q}(\sqrt{2})$ 上的极小多项式为 $x^2 - 3$，$\sqrt{2}$ 在 $\mathbb{Q}$ 上的极小多项式为 $x^2 - 2$，所以 \[
+Q(\sqrt{2})(\sqrt{3}) = \{a + b\sqrt{3}| a, b \in Q(\sqrt{2})\} = \{c + d\sqrt{2} + e \sqrt{3} + f\sqrt{6}| c, d, e, f \in \mathbb{Q}\}.
+\]
+因此，基为 $1$，$\sqrt{2}$，$\sqrt{3}$，$\sqrt{6}$。（相关知识可看\cite{qiujin}）
+\end{solution}
+
+\item
+多项式$x^3+px+1$在复数域$\mathbb{C}$内有重根，则$p$应满足（\quad）。
+\begin{solution}
+\begin{lemma}
+设$\mathbb{K}$是数域，在$\mathbb{K}(x)$中，$f(x)=x^3+ax+b$，则$f(x)$有重因式的充分必要条件为$4a^3+27b^2=0$。
+\end{lemma}
+\begin{subproof}
+由题意，$f ^ { \prime } ( x ) = 3 x ^ { 2 } + a$。\\
+设$a\ne0$，用辗转相除法求$f(x)$与$f'(x)$的最大公因式：
+\[
+\begin{tabular}{l|l|l|ll}
+\multirow{6}{*}{$h_2(x)=3x-\frac{9b}{2a}$} & $f'(x)$ & $3f(x)$ &  & $h_1$(x) \\ 
+ & $3x^2+a$ & $3x^3+3ax+3b$ & $x$ &  \\
+ & $3x^2+\frac{9b}{2a}x$ & $3x^3+ax$ &  &  \\ 
+ \cline{2-3}
+ & $-\frac{9b}{2a}x+a$ & $r_1(x)=2ax+3b$ &  &  \\
+ & $-\frac{9b}{2a}x-\frac{27b^2}{4a^2}$ & $\frac{1}{2a}r_1(x)=x+\frac{3b}{2a}$ &  &  \\
+ \cline{2-2}
+ & $r_2(x)=\frac{4a^3+27b^2}{4a^2}$ &  &  & 
+\end{tabular}
+\]
+$f(x)$ 有重因式 $\Longleftrightarrow (f(x), f'(x))\ne 1\Longleftrightarrow 4a^3+27b^2=0.$\\
+当 $a=0$ 时，上述结论仍然成立。
+\end{subproof}
+回到原题，易得 $p$ 应满足 $4p^2+27=0$ 。
+\end{solution}
+
+
+\item
+设方阵$A _ { k \times k } ,  B _ { l \times l } ,  C _ { m \times m }$的行列式都为 1，则 $\left| \begin{smallmatrix}
+	&		&		A\\
+	&		B&		\\
+	C&		&		\\
+\end{smallmatrix} \right|=(\quad)$。
+
+\begin{solution}
+\begin{align*}
+\left| \begin{matrix}
+	&		&		A\\
+	&		B&		\\
+	C&		&		\\
+\end{matrix} \right|
+&=|A|\cdot (-1)^{(1+2+\cdots +k)+[(m+l+1)+(m+k+2)+\cdots+(m+l+k)]}\cdot \left| \begin{matrix}
+	&		B		\\
+	C&		\\
+\end{matrix} \right|\\
+&=|A|\cdot (-1)^{k(m+l+k+1)}|B|\cdot (-1)^{(1+2+\cdots+l)+[(m+1)+(m+2)+\cdot+(m+l)]}|C|\\
+&=(-1)^{lm+km+kl}.
+\end{align*}
+\end{solution}
+
+\item
+若$\boldsymbol{\alpha} = ( a , b , c , d )$，则$\left| E - \boldsymbol{\alpha} ^ { T } \boldsymbol{\alpha} \right| =$（\quad）。
+\begin{solution}
+$\left| E - \boldsymbol{\alpha} ^ { T } \boldsymbol{\alpha} \right| = |1-\boldsymbol{\alpha} \boldsymbol{\alpha}^T|=1-(a^2+b^2+c^2+d^2)$。
+\end{solution}
+
+\item
+若向量组$\boldsymbol{\alpha} _ { 1 } ,  \boldsymbol{\alpha} _ { 2 } ,  \boldsymbol{\alpha} _ { 3 } \in \mathbb{R} ^ { 3 }$线性无关，则向量组$b _ { 11 } \boldsymbol{\alpha} _ { 1 } + b _ { 12 } \boldsymbol{\alpha} _ { 2 } + b _ { 13 } \boldsymbol{\alpha} _ { 3 } ,  b _ { 21 } \boldsymbol{\alpha} _ { 1 } + b _ { 22 } \boldsymbol{\alpha} _ { 2 } + b _ { 23 } \boldsymbol{\alpha} _ { 3 }, b _ { 31 } \boldsymbol{\alpha} _ { 1 } + b _ { 32 } \boldsymbol{\alpha} _ { 2 } + b _ { 33 } \boldsymbol{\alpha} _ { 3 }$的线性无关的充要条件为（\quad）。
+\begin{solution}
+\begin{align*}
+&(b _ { 11 } \boldsymbol{\alpha} _ { 1 } + b _ { 12 } \boldsymbol{\alpha} _ { 2 } + b _ { 13 } \boldsymbol{\alpha} _ { 3 } ,  b _ { 21 } \boldsymbol{\alpha} _ { 1 } + b _ { 22 } \boldsymbol{\alpha} _ { 2 } + b _ { 23 } \boldsymbol{\alpha} _ { 3 }, b _ { 31 } \boldsymbol{\alpha} _ { 1 } + b _ { 32 } \boldsymbol{\alpha} _ { 2 } + b _ { 33 } \boldsymbol{\alpha} _ { 3 })\\
+&=(\boldsymbol{\alpha} _ { 1 } ,  \boldsymbol{\alpha} _ { 2 } ,  \boldsymbol{\alpha} _ { 3 })\left( \begin{matrix}
+	b_{11}&		b_{21}&		b_{31}\\
+	b_{12}&		b_{22}&		b_{32}\\
+	b_{13}&		b_{23}&		b_{33}\\
+\end{matrix} \right) .
+\end{align*}
+所以，向量组 $b _ { 11 } \boldsymbol{\alpha} _ { 1 } + b _ { 12 } \boldsymbol{\alpha} _ { 2 } + b _ { 13 } \boldsymbol{\alpha} _ { 3 } ,  b _ { 21 } \boldsymbol{\alpha} _ { 1 } + b _ { 22 } \boldsymbol{\alpha} _ { 2 } + b _ { 23 } \boldsymbol{\alpha} _ { 3 }, b _ { 31 } \boldsymbol{\alpha} _ { 1 } + b _ { 32 } \boldsymbol{\alpha} _ { 2 } + b _ { 33 } \boldsymbol{\alpha} _ { 3 }$ 线性无关的充要条件为矩阵 $\left( \begin{smallmatrix}
+	b_{11}&		b_{21}&		b_{31}\\
+	b_{12}&		b_{22}&		b_{32}\\
+	b_{13}&		b_{23}&		b_{33}\\
+\end{smallmatrix} \right) $ 可逆。
+\end{solution}
+
+\item
+设 $A \in \mathbb{R} ^ { m \times n }$，且 ${\rm rank}(A)=r$，则 $\left\{ X \in \mathbb{R} ^ { n \times s } | A X = 0 \right\}$ 作为数域 $\mathbb{R}$ 上的线性空间，其维数为（\quad）。
+\begin{solution}
+设 $X = (X_1, X_2, \dots, X_s)$，则\[
+AX = 0 \Longleftrightarrow AX_i = 0, i = 1, 2, \dots, s.
+\]
+记 $V = \left\{ X \in \mathbb{R} ^ { n \times s } | A X = 0 \right\}$，设 $W$ 为矩阵方程 $AX = 0$ 的解空间，则 $\dim W = n - r$。因此，$\dim V = (n - r)^s$。
+\end{solution}
+
+
+\item
+设 $\mathbb{F}[x]_n$ 为数域 $\mathbb{F}$ 上次数不超过$n-1$ 的多项式集合，其为 $\mathbb{F}$ 上的线性空间，对任何$f ( x ) \in \mathbb{F}[ x ] _ { n }$，令 $Df(x)=f'(x)$，则$D$ 作为 $\mathbb{F}[x]_n$ 上的线性变换，其最小多项式为（\quad）。
+\begin{solution}
+因为$1, x, x^2, \dots, x^{n-1}$是$\mathbb{F}[x]_n$上的一组基，\[
+D(1, x, x^2, \dots, x^{n-1})=(1, x, x^2, \dots, x^{n-1})\left( \begin{matrix}
+	0&		1&		&		&		\\
+	&		0&		2&		&		\\
+	&		&		\ddots&		\ddots&		\\
+	&		&		&		0&		n-1\\
+	&		&		&		&		0\\
+\end{matrix} \right) .
+\]
+所以$D$的最小多项式为$x^n$。
+\end{solution}
+
+
+\item
+设$\sigma$为数域$\mathbb{F}$上$n$维线性空间$V$上的线性变换，且$\sigma^2=0$，则 $\dim\sigma(V)$ 最大为（\quad）。
+\begin{solution}
+考虑幂零指数为 $2$ 的 $n$ 级幂零矩阵 $A$，则 $A$ 的 Jordan 标准形中的 Jordan 块的总数为 \[
+n-{\rm rank}(A),
+\]
+且每个 Jordan 块的级数不超过 $2$。因此 Jordan 块的总数最少为 $\frac{n}{2}$，从而 ${\rm rank}(A)$ 的最大值为 $\frac{n}{2}$，因此$\dim\sigma(V)$ 最大为 $\frac{n}{2}$。
+\end{solution}
+
+\item
+一切$n\times n$实对称阵按合同分类，可分（\quad）类。
+\begin{solution}
+\[
+\begin{tabular}{|l|l|l|}
+\hline
+个数 & 秩 & 正惯性指数 \\ \hline
+1 & 0 & 0 \\ \hline
+\multirow{2}{*}{2} & 1 & 0 \\ \cline{2-3} 
+ & 1 & 1 \\ \hline
+\multirow{3}{*}{3} & 2 & 0 \\ \cline{2-3} 
+ & 2 & 1 \\ \cline{2-3} 
+ & 2 & 2 \\ \hline
+$\vdots$ & $\vdots$ & $\vdots$ \\ \hline
+\multirow{4}{*}{$n+1$} & $n$ & 0 \\ \cline{2-3} 
+ & $n$ & 1 \\ \cline{2-3} 
+ & $\vdots$ & $\vdots$ \\ \cline{2-3} 
+ & $n$ & $n$ \\ \hline
+\end{tabular}
+\]
+因此，共有$1+2+\dots+(n+1)=\frac{(n+1)(n+2)}2$种。
+\end{solution}
+
+
+\item
+一切 $4\times 4$ 幂零方阵在复数域中按相似分类，可分（\quad）类。
+
+\begin{solution}
+$5$ 类。仿照 2008 年填空题第 10 题。
+\end{solution}
+
+\end{enumerate}
+
+\item[二、]（15分）
+将$V = \mathbb{R} ^ { 3 \times 3 }$视为$\mathbb{R}$上的线性空间，令$W _ { 1 } = \{ A \in V | A ^ { T } = A \}$，$W _ { 2 } = \{ A \in V | A ^ { T } = -A \}$。\\
+(1) 求证$W_1$和$W_2$为$V$的子空间，并分别写出$W_1$和$W_2$的一组基；\\
+(2) 	求证$V=W_1\oplus W_2$。
+\begin{solution}
+(1) 因为$0\in W_1$，所以$W_1$非空。又\begin{align*}
+&\text{任意} A, B\in W_1 \Longleftrightarrow  A^T=A, B^T=B \Longleftrightarrow  (A+B)^T=A^T+B^T=A+B \Longleftrightarrow  A+B\in W_1;\\
+&\text{任意}A\in W_1, \text{任意}k\in\mathbb{R}\Longleftrightarrow  kA\in W_1.
+\end{align*}
+所以，$W_1$是$V$的子空间。同理可证$W_2$是$V$的子空间。\\
+$W_1$的一组基为\[
+\{E_{ij}|1\le i\le j\le 3\},
+\]
+$W_2$的一组基为\[
+\{E_{ij}|1\le i<j \le 3\}.
+\]
+其中$E_{ij}$表示$(i, j)$元素为1，其余元素为0的$n$阶矩阵。  \\
+(2) 任取$A\in V$，有\[
+A=\frac{A+A^T}{2}+\frac{A-A^T}{2}.
+\]
+因为\[
+\left(\frac{A+A^T}{2}\right)^T=\frac{A+A^T}{2},
+\]
+所以\[
+\frac{A+A^T}{2}\in W_1.
+\]
+又\[
+\left(\frac{A-A^T}{2}\right)^T=-\frac{A-A^T}{2},
+\]
+所以\[
+\frac{A-A^T}{2}\in W_2.
+\]
+因此\[
+V=W_1+W_2.
+\]
+又\[
+\dim V=9=6+3=\dim W_1+\dim W_2,
+\]
+所以\[
+V=W_1\oplus W_2.
+\]
+\end{solution}
+
+\item[三、]（15分）
+设
+$$
+A = \left( \begin{array} { l l l } { 3 } & { 1 } & { 1 } \\ { 1 } & { 3 } & { 1 } \\ { 1 } & { 1 } & { 3 } \end{array} \right).
+$$
+
+(1) 求正交矩阵 $P$，使得 $P^TAP$ 为对角阵；
+
+(2) 求 $A^n$。
+
+\begin{solution}
+(1) $A$的特征多项式为：\[
+f(\lambda)=|\lambda I-A|=x^3-9 x^2+24 x-20= (x-2)^2 (x-5).
+\]
+所以，$A$的全部特征值为2（2重），5（1重）。\\
+解线性方程组$(2I-A)x=0$，得一个基础解系：\[
+\boldsymbol{\xi}_1=(1, -1, 0)', \boldsymbol{\xi}_2=(1, 0, -1)'.
+\]
+解线性方程组$(5I-A)x=0$，得一个基础解系：\[
+\boldsymbol{\xi}_3=(1, 1, 1)'.
+\]
+用Schmidt正交化法把$\boldsymbol{\xi}_1, \boldsymbol{\xi}_2$正交化：\begin{align*}
+\boldsymbol{\xi}'_1&=\boldsymbol{\xi}_1;\\
+\boldsymbol{\xi}'_2&=\boldsymbol{\xi}_2-\frac{(\boldsymbol{\xi}_2, \boldsymbol{\xi}_1)}{(\boldsymbol{\xi}_1, \boldsymbol{\xi}_1)}\boldsymbol{\xi}_1=\left(\frac12, \frac12, -1\right)'.
+\end{align*}
+把$\boldsymbol{\xi}'_1, \boldsymbol{\xi}'_2, \boldsymbol{\xi}_3$单位化：\begin{align*}
+\boldsymbol{\eta}_1&=\frac{\boldsymbol{\xi}'_1}{|\boldsymbol{\xi}'_1|}=\left(\frac{\sqrt{2}}{2}, -\frac{\sqrt{2}}{2}, 0\right)';\\
+\boldsymbol{\eta}_2&=\frac{\boldsymbol{\xi}'_2}{|\boldsymbol{\xi}'_2|}=\left(\frac{\sqrt{6}}{6}, \frac{\sqrt{6}}{6}, -\frac{\sqrt{6}}{3}\right)';\\
+\boldsymbol{\eta}_3&=\frac{\boldsymbol{\xi}'_3}{|\boldsymbol{\xi}'_3|}=\left(\frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}, \frac{\sqrt{3}}{3}\right)'.\\
+\end{align*}
+令\[
+P=(\boldsymbol{\eta}_1, \boldsymbol{\eta}_2, \boldsymbol{\eta}_3).
+\]
+则$P$是正交矩阵，且\[
+P^T A P={\rm diag}\{2, 2, 5\}.
+\]
+(2) 由(1)得，\begin{align*}
+A^n&=\left[P\left( \begin{matrix}
+	2&		&		\\
+	&		2&		\\
+	&		&		5\\
+\end{matrix} \right) P^T\right]^n=P\left( \begin{matrix}
+	2^n&		&		\\
+	&		2^n&		\\
+	&		&		5^n\\
+\end{matrix} \right) P^T\\
+&=\left(
+\begin{array}{ccc}
+ \frac{2^{n+1}}{3}+\frac{5^n}{3} & -\frac{2^n}{3}+\frac{5^n}{3} & -\frac{2^n}{3}+\frac{5^n}{3} \\
+ -\frac{2^n}{3}+\frac{5^n}{3} & \frac{2^{n+1}}{3}+\frac{5^n}{3} & -\frac{2^n}{3}+\frac{5^n}{3} \\
+ -\frac{2^n}{3}+\frac{5^n}{3} & -\frac{2^n}{3}+\frac{5^n}{3} & \frac{2^{n+1}}{3}+\frac{5^n}{3} \\
+\end{array}
+\right).
+\end{align*}
+\end{solution}
+
+\item[四、]（15分）
+设$A = \left( a _ { i j } \right) _ { n \times n }$为数域$\mathbb{F}$上的方阵，令$A^S$为将$A$中的每个元素$a_{ij}$换为元素$a_{n+1-i, n+1-j}$所得到的矩阵，即将$A$旋转$180$度，例如$\left( \begin{array} { l l } { a _ { 11 } } & { a _ { 12 } } \\ { a _ { 21 } } & { a _ { 21 } } \end{array} \right) ^ { S } = \left( \begin{array} { l l } { a _ { 22 } } & { a _ { 21 } } \\ { a _ { 12 } } & { a _ { 11 } } \end{array} \right)$，求证$A$与$A^S$相似。
+\begin{solution}
+由题意，有\[
+\left( \begin{matrix}
+	&		&		&		1\\
+	&		&		1&		\\
+	&		&		&		\\
+	1&		&		&		\\
+\end{matrix} \right) \left( \begin{matrix}
+	a_{11}&		a_{12}&		\cdots&		a_{1n}\\
+	a_{21}&		a_{22}&		\cdots&		a_{2n}\\
+	\vdots&		\vdots&		\vdots&		\vdots\\
+	a_{n1}&		a_{n2}&		\cdots&		a_{nn}\\
+\end{matrix} \right) \left( \begin{matrix}
+	&		&		&		1\\
+	&		&		1&		\\
+	&		&		&		\\
+	1&		&		&		\\
+\end{matrix} \right) =\left( \begin{matrix}
+	a_{nn}&		a_{nn-1}&		\cdots&		a_{n1}\\
+	a_{n-1n}&		a_{n-1n-1}&		\cdots&		a_{n-11}\\
+	\vdots&		\vdots&		\vdots&		\vdots\\
+	a_{1n}&		a_{1n-1}&		\cdots&		a_{11}\\
+\end{matrix} \right) .
+\]
+因为\[
+\left( \begin{matrix}
+	&		&		&		1\\
+	&		&		1&		\\
+	&		&		&		\\
+	1&		&		&		\\
+\end{matrix} \right)^{-1}=\left( \begin{matrix}
+	&		&		&		1\\
+	&		&		1&		\\
+	&		&		&		\\
+	1&		&		&		\\
+\end{matrix} \right) .
+\]
+所以$A$与$A^S$相似。
+\end{solution}
+
+
+\item[五、]（15分）
+复数域$\mathbb{C}$上的一切$n\times n$矩阵的集合$C^{n\times n}$为复数域$\mathbb{C}$上的线性空间，对任何选定的矩阵$A\in C^{n\times n}$，定义映射$\phi _ { A } : C ^ { n \times n } \rightarrow C ^ { n \times n } , \quad X \rightarrow A X - X A$。\\
+(1) 求证$\phi_A$为线性空间$C^{n\times n}$上的线性变换；\\
+(2) 若矩阵$A$可对角化，求证线性变换$\phi_A$也可对角化。
+\begin{solution}
+(1) 保持加法：\[
+\text{任取}X, Y\in C^{n\times n}, \phi_A(X+Y)=A(X+Y)-(X+Y)A=(AX-XA)+(AY-YA)=\phi_A(X)+\phi_A(Y).
+\]
+保持数乘：\[
+\text{任取}X\in C^{n\times n}, k\in \mathbb{C}, \phi_A(kX)=A(kX)-(kX)A=k(AX-XA)=k\phi_A(X).\]
+因此，$\phi_A$为线性空间$C^{n\times n}$上的线性变换。\\
+(2) 因为$A$可对角化，所以存在复数域上的$n$阶可逆矩阵$P$，使得\[
+PAP^{-1}={\rm diag}\{\lambda_1, \lambda_2, \dots, \lambda_n\}:=\Lambda_n.
+\]
+其中，$\lambda_1, \lambda_2, \dots, \lambda_n$是$A$的全部特征值。注意到\[
+\phi_A(P^{-1}E_{ij}P)=AP^{-1}E_{ij}P-P^{-1}E_{ij}PA=P^{-1}(\Lambda_n E_{ij}-E_{ij}\Lambda_n)P=(\lambda_i-\lambda_j)P^{-1}E_{ij}P.
+\]
+其中$E_{ij}$是$(i, j)$元素为1，其余元素为0的$n$阶矩阵。因此
+\begin{align*}
+&\phi_A(P^{-1}E_{11}P, P^{-1}E_{12}P, \dots, P^{-1}E_{nn}P)\\
+&=(P^{-1}E_{11}P, P^{-1}E_{12}P, \dots, P^{-1}E_{nn}P){\rm diag}\{\lambda_1-\lambda_1, \lambda_1-\lambda_2, \dots, \lambda_n-\lambda_n\}.
+\end{align*}
+容易验证$P^{-1}E_{11}P, P^{-1}E_{12}P, \dots, P^{-1}E_{nn}P$是$C^{n\times n}$的一组基，因此线性变换$\phi_A$可对角化。
+
+\end{solution}
+
+
+\item[六、]（15分）
+设$V$为数域$\mathbb{F}$上的$n$维线性空间，$\sigma$为$V$上的线性变换，求证$V = \sigma ^ { n } ( V ) \oplus \operatorname { Ker } \sigma ^ { n }$。
+\begin{proof}
+首先有子空间升链：\[
+\ker\sigma \subset \ker\sigma ^2\subset \cdots \subset \ker\sigma ^n\subset \cdots \subset V
+\]
+因为$V$是有限维线性空间，所以存在正整数$n$，使得\[
+\ker \sigma^n=\ker \sigma^{n+i}, i=1, 2, \dots
+\]
+又由于\[
+\dim V=\dim \sigma^n\oplus \dim \ker \sigma^n=\dim\sigma^{n+i}\oplus\dim\ker\sigma^{n+i}, i=1, 2, \dots.
+\]
+所以\[
+\dim\sigma^n=\dim \sigma^{n+i}, i=1, 2, \dots.
+\]
+任取一个向量$\boldsymbol{\alpha} \in V$，有\[
+\boldsymbol{\alpha}=\sigma^n(\boldsymbol{\alpha})+\boldsymbol{\alpha}-\sigma^n (\boldsymbol{\alpha}).
+\]
+因为 $\sigma^n \left(\boldsymbol{\alpha}-\sigma^n (\boldsymbol{\alpha})\right)=0$，所以 $\boldsymbol{\alpha}-\sigma^n (\boldsymbol{\alpha})\in \ker \sigma^n$，故\[
+V=\sigma^n(V)+\ker \sigma^n.
+\]
+任取一个向量 $\boldsymbol{\alpha} \in \sigma^n(V)\cap\ker \sigma^n$，有\begin{align*}
+& \text{存在向量}\beta\in V, \text{使得} \boldsymbol{\alpha}=\sigma^n(\beta),\\
+& \sigma^n(\boldsymbol{\alpha})=0.
+\end{align*}
+因此 $\sigma^n(\beta)=\sigma^{2n}(\beta)=\sigma^n (\boldsymbol{\alpha})=0$，从而 $\boldsymbol{\alpha}=0$，故$\sigma^n(V)+\ker \sigma^n$ 是直和。因此\[
+V=\sigma^n(V)\oplus\ker \sigma^n.
+\]
+\end{proof}
+
+
+\item[七、]（15分）
+用数学归纳法证明，在复数域$\mathbb{C}$内，任意一个$n\times n$矩阵相似于一个上三角矩阵。
+\begin{proof}
+对复矩阵的级数$n$作数学归纳法。$n=1$时，显然命题为真，假设$n-1$级复矩阵一定相似于一个上三角矩阵。现在来看$n$级复矩阵$A$。设$\lambda_1$是$n$级复矩阵$A$的一个特征值，$\boldsymbol{\alpha} _ { 1 }$是属于$\lambda_1$的一个特征向量。
+把$\boldsymbol{\alpha} _ { 1 }$扩充成$\mathbb{C}^n$的一个基：$\boldsymbol{\alpha} _ { 1 } , \boldsymbol{\alpha} _ { 2 } , \dots , \boldsymbol{\alpha} _ { n }$。
+令$P_1=
+\left( \boldsymbol{\alpha} _ { 1 } , \boldsymbol{\alpha} _ { 2 } , \dots , \boldsymbol{\alpha} _ { n } \right)$，则$P_1$是$n$级可逆矩阵，且\[
+P _ { 1 } ^ { - 1 } A P _ { 1 } = P _ { 1 } ^ { - 1 } \left( A \boldsymbol{\alpha} _ { 1 } , A \boldsymbol{\alpha} _ { 2 } , \dots , A \boldsymbol{\alpha} _ { n } \right) = \left( P _ { 1 } ^ { - 1 } \lambda _ { 1 } \boldsymbol{\alpha} _ { 1 } , P _ { 1 } ^ { - 1 } A \boldsymbol{\alpha} _ { 2 } , \dots , P _ { 1 } ^ { - 1 } A \boldsymbol{\alpha} _ { n } \right).
+\]
+由于$P_1^{-1}P=I$，因此$P _ { 1 } ^ { - 1 } \boldsymbol{\alpha} _ { 1 } = \boldsymbol { \varepsilon } _ { 1 }$。从而\[
+P _ { 1 } ^ { - 1 } A P _ { 1 } = \left( \begin{array} { l l } { \lambda _ { 1 } } & { \boldsymbol{\alpha} } \\ { 0 } & { B } \end{array} \right).
+\]
+对$n-1$级复矩阵$B$用归纳假设，有$n-1$级可逆矩阵$P_2$，使得$P_2^{-1}BP_2$为上三角矩阵。令\[
+P = P _ { 1 } \left( \begin{array} { c c } { 1 } & { 0 } \\ { 0 } & { P _ { 2 } } \end{array} \right),
+\]
+则$P$是$n$级可逆矩阵，且\[
+P ^ { - 1 } A P = \left( \begin{array} { c c } { 1 } & { 0 } \\ { 0 } & { P _ { 2 } } \end{array} \right) ^ { - 1 } \left( \begin{array} { c c } { \lambda _ { 1 } } & { \boldsymbol{\alpha} } \\ { 0 } & { B } \end{array} \right) \left( \begin{array} { c c } { 1 } & { 0 } \\ { 0 } & { P _ { 2 } } \end{array} \right) = \left( \begin{array} { c c } { \lambda _ { 1 } } & { \boldsymbol{\alpha} P _ { 2 } } \\ { 0 } & { P _ { 2 } ^ { - 1 } B P _ { 2 } } \end{array} \right).
+\]
+因此$P^{-1}AP$是上三角矩阵。\\
+据数学归纳法原理，对一切正整数$n$，此命题为真。
+\end{proof}
+
+
+
+\end{enumerate}
+\endinput

@@ -1,0 +1,528 @@
+\section{2016}
+\begin{enumerate}[1~]
+\renewcommand{\labelenumi}{\textbf{\theenumi. }}
+\renewcommand{\Im}{\text{Im }}
+\item[一、]
+填空题 （每小题 4 分，共 20 分）
+\begin{enumerate}[1.~]
+\item
+设$(x-1)^2|Ax^4+Bx^2+1$，则$A+B=(\quad)$。
+\begin{solution}
+记$f(x)=Ax^4+Bx^2+1$，则$1$是$f(x)$的二重实根，因此，\[
+f(1)=0.
+\]
+故\[
+	A+B+1=0
+\]
+因此 $A+B=-1$。
+\end{solution}
+
+\item 
+设$f ( x ) = \left| \begin{array} { c c c c } { 1 } & { 1 } & { 1 } & { 1 } \\ { 1 } & { x } & { x ^ { 2 } } & { x ^ { 3 } } \\ { 1 } & { - 2 } & { 4 } & { - 8 } \\ { 1 } & { 3 } & { 9 } & { 27 } \end{array} \right| = 0$的三个根为$x_1$， $x_2$，$x_3$，则$x_1+x_2+x_3=(\quad)$。
+\begin{solution}
+\begin{align*}
+f\left( x \right) &=\left| \begin{matrix}
+	1&		1&		1&		1\\
+	1&		x&		x^2&		x^3\\
+	1&		-2&		4&		-8\\
+	1&		3&		9&		27\\
+\end{matrix} \right|=\left| \begin{matrix}
+	1&		1&		1&		1\\
+	0&		x-1&		x^2-1&		x^3-1\\
+	0&		-3&		3&		-9\\
+	0&		2&		8&		26\\
+\end{matrix} \right|\\
+&=6\left( x-1 \right) \left| \begin{matrix}
+	1&		1&		1&		1\\
+	0&		1&		x+1&		x^2+x+1\\
+	0&		-1&		1&		-3\\
+	0&		1&		4&		13\\
+\end{matrix} \right|
+=6\left( x-1 \right) \left| \begin{matrix}
+	1&		1&		1&		1\\
+	0&		1&		x+1&		x^2+x+1\\
+	0&		0&		x+2&		\left( x+2 \right) \left( x-1 \right)\\
+	0&		0&		-\left( x-3 \right)&		-\left( x-3 \right) \left( x+4 \right)\\
+\end{matrix} \right|\\
+&=-6\left( x+2 \right) \left( x-1 \right) \left( x-3 \right) \left| \begin{matrix}
+	1&		1&		1&		1\\
+	0&		1&		x+1&		x^2+x+1\\
+	0&		0&		1&		\left( x-1 \right)\\
+	0&		0&		1&		\left( x+4 \right)\\
+\end{matrix} \right|\\
+&=-30\left( x+2 \right) \left( x-1 \right) \left( x-3 \right).
+\end{align*}
+所以，$f(x)$ 的三个根为 $-2$，$1$，$3$。因此，$x_1+x_2+x_3=2$。
+\end{solution}
+
+\item
+若方程组
+$$
+\left\{ \begin{array} { l } { x _ { 1 } - x _ { 2 } = a _ { 1 } }, \\ { x _ { 2 } - x _ { 3 } = a _ { 2 } } ,\\ { x _ { 3 } - x _ { 4 } = a _ { 3 } }, \\ { x _ { 4 } - x _ { 5 } = a _ { 4 } } ,\\ { x _ { 5 } - x _ { 1 } = a _ { 5 } }. \end{array} \right.
+$$
+有解，则 $a_1 + a_2 + a_3 + a_4 + a_5 = (\ \ \ \ )$。
+\begin{solution}
+方程组的系数矩阵为\[
+A=\left( \begin{matrix}
+	1&		-1&		0&		0&		0\\
+	0&		1&		-1&		0&		0\\
+	0&		0&		1&		-1&		0\\
+	0&		0&		0&		1&		-1\\
+	-1&		0&		0&		0&		1\\
+\end{matrix} \right),\]
+增广阵为\[
+\tilde{A}=\left( \begin{matrix}
+	1&		-1&		0&		0&		0&a_1\\
+	0&		1&		-1&		0&		0&a_2\\
+	0&		0&		1&		-1&		0&a_3\\
+	0&		0&		0&		1&		-1&a_4  \\
+	-1&		0&		0&		0&		1&a_5\\
+\end{matrix} \right).\]
+因为$\mathrm{rank}(A)=5$，所以方程组只有零解，所以$a_1+a_2+a_3+a_4+a_5=0$。
+\end{solution}
+
+\item
+若$3$阶可逆阵$A$交换$1, 3$行得$B$，则 $AB-I = (\quad)$。
+\begin{solution}
+？？？
+\end{solution}
+
+\item
+设 $A=\left( \begin{smallmatrix}
+	1&		2&		3\\
+	0&		4&		5\\
+	0&		0&		6\\
+\end{smallmatrix} \right) $，$f(x) = (x - 1)(x - 2)^2(x - 3)^3(x - 4)^4(x - 5)^5(x - 6)^6 + x + 1$，则 $f(A) = (\ \ \ \ )$。
+\begin{solution}
+矩阵$A$的特征值分别为 $1, 4, 6$，由 Hamilton-Cayley 定理得
+$$(A-I)(A-2I)^2(A-3I)^3(A-4I)^4(A-5I)^5(A-6I)^6 = 0.$$
+所以
+$$f(A) = A+I=\left( \begin{matrix}
+	2&		2&		3\\
+	0&		5&		5\\
+	0&		0&		7\\
+\end{matrix} \right). $$
+\end{solution}
+\end{enumerate}
+
+\item[二、]（15分）
+设\[
+D_n=\left| \begin{array}{c}
+	x\\
+	z\\
+	z\\
+	\vdots\\
+	z\\
+	z\\
+\end{array}\begin{array}{c}
+	y\\
+	x\\
+	z\\
+	\vdots\\
+	z\\
+	z\\
+\end{array}\begin{array}{c}
+	y\\
+	y\\
+	x\\
+	\vdots\\
+	z\\
+	z\\
+\end{array}\begin{array}{c}
+	\cdots\\
+	\cdots\\
+	\cdots\\
+	\vdots\\
+	\cdots\\
+	\cdots\\
+\end{array}\begin{array}{c}
+	y\\
+	y\\
+	y\\
+	\vdots\\
+	x\\
+	z\\
+\end{array}\begin{array}{c}
+	y\\
+	y\\
+	y\\
+	\vdots\\
+	y\\
+	x\\
+\end{array} \right|.
+\]
+(1) 当$y=z$时，计算$D_n$。\\
+(2) 当$y\ne z$时，计算$D_n$。
+\begin{proof}
+(1) 证法一：当$x=z$时，\[
+D _ { n } 
+= \left| \begin{matrix}
+	z&		z&		z&		\cdots&		z&		z\\
+	z&		z&		z&		\cdots&		z&		z\\
+	z&		z&		z&		\cdots&		z&		z\\
+	\vdots&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots\\
+	z&		z&		z&		\cdots&		z&		z\\
+	z&		z&		z&		\cdots&		z&		z\\
+\end{matrix} \right|=0.
+\]
+当$x\ne z$时，
+\begin{align*}
+D _ { n } 
+&= \left| \begin{matrix}
+	x&		z&		z&		\cdots&		z&		z\\
+	z&		x&		z&		\cdots&		z&		z\\
+	z&		z&		x&		\cdots&		z&		z\\
+	\vdots&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots\\
+	z&		z&		z&		\cdots&		x&		z\\
+	z&		z&		z&		\cdots&		z&		x\\
+\end{matrix} \right|
+=\left| \begin{matrix}
+	1&		1&		1&		1&		1&		1&		1\\
+	0&		x&		z&		z&		\cdots&		z&		z\\
+	0&		z&		x&		z&		\cdots&		z&		z\\
+	0&		z&		z&		x&		\cdots&		z&		z\\
+	0&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots\\
+	0&		z&		z&		z&		\cdots&		x&		z\\
+	0&		z&		z&		z&		\cdots&		z&		x\\
+\end{matrix} \right|\\
+&=\left| \begin{matrix}
+	1&		1&		1&		1&		1&		1&		1\\
+	-z&		x-z&		0&		0&		\cdots&		0&		0\\
+	-z&		0&		x-z&		0&		\cdots&		0&		0\\
+	-z&		0&		0&		x-z&		\cdots&		0&		0\\
+	-z&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots\\
+	-z&		0&		0&		0&		\cdots&		x-z&		0\\
+	-z&		0&		0&		0&		\cdots&		0&		x-z\\
+\end{matrix} \right|\\
+&=\left| \begin{matrix}
+	1&		1&		1&		1&		1&		1&		1\\
+	-z&		x-z&		0&		0&		\cdots&		0&		0\\
+	-z&		0&		x-z&		0&		\cdots&		0&		0\\
+	-z&		0&		0&		x-z&		\cdots&		0&		0\\
+	-z&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots\\
+	-z&		0&		0&		0&		\cdots&		x-z&		0\\
+	-z&		0&		0&		0&		\cdots&		0&		x-z\\
+\end{matrix} \right|\\
+&=\left| \begin{matrix}
+	1+n\left( \frac{z}{x-z} \right)&		1&		1&		1&		1&		1&		1\\
+	0&		x-z&		0&		0&		\cdots&		0&		0\\
+	0&		0&		x-z&		0&		\cdots&		0&		0\\
+	0&		0&		0&		x-z&		\cdots&		0&		0\\
+	0&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots\\
+	0&		0&		0&		0&		\cdots&		x-z&		0\\
+	0&		0&		0&		0&		\cdots&		0&		x-z\\
+\end{matrix} \right|
+\end{align*}
+\begin{align*}
+\quad&=\left[ 1+n\left( \frac{z}{x-z} \right) \right] \left( x-z \right) ^n=\left[ x+\left( n-1 \right) z \right] \left( x-z \right) ^{n-1}.
+\end{align*}
+$x=z$时，上式仍然成立。因此，$D_n=\left[ x+\left( n-1 \right) z \right] \left( x-z \right) ^{n-1}$。\\
+证法二：\begin{align*}
+D_n
+&=\left| \begin{matrix}
+	x&		z&		z&		\cdots&		z&		z\\
+	z&		x&		z&		\cdots&		z&		z\\
+	z&		z&		x&		\cdots&		z&		z\\
+	\vdots&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots\\
+	z&		z&		z&		\cdots&		x&		z\\
+	z&		z&		z&		\cdots&		z&		x\\
+\end{matrix} \right|\\
+&=\left| \begin{matrix}
+	x+\left( n-1 \right) z&		x+\left( n-1 \right) z&		x+\left( n-1 \right) z&		\cdots&		x+\left( n-1 \right) z&		x+\left( n-1 \right) z\\
+	z&		x&		z&		\cdots&		z&		z\\
+	z&		z&		x&		\cdots&		z&		z\\
+	\vdots&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots\\
+	z&		z&		z&		\cdots&		x&		z\\
+	z&		z&		z&		\cdots&		z&		x\\
+\end{matrix} \right|\\
+&=\left[ x+\left( n-1 \right) z \right] \left| \begin{matrix}
+	1&		1&		1&		\cdots&		1&		1\\
+	z&		x&		z&		\cdots&		z&		z\\
+	z&		z&		x&		\cdots&		z&		z\\
+	\vdots&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots\\
+	z&		z&		z&		\cdots&		x&		z\\
+	z&		z&		z&		\cdots&		z&		x\\
+\end{matrix} \right|\\
+&=\left[ x+\left( n-1 \right) z \right] \left| \begin{matrix}
+	1&		1&		1&		\cdots&		1&		1\\
+	0&		x-z&		0&		\cdots&		0&		0\\
+	0&		0&		x-z&		\cdots&		0&		0\\
+	\vdots&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots\\
+	0&		0&		0&		\cdots&		x-z&		0\\
+	0&		0&		0&		\cdots&		0&		x-z\\
+\end{matrix} \right|\\
+&=\left[ x+\left( n-1 \right) z \right] \left( x-z \right) ^{n-1}.
+\end{align*}
+(2) \begin{align}\label{Dn1}
+D_n
+&=\left| \begin{matrix}
+	x&		y&		y&		\cdots&		y&		y\\
+	z&		x&		y&		\cdots&		y&		y\\
+	z&		z&		x&		\cdots&		y&		y\\
+	\vdots&		\vdots&		\vdots&		\vdots&		\vdots&		\vdots\\
+	z&		z&		z&		\cdots&		x&		y\\
+	z&		z&		z&		\cdots&		z&		x\\
+\end{matrix} \right|\\
+&=(x-y)D_{n-1}+y(x-z)^{n-1}\quad (n\ge 2).
+\end{align}
+由对称性，
+\begin{equation}\label{Dn2}
+D _ { n } = \left| A ^ { \prime } \right| = ( x - z ) D _ { n - 1 } + z ( x - y ) ^ { n - 1 } \quad ( n \ge 2 ).
+\end{equation}
+由 \eqref{Dn1} 和  \eqref{Dn2} 得，\[
+D_n=\frac{y(x-z)^n-z(x-y)^n}{y-z}\quad (n\ge 2).
+\]
+容易验证上式在$n=1$时也成立。因此，\[
+D_n=\frac{y(x-z)^n-z(x-y)^n}{y-z}.
+\]
+\end{proof}
+
+\item[三、]（15分）
+设 $\boldsymbol { \boldsymbol{\alpha} }_1, \boldsymbol { \boldsymbol{\alpha} }_2, \dots , \boldsymbol { \boldsymbol{\alpha} }_n$ 为一组 $n$ 维向量， 求证 $\boldsymbol { \boldsymbol{\alpha} }_1, \boldsymbol { \boldsymbol{\alpha} }_2, \dots ,\boldsymbol { \boldsymbol{\alpha} }_n$ 线性无关的充分必要条件为：任意 $n$ 维向量均可由 $\boldsymbol { \boldsymbol{\alpha} }_1, \boldsymbol { \boldsymbol{\alpha} }_2, \dots ,\boldsymbol { \boldsymbol{\alpha} }_n $ 线性表示。
+\begin{proof}
+必要性。设$\boldsymbol { \boldsymbol{\alpha} } _ { 1 } , \boldsymbol { \boldsymbol{\alpha} } _ { 2 } , \dots , \boldsymbol { \boldsymbol{\alpha} } _ { n }$线性无关。在$\mathbb{K}^n$中任取一个向量$\boldsymbol{\boldsymbol{\beta}}$。由于$\mathbb{K}^n$中任意$n+1$个向量都线性相关，所以向量组$\boldsymbol { \boldsymbol{\alpha} } _ { 1 } , \boldsymbol { \boldsymbol{\alpha} } _ { 2 } , \dots , \boldsymbol { \boldsymbol{\alpha} } _ { n } , \boldsymbol { \boldsymbol{\beta} }$必线性相关。从而$\boldsymbol { \boldsymbol{\beta} }$可以由$\boldsymbol { \boldsymbol{\alpha} } _ { 1 } , \boldsymbol { \boldsymbol{\alpha} } _ { 2 } , \dots , \boldsymbol { \boldsymbol{\alpha} } _ { n } $线性表出。\\
+充分性。设$\mathbb{K}^n$中任一向量都可以由$\boldsymbol { \boldsymbol{\alpha} } _ { 1 } , \boldsymbol { \boldsymbol{\alpha} } _ { 2 } , \dots , \boldsymbol { \boldsymbol{\alpha} } _ { n } $线性表出。则$\boldsymbol{\varepsilon} _ { 1 } , \boldsymbol{\varepsilon} _ { 2 } , \dots , \boldsymbol{\varepsilon} _ { n }$可以由$\boldsymbol { \boldsymbol{\alpha} } _ { 1 } , \boldsymbol { \boldsymbol{\alpha} } _ { 2 } , \dots , \boldsymbol { \boldsymbol{\alpha} } _ { n } $线性表出。因此
+\[
+{\rm rank}\{\boldsymbol{\varepsilon} _ { 1 } , \boldsymbol{\varepsilon} _ { 2 } , \dots , \boldsymbol{\varepsilon} _ { n }\}< {\rm rank}\{\boldsymbol { \boldsymbol{\alpha} } _ { 1 } , \boldsymbol { \boldsymbol{\alpha} } _ { 2 } , \dots , \boldsymbol { \boldsymbol{\alpha} } _ { n } \}.
+\]
+由于$\boldsymbol{\varepsilon} _ { 1 } , \boldsymbol{\varepsilon} _ { 2 } , \dots , \boldsymbol{\varepsilon} _ { n }$线性无关，因此${\rm rank}\{\boldsymbol{\varepsilon} _ { 1 } , \boldsymbol{\varepsilon} _ { 2 } , \dots , \boldsymbol{\varepsilon} _ { n }\}=n$。从而${\rm rank}\{\boldsymbol { \boldsymbol{\alpha} } _ { 1 } , \boldsymbol { \boldsymbol{\alpha} } _ { 2 } , \dots , \boldsymbol { \boldsymbol{\alpha} } _ { n }\}=n$。
+于是$\boldsymbol { \boldsymbol{\alpha} } _ { 1 } , \boldsymbol { \boldsymbol{\alpha} } _ { 2 } , \dots , \boldsymbol { \boldsymbol{\alpha} } _ { n }$线性无关。
+\end{proof}
+
+\item[四、]（15分）
+设 $A, B, C, D $均为 $n$ 阶方阵，且 $|A| \ne 0, AC = CA$。求证：\[
+\left| \begin{matrix}
+	A&		B\\
+	C&		D\\
+\end{matrix} \right|=|AD-CB|.
+\]
+\begin{proof}
+\[
+\left| \begin{matrix}
+	A&		B\\
+	C&		D\\
+\end{matrix} \right| = 
+\left| \begin{matrix}
+	A&		B\\
+	0&		D-CA^{-1}B\\
+\end{matrix} \right| = 
+|A||D-CA^{-1}B|=|AD-CB|.
+\]
+\end{proof}
+
+\item[五、]（15分）
+设$A=\left( \begin{smallmatrix}
+	2&		1&		0\\
+	0&		2&		1\\
+	0&		0&		2\\
+\end{smallmatrix} \right) $，求证：\[
+A^n=\left( \begin{matrix}
+	2^n&		2^{n-1}n&		2^{n-3}n\left( n-1 \right)\\
+	0&		2^n&		2^{n-1}n\\
+	0&		0&		2^n\\
+\end{matrix} \right) .
+\]
+
+\begin{proof}
+因为
+\[
+A=2I+J,
+\]
+其中$J=\left( \begin{matrix}
+	0&		1&		0\\
+	0&		0&		1\\
+	0&		0&		0\\
+\end{matrix} \right) $。\\
+所以
+\begin{align*}
+A^n&=(2I+J)^n=\sum_{r=0}^n{\binom{n}{r} \left( 2I \right) ^{n-r}J^r}=\binom{n}{0} \left( 2I \right) ^nJ^0+\binom{n}{1} \left( 2I \right) ^{n-1}J^1+\binom{n}{2} \left( 2I \right) ^{n-2}J^2\\
+&=\left( \begin{matrix}
+	2^n&		2^{n-1}n&		2^{n-3}n\left( n-1 \right)\\
+	0&		2^n&		2^{n-1}n\\
+	0&		0&		2^n\\
+\end{matrix} \right) .
+\end{align*}
+\end{proof}
+
+\item[六、]（15分）
+设$A$为正交阵。\\
+(1) 求证：对任意的$n$维向量$X$，有$\lVert AX \rVert =\lVert X \rVert $。\\
+(2) 若$\lambda$为$A$的一个特征值，求证：$|\lambda|=1$。
+\begin{proof}
+(1) 对任意的$n$维向量$X$，\[
+\lVert AX \rVert =\sqrt{(AX, AX)}=\sqrt{X'A'AX}=\sqrt{X'X}=\sqrt{(X, X)}=\lVert X \rVert 
+\]
+(2) 取$A$对应于特征值$\lambda$的特征向量$X$，由(1)得\[
+|\lambda|\lVert X\rVert=\lVert\lambda X\rVert=\lVert AX \rVert=\lVert X \rVert.
+\]
+因为$X\ne 0$，所以$|\lambda|=1$。
+\end{proof}
+
+\item[七、]（15分）
+设 $V$ 为 $\mathbb{R}$上的 $3$ 维线性空间，$\boldsymbol { \boldsymbol{\alpha} }_1, \boldsymbol { \boldsymbol{\alpha} }_2, \boldsymbol { \boldsymbol{\alpha} }_3$ 是空间$ V $的一组基，$\boldsymbol { \boldsymbol{\beta} }_1 =\boldsymbol { \boldsymbol{\alpha} }_1 +\boldsymbol { \boldsymbol{\alpha} }_2, \boldsymbol { \boldsymbol{\beta} }_2 = \boldsymbol { \boldsymbol{\alpha} }_2 +\boldsymbol { \boldsymbol{\alpha} }_3, \boldsymbol { \boldsymbol{\beta} }_3 =\boldsymbol { \boldsymbol{\alpha} }_3 + \boldsymbol { \boldsymbol{\alpha} }_1$。\\
+(1) 求证：$\boldsymbol { \boldsymbol{\beta} }_1, \boldsymbol { \boldsymbol{\beta} }_2, \boldsymbol { \boldsymbol{\beta} }_3$ 也是空间 $V$ 的基。\\
+(2) 求基 $\boldsymbol { \boldsymbol{\beta} }_1, \boldsymbol { \boldsymbol{\beta} }_2, \boldsymbol { \boldsymbol{\beta} }_3$ 到 $\boldsymbol { \boldsymbol{\alpha} }_1, \boldsymbol { \boldsymbol{\alpha} }_2, \boldsymbol { \boldsymbol{\alpha} }_3$ 的过渡矩阵。\\
+(3) 求 $\boldsymbol{\boldsymbol{\gamma}} = 3\boldsymbol { \boldsymbol{\alpha} }_1 + \boldsymbol { \boldsymbol{\alpha} }_2 - 4\boldsymbol { \boldsymbol{\alpha} }_3 $在基 $\boldsymbol { \boldsymbol{\beta} }_1, \boldsymbol { \boldsymbol{\beta} }_2, \boldsymbol { \boldsymbol{\beta} }_3$ 下的坐标。
+\begin{proof}
+(1) 只需证明$\boldsymbol { \boldsymbol{\beta} }_1, \boldsymbol { \boldsymbol{\beta} }_2, \boldsymbol { \boldsymbol{\beta} }_3$是线性无关的。\\
+设$k_1\boldsymbol { \boldsymbol{\beta} }_1+k_2\boldsymbol { \boldsymbol{\beta} }_2+k_3\boldsymbol { \boldsymbol{\beta} }_3=0$，则\[
+k_1(\boldsymbol { \boldsymbol{\alpha} }_1+\boldsymbol { \boldsymbol{\alpha} }_2)+k_2(\boldsymbol { \boldsymbol{\alpha} }_2+\boldsymbol { \boldsymbol{\alpha} }_3)+k_3(\boldsymbol { \boldsymbol{\alpha} }_3+\boldsymbol { \boldsymbol{\alpha} }_1)=(k_1+k_3)\boldsymbol { \boldsymbol{\alpha} }_1 + (k_1+k_2)\boldsymbol { \boldsymbol{\alpha} }_2 + (k_2+k_3)\boldsymbol { \boldsymbol{\alpha} }_3=0.
+\]
+因为$\boldsymbol { \boldsymbol{\alpha} }_1, \boldsymbol { \boldsymbol{\alpha} }_2, \boldsymbol { \boldsymbol{\alpha} }_3$ 是空间$ V $的一组基，所以\[
+\left\{ \begin{array}{l}
+	k_1+k_3=0\\
+	k_1+k_2=0\\
+	k_2+k_3=0\\
+\end{array} \right. 
+\]
+解得$k_1 = k_2 = k_3 = 0$。所以$\boldsymbol { \boldsymbol{\beta} }_1, \boldsymbol { \boldsymbol{\beta} }_2, \boldsymbol { \boldsymbol{\beta} }_3$是线性无关的。所以$\boldsymbol { \boldsymbol{\beta} }_1, \boldsymbol { \boldsymbol{\beta} }_2, \boldsymbol { \boldsymbol{\beta} }_3$是空间 $V$ 的基。\\
+(2) 因为\[
+\left( \boldsymbol { \boldsymbol{\beta} }_1, \boldsymbol { \boldsymbol{\beta} }_2, \boldsymbol { \boldsymbol{\beta} }_3 \right) =\left( \boldsymbol { \boldsymbol{\alpha} } _1,\boldsymbol { \boldsymbol{\alpha} } _2,\boldsymbol { \boldsymbol{\alpha} } _3 \right) \left( \begin{matrix}
+	1&		0&		1\\
+	1&		1&		0\\
+	0&		1&		1\\
+\end{matrix} \right) ,
+\]
+所以\[
+\left( \boldsymbol { \boldsymbol{\alpha} } _1,\boldsymbol { \boldsymbol{\alpha} } _2,\boldsymbol { \boldsymbol{\alpha} } _3 \right) =\left( \boldsymbol { \boldsymbol{\beta} }_1, \boldsymbol { \boldsymbol{\beta} }_2, \boldsymbol { \boldsymbol{\beta} }_3 \right) \left( \begin{matrix}
+	1&		0&		1\\
+	1&		1&		0\\
+	0&		1&		1\\
+\end{matrix} \right) ^{-1}=\left( \boldsymbol { \boldsymbol{\beta} }_1, \boldsymbol { \boldsymbol{\beta} }_2, \boldsymbol { \boldsymbol{\beta} }_3 \right) \left( \begin{matrix}
+	\frac{1}{2}&		\frac{1}{2}&		-\frac{1}{2}\\
+	-\frac{1}{2}&		\frac{1}{2}&		\frac{1}{2}\\
+	\frac{1}{2}&		-\frac{1}{2}&		\frac{1}{2}\\
+\end{matrix} \right) .
+\]
+所以基 $\boldsymbol { \boldsymbol{\beta} }_1, \boldsymbol { \boldsymbol{\beta} }_2, \boldsymbol { \boldsymbol{\beta} }_3$ 到 $\boldsymbol { \boldsymbol{\alpha} }_1, \boldsymbol { \boldsymbol{\alpha} }_2, \boldsymbol { \boldsymbol{\alpha} }_3$ 的过渡矩阵为\[
+\left( \begin{matrix}
+	\frac{1}{2}&		\frac{1}{2}&		-\frac{1}{2}\\
+	-\frac{1}{2}&		\frac{1}{2}&		\frac{1}{2}\\
+	\frac{1}{2}&		-\frac{1}{2}&		\frac{1}{2}\\
+\end{matrix} \right).
+\]
+(3) \[
+\boldsymbol{\boldsymbol{\gamma}}=\left( \boldsymbol { \boldsymbol{\alpha} } _1,\boldsymbol { \boldsymbol{\alpha} } _2,\boldsymbol { \boldsymbol{\alpha} } _3 \right) \left( \begin{array}{c}
+	3\\
+	1\\
+	-4\\
+\end{array} \right) =\left( \boldsymbol { \boldsymbol{\beta} }_1, \boldsymbol { \boldsymbol{\beta} }_2, \boldsymbol { \boldsymbol{\beta} }_3 \right) \left( \begin{matrix}
+	\frac{1}{2}&		\frac{1}{2}&		-\frac{1}{2}\\
+	-\frac{1}{2}&		\frac{1}{2}&		\frac{1}{2}\\
+	\frac{1}{2}&		-\frac{1}{2}&		\frac{1}{2}\\
+\end{matrix} \right) \left( \begin{array}{c}
+	3\\
+	1\\
+	-4\\
+\end{array} \right) =\left( \boldsymbol { \boldsymbol{\beta} }_1, \boldsymbol { \boldsymbol{\beta} }_2, \boldsymbol { \boldsymbol{\beta} }_3 \right) \left( \begin{array}{c}
+	4\\
+	-3\\
+	-1\\
+\end{array} \right) .
+\]
+所以$\boldsymbol{\boldsymbol{\gamma}}$在基 $\boldsymbol { \boldsymbol{\beta} }_1, \boldsymbol { \boldsymbol{\beta} }_2, \boldsymbol { \boldsymbol{\beta} }_3$ 下的坐标为$(4, -3, -1)'$。
+\end{proof}
+
+\item[八、]
+（15 分）用正交线性替换化二次型为标准型，并判断\[
+f(x_1, x_2, x_3) = 1
+\]
+为何种几何曲面？其中 $f(x_1, x_2, x_3) = 5x^2_1 + 5x^2_2 + 3x^2_3 - 2x_1x_2 + 6x_1x_3 - 6x_2x_3$。
+\begin{proof}
+二次型$f(x_1, x_2, x_3)$的矩阵为\[A=
+\left( \begin{matrix}
+	5&		-1&		3\\
+	-1&		5&		-3\\
+	3&		-3&		3\\
+\end{matrix} \right) .
+\]
+\[
+|\lambda I-A|=\left| \begin{matrix}
+	\lambda -5&		1&		-3\\
+	1&		\lambda -5&		3\\
+	-3&		3&		\lambda -3\\
+\end{matrix} \right|=\lambda \left( \lambda -4 \right) \left( \lambda -9 \right) .
+\]
+所以$A$的全部特征值为$0$，$4$，$9$。\\
+解线性方程组$(0I-A)X=0$，得一个基础解系：\[
+\boldsymbol{\xi}_1=(-1, 1, 2)'.
+\]
+解线性方程组$(4I-A)X=0$，得一个基础解系：\[
+\boldsymbol{\xi}_2=(1, 1, 0)'.
+\]
+解线性方程组$(9I-A)X=0$，得一个基础解系：\[
+\boldsymbol{\xi}_3=(7, -1, 1)'.
+\]
+将$\boldsymbol{\xi}_1, \boldsymbol{\xi}_2, \boldsymbol{\xi}_3$分别单位化得：\begin{align*}
+\eta_1&=\frac{\boldsymbol{\xi}_1}{|\boldsymbol{\xi}_1|}=\left(\frac{-\sqrt{6}}{6}, \frac{\sqrt{6}}{6}, \frac{\sqrt{6}}{3}\right)';\\
+\eta_2&=\frac{\boldsymbol{\xi}_2}{|\boldsymbol{\xi}_2|}=\left(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}, 0\right)';\\
+\eta_3&=\frac{\boldsymbol{\xi}_3}{|\boldsymbol{\xi}_3|}=\left(\frac{7\sqrt{51}}{51}, \frac{-\sqrt{51}}{51}, \frac{\sqrt{51}}{51}\right)'.
+\end{align*}
+令\[
+T=\left( \eta _1,\eta _2,\eta _3 \right) =\left( \begin{matrix}
+	-\frac{\sqrt{6}}{6}&		\frac{\sqrt{2}}{2}&		\frac{7\sqrt{51}}{51}\\
+	\frac{\sqrt{6}}{6}&		\frac{\sqrt{2}}{2}&		-\frac{\sqrt{51}}{51}\\
+	\frac{\sqrt{6}}{3}&		0&		\frac{\sqrt{51}}{51}\\
+\end{matrix} \right),
+\]
+则$T$是正交阵，且$T^{-1}AT={\rm diag}\{0, 4, 9\}$。\\
+令\begin{equation}\label{transformation}
+\left( \begin{array}{c}
+	x_1^*\\
+	x_2^*\\
+	x_3^*\\
+\end{array} \right) =T\left( \begin{array}{c}
+	x_1\\
+	x_2\\
+	x_3\\
+\end{array} \right) .
+\end{equation}
+则\[
+f(x_1, x_2, x_3)=4{x_2^*}^2+9{x_3^*}^2.
+\]
+下面判断曲面类型。作直角坐标变换  \eqref{transformation}，则原二次曲面 $5 x _ { 1 } ^ { 2 } + 5 x _ { 2 } ^ { 2 } + 3 x _ { 3 } ^ { 2 } - 2 x _ { 1 } x _ { 2 } + 6 x _ { 1 } x _ { 3 } - 6 x _ { 2 } x _ { 3 }=1$在新的直角坐标系中的方程为：\[
+4{x_2^*}^2+9{x_3^*}^2=1.
+\]
+由此看出，这是椭圆柱面。
+\end{proof}
+
+\item[九、]
+（15 分）设 $f(x)$ 是一个整系数多项式，$f(0)$ 与 $f(1)$ 均为奇数，求证：$f(x)$ 没有整数根。
+\begin{proof}
+假如 $f(x)$ 有一个整数根$b$，则$x-b$是本原多项式，且$x-b$是$f(x)$的一个因式。又由于$f(x)$也是本原多项式，因此存在整系数多项式$h(x)$，使得\[
+f(x)=(x-b)h(x).
+\]
+$x$分别用$0$和$1$代入，从上式得\[
+f(0)=(-b)h(0), (1)=(1-b)h(1).\]
+由于$-b$和$-b+1$必有一个是偶数，因此$f(0)$和$f(1)$必有一个是偶数。这与已知条件矛盾，所以$f(x)$没有整数根。
+\end{proof}
+
+\item[十、]
+（10 分）设 $V$ 为 $\mathbb{R}$ 上的 $n$ 维线性空间，$\mathscr{A}$ 为 $V$ 上的一个线性变换，$\Im(\mathscr{A})$ 与$\ker\mathscr{A}$分别为线性变换$\mathscr{A}$的值域和核空间，求证：\[
+\Im\mathscr{A}\oplus\ker\mathscr{A}= V
+\]
+的充分必要条件为：\[
+\ker\mathscr{A} = \ker\mathscr{A}^2.
+\]
+\begin{proof}
+必要性。易知$\ker\mathscr{A}\subset\ker\mathscr{A}^2$，下证$\ker\mathscr{A}^2\subset\ker\mathscr{A}$。\\
+任取向量$\boldsymbol{\alpha} \in \ker\mathscr{A}^2$，有
+$$\mathscr{A}^2\boldsymbol{\alpha}=0,$$
+因此\[
+\mathscr{A}\boldsymbol{\alpha}\in\ker\mathscr{A}.
+\]
+又\[
+\mathscr{A}\boldsymbol{\alpha}\in\Im\mathscr{A},
+\]
+且$\Im\mathscr{A}+\ker\mathscr{A}$是直和，所以
+$$\mathscr{A}\boldsymbol{\alpha}=0,$$
+即\[
+\boldsymbol{\alpha}\in\ker\mathscr{A}.
+\]
+故$\ker\mathscr{A}^2\subset\ker\mathscr{A}$。\\
+充分性。只需证$\text{Im}\mathscr{A}+\ker\mathscr{A}$是直和。\\
+任取一个向量$\boldsymbol{\alpha}\in \Im\mathscr{A}\bigcap\ker\mathscr{A}$，则$\mathscr{A}\boldsymbol{\alpha}=0$，且存在一个向量$\boldsymbol{\beta}\in V$，使得$\boldsymbol{\alpha}=\mathscr{A}\boldsymbol{\beta}$。因此$\mathscr{A}^2\boldsymbol{\beta}=0$，即$\boldsymbol{\beta}\in\ker\mathscr{A}^2$。因为$\ker\mathscr{A}=\ker\mathscr{A}^2$，所以$\boldsymbol{\beta}\in\ker\mathscr{A}$，即$\mathscr{A}\boldsymbol{\beta}=0$。因此$\boldsymbol{\alpha}=0$。故$\text{Im}\mathscr{A}+\ker\mathscr{A}$是直和。
+
+\end{proof}
+\end{enumerate}
+\endinput

@@ -1,0 +1,826 @@
+\section{2014}
+\begin{enumerate}[1~]
+\renewcommand{\labelenumi}{\textbf{\theenumi. }}
+\renewcommand{\Im}{\text{Im }}
+\item[一、]填空题 
+\begin{enumerate}[1.~]
+\item
+当 $a, b$ 满足 （\ \ \ \ ） 时，多项式 $f(x) = x^4 + 4ax - b$ 有重根。
+\begin{solution}
+因为$f'(x)=4x^3+4a=4(x+a^{\frac{1}{3}})(x^2-a^{\frac{1}{3}}x+a^{\frac{2}{3}})$，且$a^{\frac{2}{3}}-4a^{\frac{2}{3}}<0$，所以$f'(x)$只有一个实数根$x=-a^{\frac{1}{3}}$。所以
+\begin{align*}
+&\text{多项式$f(x)$有重根}
+\Leftrightarrow (f(x),f'(x))=(x+a^{\frac{1}{3}} )\\
+&\Rightarrow (x+a^{\frac13})| f(x) \Rightarrow f(-a^{\frac13})=0\\ 
+&\Rightarrow a^{\frac43}-4a^{\frac43}-b=0\\
+&\Rightarrow 3a^{\frac43}+b=0.
+\end{align*}
+所以，$a$和$b$应满足$3a^{\frac 43}+b = 0$。
+\end{solution}
+
+\item 
+$n$阶行列式$\left| \begin{array}{c}
+	5\\
+	2\\
+	0\\
+	\vdots\\
+	0\\
+	0\\
+\end{array}\begin{array}{c}
+	3\\
+	5\\
+	2\\
+	\vdots\\
+	0\\
+	0\\
+\end{array}\begin{array}{c}
+	0\\
+	3\\
+	5\\
+	\vdots\\
+	0\\
+	0\\
+\end{array}\begin{array}{c}
+	\cdots\\
+	\cdots\\
+	\cdots\\
+	\\
+	\cdots\\
+	\cdots\\
+\end{array}\begin{array}{c}
+	0\\
+	0\\
+	0\\
+	\vdots\\
+	5\\
+	2\\
+\end{array}\begin{array}{c}
+	0\\
+	0\\
+	0\\
+	\vdots\\
+	3\\
+	5\\
+\end{array} \right|
+$
+的值为（\ \ \ \ ）。
+\begin{solution}
+先证明一般性命题：设\[
+D _ { n } = \left| \begin{array} { c c c c c c c } { a + b } & { a b } & { 0 } & { 0 } & { \cdots } & { 0 } & { 0 } \\ { 1 } & { a + b } & { a b } & { 0 } & { \cdots } & { 0 } & { 0 } \\ { 0 } & { 1 } & { a + b } & { a b } & { \cdots } & { 0 } & { 0 } \\ { \vdots } & { \vdots } & { \vdots } & { \vdots } & { } & { \vdots } & { \vdots } \\ { 0 } & { 0 } & { 0 } & { 0 } & { \cdots } & { 1 } & { a + b } \end{array} \right|.
+\]
+其中$a \neq b$。当$n \ge 3$时，将行列式按第一行展开，
+\begin{align*} 
+D _ { n } & = ( a + b ) D _ { n - 1 } + ( - 1 ) ^ { 1 + 2 } a b \cdot 1 \cdot D _ { n - 2 }, \\ 
+& = ( a + b ) D _ { n - 1 } - a b D _ { n - 2 }. \end{align*}
+所以有\[
+D _ { n } - a D _ { n - 1 } = b \left( D _ { n - 1 } - a D _ { n - 2 } \right),
+\]
+于是$D _ { 2 } - a D _ { 1 } , D _ { 3 } - a D _ { 2 } , \dots , D _ { n } - a D _ { n - 1 }$是公比为$b$的等比数列。从而，
+\[
+D _ { n } - a D _ { n - 1 } = \left( D _ { 2 } - a D _ { 1 } \right) b ^ { n - 2 }.
+\]
+由于\begin{align*}
+D _ { 1 } &= | a + b | = a + b,\\
+D _ { 2 } &= \left| \begin{array} { c c } { a + b } & { a b } \\ { 1 } & { a + b } \end{array} \right| = ( a + b ) ^ { 2 } - a b = a ^ { 2 } + a b + b ^ { 2 }.
+\end{align*}
+因此\[
+D _ { 2 } - a D _ { 1 } = b ^ { 2 }.
+\]
+又由上式得到\[
+D _ { n } - a D _ { n - 1 } = b ^ { n },
+\]
+由对称性，\[
+D _ { n } - b D _ { n - 1 } = a ^ { n },
+\]
+联立可解得\[
+D _ { n } = \frac { a ^ { n + 1 } - b ^ { n + 1 } } { a - b }.
+\]
+记原行列式为$D$，则\[
+D=2^n \left| \begin{array}{c}
+	\frac52\\
+	1\\
+	0\\
+	\vdots\\
+	0\\
+	0\\
+\end{array}\begin{array}{c}
+	\frac32\\
+	\frac52\\
+	1\\
+	\vdots\\
+	0\\
+	0\\
+\end{array}\begin{array}{c}
+	0\\
+	\frac32\\
+	\frac52\\
+	\vdots\\
+	0\\
+	0\\
+\end{array}\begin{array}{c}
+	\cdots\\
+	\cdots\\
+	\cdots\\
+	\\
+	\cdots\\
+	\cdots\\
+\end{array}\begin{array}{c}
+	0\\
+	0\\
+	0\\
+	\vdots\\
+	\frac52\\
+	1\\
+\end{array}\begin{array}{c}
+	0\\
+	0\\
+	0\\
+	\vdots\\
+	\frac32\\
+	\frac52\\
+\end{array} \right|
+,\]
+对于上述命题取$a=1,b=\frac32$，即得\[
+D=2^n \frac{1-( \frac32)^{n+1}}{1-\frac32} = 3^{n+1}-2^{n+1}.
+\]
+\end{solution}
+
+\item
+设 $A$ 为 $n$ 阶反对称阵，$\boldsymbol{\alpha}$ 是 $n$ 维单位列向量，则 $\boldsymbol{\alpha}^T (A - E)\boldsymbol{\alpha} = $（\ \ \ \ ）。
+\begin{solution}
+先证$ \boldsymbol{\alpha} ^T A \boldsymbol{\alpha} = 0$。因为\[
+\boldsymbol{\alpha} ^T A \boldsymbol{\alpha} = (\boldsymbol{\alpha} ^T A \boldsymbol{\alpha})^T = -\boldsymbol{\alpha} ^T A \boldsymbol{\alpha},
+\]
+所以，\[
+\boldsymbol{\alpha} ^T A \boldsymbol{\alpha} = 0.
+\]
+因此，\[
+\boldsymbol{\alpha} ^T (A-E) \boldsymbol{\alpha} = \boldsymbol{\alpha} ^T A \boldsymbol{\alpha} - \boldsymbol{\alpha} ^T \boldsymbol{\alpha} = - \boldsymbol{\alpha} ^T \boldsymbol{\alpha} = - \sqrt{(\boldsymbol{\alpha},\boldsymbol{\alpha})} = -1.
+\]
+\end{solution}
+
+\item
+已知向量组 $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3$ 线性无关，向量组 $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3, \boldsymbol{\alpha}_4$ 的秩为 $3$，向量组 $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3, \boldsymbol{\alpha}_5$ 的秩为 $4$，则向量组 $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3, \boldsymbol{\alpha}_5 - \boldsymbol{\alpha}_4$ 的秩为 （\ \ \ \ ）。
+\begin{solution}
+因为$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_5$的秩为4，所以$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3$线性无关。（题目中''向量组$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3$线性无关''条件是多余的）\\
+又$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4$的秩为3，所以$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3$是$\boldsymbol{\alpha}_1,\boldsymbol{\alpha}_2,\boldsymbol{\alpha}_3,\boldsymbol{\alpha}_4$的一个极大线性无关组。\\
+设\[
+\boldsymbol{\alpha}_4 = k_1 \boldsymbol{\alpha}_1 + k_2 \boldsymbol{\alpha}_2 + k_3 \boldsymbol{\alpha}_3,
+\]
+其中$k_1, k_2, k_3 \in \mathbb{R}$ ，则\[
+(\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3, \boldsymbol{\alpha}_5) = (\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3, \boldsymbol{\alpha}_5) \left( \begin{matrix}
+	1&		0&		0&		-k_1\\
+	0&		1&		0&		-k_2\\
+	0&		0&		1&		-k_3\\
+	0&		0&		0&		1\\
+\end{matrix} \right)  
+\]
+因为\[
+\left| \begin{matrix}
+	1&		0&		0&		-k_1\\
+	0&		1&		0&		-k_2\\
+	0&		0&		1&		-k_3\\
+	0&		0&		0&		1\\
+\end{matrix} \right| = 1\ne 0,
+\]
+所以$\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3, \boldsymbol{\alpha}_5-\boldsymbol{\alpha}_4$的秩为4。
+\end{solution}
+
+\item
+已知向量组 $\boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3, \boldsymbol{\alpha}_4$ 线性无关，$\boldsymbol{\alpha} _ { 1 } = 2 \boldsymbol{\alpha} _ { 2 } - \boldsymbol{\alpha} _ { 3 } , \boldsymbol{\beta} = \boldsymbol{\alpha} _ { 1 } + \boldsymbol{\alpha} _ { 2 } + \boldsymbol{\alpha} _ { 3 } + \boldsymbol{\alpha} _ { 4 } , A = \left( \boldsymbol{\alpha} _ { 1 } , \boldsymbol{\alpha} _ { 2 } , \boldsymbol{\alpha} _ { 3 } , \boldsymbol{\alpha} _ { 4 } \right)$ 则方程
+组 $AX=\boldsymbol{\beta}$ 的通解为 （\ \ \ \ ）。
+\begin{solution}
+由题目可知，方程组的一个特解为\[
+X_0 = \left( \begin{matrix}
+1\\
+1\\
+1\\
+1
+\end{matrix} \right).
+\]
+因为$\boldsymbol{\alpha}_1 = 2 \boldsymbol{\alpha}_2 - \boldsymbol{\alpha}_3$，所以\[
+(\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3, \boldsymbol{\alpha}_4) \left( \begin{matrix}
+1\\
+-2\\
+1\\
+0
+\end{matrix} \right) =  \left( \begin{matrix}
+0\\
+0\\
+0\\
+0
+\end{matrix} \right),
+\]
+所以，$\left( \begin{matrix}
+1\\
+-2\\
+1\\
+0
+\end{matrix} \right)$ 是$AX = 0$的一个解。\\
+又${\rm rank}(A) = 3$，所以$AX = 0$的通解为$k  \left( \begin{matrix}
+1\\
+-2\\
+1\\
+0
+\end{matrix} \right), k \in \mathbb{R}$。\\
+所以，$AX = \boldsymbol{\beta}$ 的通解为
+\[
+X =  \left( \begin{matrix}
+0\\
+0\\
+0\\
+0
+\end{matrix} \right) + k  \left( \begin{matrix}
+1\\
+-2\\
+1\\
+0
+\end{matrix} \right), k \in \mathbb{R}.
+\]
+\end{solution}
+
+
+\item
+线性空间 $\mathbb{R}^{2\times2}$ 中，基 (1)：
+$$
+A _ { 1 } = \left( \begin{array} { c c } { 1 } & { 0 } \\ { 0 } & { 0 } \end{array} \right) , A _ { 2 } = \left( \begin{array} { c c } { 1 } & { 1 } \\ { 0 } & { 0 } \end{array} \right) , A _ { 3 } = \left( \begin{array} { c c } { 1 } & { 1 } \\ { 1 } & { 0 } \end{array} \right) , A _ { 4 } = \left( \begin{array} { c c } { 1 } & { 1 } \\ { 1 } & { 1 } \end{array} \right)
+$$
+到基 (2)：
+$$
+B _ { 1 } = \left( \begin{array} { c c } { 1 } & { 0 } \\ { 1 } & { 1 } \end{array} \right) , B _ { 2 } = \left( \begin{array} { c c } { 0 } & { 1 } \\ { 1 } & { 1 } \end{array} \right) , B _ { 3 } = \left( \begin{array} { c c } { 1 } & { 1 } \\ { 1 } & { 0 } \end{array} \right) , B _ { 4 } = \left( \begin{array} { c c } { 1 } & { 1 } \\ { 0 } & { 1 } \end{array} \right)
+$$
+的过渡矩阵为：
+
+\begin{solution}
+取线性空间 $\mathbb{R}^{2\times2}$上的自然基$E_{11}, E_{12}, E_{21}, E_{22}$，其中$E_{ij}$是$(i,j)$元素为1，其余元素为0的2阶实方阵。则有\[
+(A_1, A_2, A_3, A_4) = (E_{11}, E_{12}, E_{21}, E_{22}) \left( \begin{matrix}
+1& 1& 1& 1\\
+0& 1& 1& 1\\
+0& 0& 1& 1\\
+0& 0& 0& 1
+\end{matrix} \right),
+\]
+同理，\[
+(B_1, B_2, B_3, B_4) = (E_{11}, E_{12}, E_{21}, E_{22}) \left( \begin{matrix}
+1& 0& 1& 1\\
+0& 1& 1& 1\\
+1& 1& 1& 0\\
+1& 1& 0& 1
+\end{matrix} \right).
+\]
+设过渡矩阵为$P$，则\[
+\left( \begin{matrix}
+1& 1& 1& 1\\
+0& 1& 1& 1\\
+0& 0& 1& 1\\
+0& 0& 0& 1
+\end{matrix} \right) P = \left( \begin{matrix}
+1& 0& 1& 1\\
+0& 1& 1& 1\\
+1& 1& 1& 0\\
+1& 1& 0& 1
+\end{matrix} \right).
+\]
+故\[
+P^{-1} = \left( \begin{matrix}
+1& 1& 1& 1\\
+0& 1& 1& 1\\
+0& 0& 1& 1\\
+0& 0& 0& 1
+\end{matrix} \right) ^{-1} \left( \begin{matrix}
+1& 0& 1& 1\\
+0& 1& 1& 1\\
+1& 1& 1& 0\\
+1& 1& 0& 1
+\end{matrix} \right)\\
+ = \left( \begin{matrix}
+1& -1& 0& 0\\
+-1& 0& 0& 1\\
+0& 0& 1& -1\\
+1& 1& 0& 1
+\end{matrix} \right).
+\]
+\end{solution}
+\item
+当 $a$ 满足什么条件时，实二次型 $f(x_1, x_2, x_3) = x^2_1 + x^2_2 + x^2_3 + 2ax_1x_2$ 正定。
+\begin{solution}
+实二次型 $f(x_1, x_2, x_3)$的系数矩阵为
+$$
+\left( \begin{matrix}
+1& a& 0\\
+a& 1& 0\\
+0& 0& 1
+\end{matrix} \right),
+$$
+若$f(x_1, x_2, x_3)$正定，则有\[
+1>0,\\
+1-a^2>0.
+\]
+因此，$a$需满足的条件为$-1<a<1$。
+\end{solution}
+
+\item
+矩阵$A = \left( \begin{array} { l l l } { 1 } & { 2 } & { 3 } \\ { 0 } & { 4 } & { 5 } \\ { 0 } & { 0 } & { 4 } \end{array} \right)$的 Jordan 标准型为（\ \ \ \ ）。
+\begin{solution}
+$A$的特征多项式为$f( \lambda) = (\lambda -1)(\lambda -4)^2$。\\
+因为\[
+A-I = \left( \begin{matrix}
+0& 2& 3\\
+0& 3& 5\\
+0& 0& 3
+\end{matrix} \right),\\
+A-4I = \left( \begin{matrix}
+-3& 2& 3\\
+0& 0& 5\\
+0& 0& 0
+\end{matrix} \right).
+\]
+所以有\[
+(A-I)(A-4I) = \left( \begin{matrix}
+0& 0& 10\\
+0& 0& 15\\
+0& 0& 0
+\end{matrix} \right)\ne 0,
+\]
+因此 $A$ 的最小多项式 $m(\lambda)$ 有重根。\\
+所以 $A$ 不可对角化，由题意易知 $A$ 的 Jordan 标准型为\[
+\left( \begin{matrix}
+1& 0& 0\\
+0& 4& 1\\
+0& 0& 4
+\end{matrix} \right).
+\]
+\end{solution}
+\item
+设$A$ 为 $3$ 阶奇异阵，$A + E$ 的行向量组线性相关，rank$(A + 2E) = 2$，则 $|A + 3E| = $（\ \ \ \ ）。
+\begin{solution}
+因为$A$为奇异矩阵，所以$|A| = 0$，所以0是$A$的一个特征值。\\
+又\begin{align*}
+|-E-A| &= (-1)^3 |E+A| = 0,\\
+|-2E-A| &= (-1)^3 |2E+A| = 0.
+\end{align*}
+所以$A$的全部特征值为0, -1 ,-2，所以$A+3E$的全部特征值为3, 2, 1。\\
+因此，$|A+3E| = 6$。
+\end{solution}
+\begin{remark}
+一般地，设$A$是数域$\mathbb{K}$上的$n$级矩阵，$\lambda_1, \lambda_2, \dots, \lambda_n$是$A$的特征多项式$|\lambda I-A|$在复数域中的全部根（它们中可能有相同的），则\\
+(1) 对于复数域上的任一多项式$g(x)$，有$|g(A)| = g(\lambda_1) g(\lambda_2) \cdots g(\lambda_n)$；\\
+(2) 对于数域$\mathbb{K}$上任一多项式$f(x)$，有$f(\lambda_1), f(\lambda_2), \dots, f(\lambda_n)$是矩阵$f(A)$的特征多项式$|\lambda I -f(A)|$在复数域中的全部根，从而如果$\lambda_1$是$A$的$l_1$重特征值，那么$f(\lambda_1)$是$f(A)$的至少$l_1$重特征值。
+\begin{proof}
+由已知条件得，$n$级矩阵$A$的特征多项式$|\lambda I-A|$在复数域中的因式分解为\begin{equation}\label{lambda}
+| \lambda I -A | = (\lambda - \lambda_1)(\lambda - \lambda_2) \cdots (\lambda - \lambda_n).
+\end{equation}
+(1)设$g(x)$在复数域中的因式分解为\begin{equation}\label{g(x)}
+g(x) = b(x-\mu_1)(x-\mu_2) \cdots (x-\mu_n),
+\end{equation}
+$x$ 用 $A$ 代入，由 \eqref{g(x)} 式得，\begin{equation} \label{g(A)}
+g(A) = b(A-\mu_1 I)(A-\mu_2 I) \cdots (A-\mu_n I).
+\end{equation}
+$x$用 $\lambda_i$ 代入，由 \eqref{g(x)} 式得 \begin{equation}\label{g(lambda)}
+g(\lambda_i) = b(\lambda_i - \mu_1)(\lambda_i - \mu_2) \cdots (\lambda_i - \mu_n) = b \prod_{j=1}^m (\lambda_i - \mu_j).
+\end{equation}
+由 \eqref{lambda} 式得，\begin{equation} \label{AlI}
+|A-\lambda I| = (\lambda_1 - \lambda) (\lambda_2 - \lambda) \cdots  (\lambda_n - \lambda).
+\end{equation}
+$\lambda$ 用 $\mu_j$ 代入，把 \eqref{AlI} 式左端展开成 $\lambda$ 的多项式后，由 \eqref{AlI} 式可得 \begin{equation} \label{AmI}
+| A-\mu_j I| = (\lambda_1 - \mu_j)(\lambda_2 - \mu_j) \cdots (\lambda_n - \mu_j) = \prod_{i=1}^n (\lambda_i - \mu_j).
+\end{equation}
+由 \eqref{g(A)}、 \eqref{AmI} 和 \eqref{g(lambda)} 得
+\begin{align}\label{|g(A)|}
+|g(A)| &= b^n |A -\mu_1 I||A -\mu_2 I| \cdots |A -\mu_m I| = b ^ { n } \prod _ { j = 1 } ^ { m } \left| A - \mu _ { j } I\right|\\
+&= b ^ { n } \prod _ { j = 1 } ^ { m } \prod _ { i = 1 } ^ { n } \left( \lambda _ { i } - \mu _ { j } \right) = b ^ { n } \prod _ { i = 1 } ^ { n } \prod _ { j = 1 } ^ { m } \left( \lambda _ { i } - \mu _ { j } \right) = \prod _ { i = 1 } ^ { n } g \left( \lambda _ { i } \right).
+\end{align}
+
+(2)任给数域 $\mathbb{K}$ 上的一个多项式 $f(x)$。令\begin{equation} \label{gx}
+g(x) = \lambda - f(x),
+\end{equation}
+其中 $\lambda$ 可以取任意一个复数。当 $\lambda$ 任意取定一个复数后，对$g(x)$ 用第 (1) 小题的结论得
+\begin{equation} \label{|gA|}
+| g ( A ) | = \prod _ { i = 1 } ^ { n } g \left( \lambda _ { i } \right).
+\end{equation}
+$x$ 用 $A$ 代入，由 \eqref{gx}，得\begin{equation} \label{gA}
+g (A) = \lambda I - f ( A ).
+\end{equation}
+$x$ 用 $\lambda_i$ 代入，由 \eqref{gx}，得\begin{equation} \label{glambda}
+g \left( \lambda _ { i } \right) = \lambda - f \left( \lambda _ { i } \right).
+\end{equation}
+由 \eqref{|gA|}、 \eqref{gA}、 \eqref{glambda} 式，得\begin{equation}\label{lambdaIfA}
+| \lambda I - f ( A ) | = \prod _ { i = 1 } ^ { n } \left[ \lambda - f \left( \lambda _ { i } \right) \right].
+\end{equation}
+ \eqref{lambdaIfA} 式对 $\lambda$ 取任意一个复数都成立。于是 \eqref{lambdaIfA} 左端可以看成是变量 $\lambda$ 的多项式函数， \eqref{lambdaIfA} 式就表明 $\lambda$ 的多项式函数 $|\lambda I-f(A)|$ 在$f \left( \lambda _ { 1 } \right) , f \left( \lambda _ { 2 } \right) , \dots , f \left( \lambda _ { n } \right)$ 处的函数值都为 0。从而 $f \left( \lambda _ { 1 } \right) , f \left( \lambda _ { 2 } \right) , \dots , f \left( \lambda _ { n } \right)$是 $f(A)$ 的特征多项式 $|\lambda I-f(A)|$ 在复数域中的全部根。
+\end{proof}
+\end{remark}
+
+\item
+在向量空间 $\mathbb{R}^2$ 中规定内积 （不一定是标准内积） 后得到欧式空间 $V$ ，且 $V$ 的基 $\boldsymbol{\alpha}_1 = (2, 1), \boldsymbol{\alpha}_2 = (3, 2)$ 的度量矩阵为 $A = \left( \begin{array} { c c } { 6 } & { 10 } \\ {10} & { 17 } \end{array} \right)$，
+则基 $e_1 = (1, 0), e_2 = (0, 1)$ 的度量矩阵为 （\ \ \ \ ）。
+
+\begin{solution}
+设 $V$ 的内积为 $(\cdot, \cdot)$，由于 $\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2$ 的度量矩阵为
+$$\left( \begin{matrix}
+	6&		10\\
+	10&		17\\
+\end{matrix} \right),$$
+所以，
+$$
+\begin{array}{l}
+	\left( \boldsymbol{\alpha} _1,\boldsymbol{\alpha} _1 \right) _1=6,\\
+	\left( \boldsymbol{\alpha} _1,\boldsymbol{\alpha} _2 \right) _1=10,\\
+	\left( \boldsymbol{\alpha} _2,\boldsymbol{\alpha} _1 \right) _1=10,\\
+	\left( \boldsymbol{\alpha} _2,\boldsymbol{\alpha} _2 \right) _1=17.\\
+\end{array}
+$$
+又因为
+$$
+\begin{array}{l}
+	e_1 = 2 \boldsymbol{\alpha} _1 - \boldsymbol{\alpha} _2,\\
+	e_2 = -3 \boldsymbol{\alpha} _1 + \boldsymbol{\alpha} _2 .\\
+\end{array}
+$$
+所以
+\begin{align*}
+(e_1, e_1)_1 &= (2 \boldsymbol{\alpha}_1- \boldsymbol{\alpha}_2, 2 \boldsymbol{\alpha}_1- \boldsymbol{\alpha}_2)_1 = 1,\\
+(e_1, e_2)_1 &= (2 \boldsymbol{\alpha}_1- \boldsymbol{\alpha}_2, 3\boldsymbol{\alpha}_1 +2\boldsymbol{\alpha}_2)_1 = 0,\\
+(e_2, e_1)_1 &= (-3 \boldsymbol{\alpha}_1+ 2\boldsymbol{\alpha}_2, 2 \boldsymbol{\alpha}_1- \boldsymbol{\alpha}_2)_1 = 0,\\
+(e_2, e_2)_1 &= (-3 \boldsymbol{\alpha}_1+ 2\boldsymbol{\alpha}_2, -3 \boldsymbol{\alpha}_1+2 \boldsymbol{\alpha}_2)_1 = 2.\\
+\end{align*}
+
+所以，$e_1, e_2$的度量矩阵为$$
+\left( \begin{matrix}
+	1&		0\\
+	0&		2\\
+\end{matrix} \right) 。
+$$
+\end{solution}
+\end{enumerate}
+
+\item[二、]
+ 设 $V$ 为 $\mathbb{R}$ 上的三维线性空间，$\mathscr{A}$ 为 $V$ 的一个线性变换，$\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3$ 是 $V$ 的一组基，
+ $$\mathscr { A } \left( \boldsymbol{\alpha} _ { 1 } \right) = 2 \boldsymbol{\alpha} _ { 1 } + \boldsymbol{\alpha} _ { 2 } + \boldsymbol{\alpha} _ { 3 },$$
+$$\mathscr { A } \left( \boldsymbol{\alpha} _ { 2 } \right) = \boldsymbol{\alpha} _ { 1 } + 2 \boldsymbol{\alpha} _ { 2 } + \boldsymbol{\alpha} _ { 3 },$$
+$$\mathscr { A } \left( \boldsymbol{\alpha} _ { 3 } \right) = \boldsymbol{\alpha} _ { 1 } + \boldsymbol{\alpha} _ { 2 } + 2 \boldsymbol{\alpha} _ { 3 }.$$
+(1) 求 $\mathscr{A}$ 在基$\boldsymbol{\alpha} _ { 1 } , \boldsymbol{\alpha} _ { 2 } , \boldsymbol{\alpha} _ { 3 }$下的矩阵。
+
+(2) 求 $\mathscr{A}$ 的特征值，特征向量。
+
+(3) 求 $V$ 的一组基，使 $\mathscr{A}$ 在该基下的矩阵为对角阵。
+\begin{solution}
+(1)因为
+$$
+\sigma (\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3) = (\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3) \left( \begin{matrix}
+	2&		1&		1\\
+	1&		2&		1\\
+	1&		1&		2\\
+\end{matrix} \right),
+$$
+所以，$\sigma$在基$\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3$下的矩阵为$$
+A =  \left( \begin{matrix}
+	2&		1&		1\\
+	1&		2&		1\\
+	1&		1&		2\\
+\end{matrix} \right).$$
+(2)先求$A$的特征值和特征向量。因为$$
+|\lambda I- A| = \left| \begin{matrix}
+	\lambda-2&		-1&		-1\\
+	-1&		\lambda-2&		-1\\
+	-1&		-1&		\lambda-2\\
+\end{matrix} \right| = (\lambda - 1)^2(\lambda-4)，$$
+所以，$A$ 的特征值为 $1$（$2$ 重），$4$（$1$ 重）。\\
+解线性方程组 $(A-I)X = 0$，得一个基础解系：$$
+\boldsymbol{\eta}_1 =\left( \begin{matrix}
+	1  \\
+	0  \\
+	-1   \end{matrix} \right), \boldsymbol{\eta}_2 = \left( \begin{matrix}
+	1  \\
+	-1 \\
+	0  \\ \end{matrix} \right), $$
+解线性方程组$(A-4I)X = 0$，得一个基础解系：$$
+\boldsymbol{\eta}_3 =\left( \begin{matrix}
+   1  \\
+	1  \\
+	1  \\    \end{matrix} \right).$$
+因此，$A$ 的属于 1 的特征向量为：$$
+k\left( \begin{array}{c}
+	1\\
+	0\\
+	-1\\
+\end{array} \right) , l\left( \begin{array}{c}
+	1\\
+	-1\\
+	0\\
+\end{array} \right), k,l \in \mathbb{R}, k,l \neq 0. 
+$$
+$A$ 的属于 4 的特征向量为：$$
+m\left( \begin{array}{c}
+	1\\
+	1\\
+	1\\
+\end{array} \right) , m \in \mathbb{R},m \neq 0.
+$$
+故 $\sigma$的特征值为 1(2重)，4(1重)。\\
+$\sigma$的属于 1 的特征向量为
+$$
+k\left( \begin{array}{c}
+	1\\
+	0\\
+	-1\\
+\end{array} \right) , l\left( \begin{array}{c}
+	1\\
+	-1\\
+	0\\
+\end{array} \right), k,l \in \mathbb{R}, k,l \neq 0. 
+$$
+$\sigma$的属于4的特征向量为：$$
+m\left( \begin{array}{c}
+	1\\
+	1\\
+	1\\
+\end{array} \right) , m \in \mathbb{R},m \neq 0.
+$$
+(3)由(2)知，$\boldsymbol{\eta}_1, \boldsymbol{\eta}_2, \boldsymbol{\eta}_3$是$V$的一组基，且$$
+\sigma (\boldsymbol{\eta}_1, \boldsymbol{\eta}_2, \boldsymbol{\eta}_3) = (\boldsymbol{\eta}_1, \boldsymbol{\eta}_2, \boldsymbol{\eta}_3) \left( \begin{matrix}
+	1&		0&		0\\
+	0&		1&		0\\
+	0&		0&		4\\
+\end{matrix} \right), $$
+故
+$$
+\boldsymbol{\eta}_1 = \left( \begin{array}{c}
+	1\\
+	0\\
+	-1\\
+\end{array} \right), \boldsymbol{\eta}_2 = \left( \begin{array}{c}
+	1\\
+	-1\\
+	0\\
+\end{array} \right), \boldsymbol{\eta}_3 = \left( \begin{array}{c}
+	1\\
+	1\\
+	1\\
+\end{array} \right)
+$$
+是 $V$ 的满足条件的一组基。 
+\end{solution}
+
+\item[三、]
+设 $A$ 为 $n$ 阶方阵 $(n > 1)$，求证：\\
+(1) 若 r$(A) = 1$，则存在 $n$ 行 $1$ 列矩阵 $B$ 和 $1$ 行 $n$ 列矩阵 $C$ 使 $A = BC$。\\
+(2) 若 $\operatorname{r}(A) = 1$，且 $\operatorname{tr}A = 1$ 则 $A^n = A$。
+\begin{proof}
+设$$
+A = (\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \dots, \boldsymbol{\alpha}_n).$$
+其中，$\boldsymbol{\alpha}_i$是$\mathbb{F}^n$中的列向量，$i = 1, 2, \dots, n$。
+
+因为${\rm r}(A) = 1$，所以$\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \dots, \boldsymbol{\alpha}_n$发的极大线性无关组中只有一个列向量，不妨设为$\boldsymbol{\alpha}_1$，则$\boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3, \dots, \boldsymbol{\alpha}_n$都是$\boldsymbol{\alpha}_1$的线性组合。
+
+故$\boldsymbol{\alpha}_2 = k_2 \boldsymbol{\alpha}_1, \boldsymbol{\alpha}_3 = k_3 \boldsymbol{\alpha}_1, \dots, \boldsymbol{\alpha}_n = k_n \boldsymbol{\alpha}_1, (k_2, k_3, \dots, k_n \in \mathbb{F})$。
+因此\[
+A = (\boldsymbol{\alpha}_1, k_2 \boldsymbol{\alpha}_1, \dots, k_n \boldsymbol{\alpha}_1) = \boldsymbol{\alpha}_1 (1, k_2, \dots, k_n).
+\]
+取$\boldsymbol{\beta} = \boldsymbol{\alpha}_1, C = (1, k_2, \dots, k_n)$即可。
+
+(2) 设
+$$
+\boldsymbol{\alpha}_1 = \left( \begin{matrix}
+\boldsymbol{\alpha}_{11}\\
+\boldsymbol{\alpha}_{21}\\
+\vdots\\
+\boldsymbol{\alpha}_{n1} \end{matrix} \right), \boldsymbol{\alpha}_{k1} \in \mathbb{F}, k = 1, 2, \dots, n.
+$$
+
+则\begin{align*}
+{\rm tr}(A) = \boldsymbol{\alpha}_{11} +k_2 \boldsymbol{\alpha}_{21}+ \cdots +k_n\boldsymbol{\alpha}_{n1}
+=(1, k_2, \dots, \k_n) \left( \begin{matrix}
+\boldsymbol{\alpha}_{11}\\
+\boldsymbol{\alpha}_{21}\\
+\vdots \\
+\boldsymbol{\alpha}_{n1}\\
+\end{matrix} \right)
+=CB.
+\end{align*}
+
+所以 $CB=1$，故 $A^n=(BC)^n=B(CB)^{n-1}C=BC=A$。
+\end{proof}
+
+\item[四、]
+设 $V = \{ A | \operatorname {tr} A = 0 , A \in \mathbb {R}^{2 \times 2} \}$。
+
+(1) 求证：$V$ 按通常的矩阵加法和数乘构成实数域上的线性空间。
+
+(2) 求 $\dim V$，找出 $V$ 的一组基，并用基的定义说明找出矩阵是 $V$ 的基。
+
+\begin{proof}
+(1) 证法一：任取$B$，$C$，$D\in V$，$k$，$l\in \mathbb{R}$，\begin{align*}
+&\text{由矩阵的加法知，}B+C=C+B\text{（加法交换律）}\\
+&\text{由矩阵的加法知，}(B+C)+D=B+(C+D)\text{（加法结合律）}\\
+&\text{由矩阵的加法知，零矩阵是$V$的零元素}\\
+&\text{由矩阵的加法知，$A$的负元素是$-A$。}\\
+&\text{由矩阵的乘法知，}1A=A\text{，其中$1$是$\mathbb{R}$的单位元。}\\
+&\text{由矩阵的乘法知，}(kl)A=k(lA)\text{。}\\
+&\text{由矩阵的加法和乘法知，}(k+l)A=kA+lA\text{。}\\
+&\text{由矩阵的加法和乘法知，}k(A+B)=kA+kB\text{。}
+\end{align*}
+
+因此 $V$ 按通常的矩阵加法和数乘构成实数域上的线性空间。
+
+证法二：易知 $V$ 是 $\mathbb{R}^{2\times 2}$ 的子集。因为 $\left( \begin{smallmatrix}
+	1&		0\\
+	0&		-1\\
+\end{smallmatrix} \right) \in V$，所以 $V$ 非空。又
+\begin{align*}
+&B , C \in V \quad \Longrightarrow {\rm tr}(A)={\rm tr}(B)=0 \Longrightarrow {\rm tr}(A+B)={\rm tr}(A)+{\rm tr}(B)=0\Longrightarrow \quad A + B \in V,\\
+&A \in V , k \in \mathbb{R}\Longrightarrow{\rm tr}(A)=0\Longrightarrow{\rm tr}(kA)=k{\rm tr}(A)=0 \quad \Longrightarrow k \boldsymbol{\alpha} \in V.
+\end{align*}
+
+因此 $V$ 是 $\mathbb{R}^{2\times 2}$ 的子空间，所以 $V$ 按通常的矩阵加法和数乘构成实数域上的线性空间。
+
+(2) 断言：
+$$
+K_1=\left( \begin{matrix}
+	1&		0\\
+	0&		1\\
+\end{matrix} \right) , K_2=\left( \begin{matrix}
+	0&		1\\
+	0&		0\\
+\end{matrix} \right) , K_3=\left( \begin{matrix}
+	0&		0\\
+	1&		0\\
+\end{matrix} \right)
+$$
+是 $V$ 的一个基。
+
+证明：设
+$$k_1\left( \begin{matrix}
+	1&		0\\
+	0&		-1\\
+\end{matrix} \right) +k_2\left( \begin{matrix}
+	0&		1\\
+	0&		0\\
+\end{matrix} \right) +k_3\left( \begin{matrix}
+	0&		0\\
+	1&		0\\
+\end{matrix} \right) =0$$，
+则有\[
+\left( \begin{matrix}
+	k_1&		k_2\\
+	k_3&		-k_1\\
+\end{matrix} \right)=0.
+\]
+因此 $k_1=k_2=k_3=0$。所以$\left( \begin{smallmatrix}
+	1&		0\\
+	0&		-1\\
+\end{smallmatrix} \right) , \left( \begin{smallmatrix}
+	0&		1\\
+	0&		0\\
+\end{smallmatrix} \right) , \left( \begin{smallmatrix}
+	0&		0\\
+	1&		0\\
+\end{smallmatrix} \right)$ 是线性无关的。
+
+任取$A\in V$，有\[
+A=\left( \begin{matrix}
+	l_1&		l_2\\
+	l_3&		-l_1\\
+\end{matrix} \right) ,
+\]
+其中 $l_1, l_2, l_3\in\mathbb{R}$。因此
+\[
+A=l_1K_1+l_2K_2+l_3K_3.
+\]
+所以 $A$ 可以由 $K_1$，$K_2$，$K_3$ 线性表出。
+
+所以 $K_1$，$K_2$，$K_3$ 是 $V$ 的一个基。
+
+因此，$\dim V=3$。
+\end{proof}
+
+\item[五、] 
+设有向量组 $\boldsymbol{\boldsymbol{\alpha}} _ { 1 } = ( 1, 1, 1, 2 ) , \boldsymbol{\boldsymbol{\alpha}} _ { 2 } = ( 3 , a + 4, 2 a + 5 , a + 7 ) , \boldsymbol{\boldsymbol{\alpha}} _ { 3 } = ( 4, 6, 8, 10 ) , \boldsymbol{\boldsymbol{\alpha}} _ { 4 } = ( 2, 3, 2 a + 3, 5 )$。当
+$a, b$ 如何取值时 $\boldsymbol{\boldsymbol{\beta}} = (0, 1, 3, b)$ 不能由 $\boldsymbol{\boldsymbol{\alpha}}_1, \boldsymbol{\boldsymbol{\alpha}}_2, \boldsymbol{\boldsymbol{\alpha}}_3, \boldsymbol{\boldsymbol{\alpha}}_4$ 线性表示？
+
+\begin{proof}
+记$A = (\boldsymbol{\boldsymbol{\alpha}}'_1, \boldsymbol{\boldsymbol{\alpha}}'_2, \boldsymbol{\boldsymbol{\alpha}}'_3, \boldsymbol{\boldsymbol{\alpha}}'_4)$。\\
+\begin{align*}
+\text{$\boldsymbol{\boldsymbol{\beta}}$不能由$\boldsymbol{\boldsymbol{\alpha}}_1, \boldsymbol{\boldsymbol{\alpha}}_2, \boldsymbol{\boldsymbol{\alpha}}_3, \boldsymbol{\boldsymbol{\alpha}}_4$线性表示} 
+&\Leftrightarrow\text{$\boldsymbol{\boldsymbol{\beta}}'$不能由$\boldsymbol{\boldsymbol{\alpha}}'_1, \boldsymbol{\boldsymbol{\alpha}}'_2, \boldsymbol{\boldsymbol{\alpha}}'_3, \boldsymbol{\boldsymbol{\alpha}}'_4$线性表示}\\
+&\Leftrightarrow \text{线性方程组$AX = \boldsymbol{\boldsymbol{\beta}}'$无解}\\
+&\Leftrightarrow {\rm rank}(A) < {\rm rank}((A, \boldsymbol{\boldsymbol{\beta}}')).
+\end{align*}
+
+对增广矩阵 $(A, \boldsymbol{\boldsymbol{\beta}}')$ 作初等行变换，化其为行阶梯形矩阵：
+$$
+\left( \begin{matrix}
+	1&		3&		4&		2\\
+	1&		a+4&		6&		3\\
+	1&		2a+5&		8&		2a+3\\
+	2&		a+7&		10&		5\\
+\end{matrix}\begin{array}{c}
+	0\\
+	1\\
+	3\\
+	b\\
+\end{array} \right) \rightarrow \left( \begin{matrix}
+	1&		3&		4&		2\\
+	0&		a+1&		2&		1\\
+	0&		0&		0&		2a-1\\
+	0&		0&		0&		0\\
+\end{matrix}\begin{array}{c}
+	0\\
+	1\\
+	1\\
+	b-1\\
+\end{array} \right) =:A_1.
+$$
+当 $a=\frac 12$时，$$
+A_1 = \left( \begin{matrix}
+	1&		3&		4&		2&  0\\
+	0&		\frac{3}{2}&		2&		1&  1\\
+	0&		0&		0&		0&  1\\
+	0&		0&		0&		0&  b-1\\
+\end{matrix}\right).
+$$
+故
+$$
+{\rm rank}(A) = 2, {\rm rank}((A, \boldsymbol{\boldsymbol{\beta}}')) = 3.
+$$
+当 $a \neq \frac12 $时，若 $b=1$，则
+$$
+{\rm rank}(A) = 3, {\rm rank}((A, \boldsymbol{\boldsymbol{\beta}}')) = 3.
+$$
+若 $b \neq 1$，则
+$$
+{\rm rank}(A) = 3, {\rm rank}((A, \boldsymbol{\boldsymbol{\beta}}')) = 4.
+$$
+因此，当且仅当 $a = \frac{1}{2}$ 或 $a = \frac12$且$b \neq 1$时，${\rm rank} (A)< {\rm rank}((A, \boldsymbol{\boldsymbol{\beta}}'))$，
+即$\boldsymbol{\boldsymbol{\beta}}$ 不能由 $\boldsymbol{\boldsymbol{\alpha}}_1, \boldsymbol{\boldsymbol{\alpha}}_2, \boldsymbol{\boldsymbol{\alpha}}_3, \boldsymbol{\boldsymbol{\alpha}}_4$ 线性表示。
+\end{proof}
+
+\item[六、]
+设 $V$ 为 $\mathbb{R}$ 上的 $n$ 维线性空间，$V_1, V_2, V_3$ 是 $V$ 的子空间。\\
+(1) 判断命题 “ 若 $V _ { 1 } \cap V _ { 2 } = \{ 0 \} , V _ { 2 } \cap V _ { 3 } = \{ 0 \} , V _ { 3 } \cap V _ { 1 } = \{ 0 \}$ ，则 $V_1 + V_2 + V_3$ 为直和 ” 是否正确，若正
+确给出证明，若不正确举出反例。
+
+(2) 判断命题 “若$V _ { 1 } \cap V _ { 2 } = \{ 0 \} , V _ { 3 } \cap \left( V _ { 1 } + V _ { 2 } \right) = \{ 0 \}$，则 $V _ { 1 } + V _ { 2 } + V _ { 3 }$ 为直和 ”是否正确，若正确给出证明，若不正确举出反例。
+
+\begin{proof}
+(1) 错误。反例： $V_1 = \{\boldsymbol{e}_1\}$，$V_2 = \{\boldsymbol{e}_2\}$，$V_3 = \{\boldsymbol{e}_1 + \boldsymbol{e}_2\}$，其中 $\boldsymbol{e}_1$，$\boldsymbol{e}_2$ 是 $\mathbb{R}^n$ 的两个线性无关的单位向量。
+
+(2) 正确。设 $\Omega_1$ 是生成 $V_1$ 的向量的集合，$\Omega_2$ 是生成 $V_2$ 的向量的集合，$\Omega_3$ 是生成 $V_1$ 的向量的集合。因为 $V _ { 1 } \cap V _ { 2 } = \{ 0 \}$，所以 $V_1 + V_2$ 是直和，所以 $\Omega_1 + \Omega_2$ 是生成 $V_1 + V_2$ 的向量的集合。因为 $V _ { 3 } \cap \left( V _ { 1 } + V _ { 2 } \right) = \{ 0 \}$，所以 $V _ { 3 } + \left( V _ { 1 } + V _ { 2 } \right)$ 是直和，从而 $(\Omega_1 \cup \Omega_2) \cup \Omega_3$ 是线性无关的，所以 $\Omega_1 \cup \Omega_2 \cup \Omega_3$ 是线性无关的，于是 $V_1 + V_2 + V_3$ 是直和。
+\end{proof}
+
+\begin{remark}
+错解：因为\[
+V _ { 1 } \cap V _ { 2 } = \{ 0 \}, V _ { 1 } \cap V _ { 3 } = \{ 0 \}.\]
+所以\[
+V _ { 1 } \cap (V _ { 2 }+V_{3}) = \{ 0 \}.\]
+同理，有\[
+V _ { 2 } \cap (V _ { 1 }+V_{3}) = \{ 0 \},\]
+\[
+V _ { 3 } \cap (V _ { 1 }+V_{2}) = \{ 0 \}.\]
+所以$V_1 + V_2 + V_3$ 为直和。\\
+错因：$V _ { 1 } \cap \left( V _ { 2 } + V _ { 3 } \right) \supseteq \left( V _ { 1 } \cap V _ { 2 } \right) + \left( V _ { 1 } \cap V _ { 3 } \right)$。
+\end{remark}
+
+\item[七、]
+设 $n$ 阶实对称阵 $A$ 的特征值 $\lambda _ { 1 } , \lambda _ { 2 } , \dots , \lambda _ { n }$ 满足$1 < \lambda _ { 1 } \leq \lambda _ { 2 } \leq \dots \leq \lambda _ { n } < 2$，求证：对任意零实向量 $X$ 总有\[
+X ^ { T } X < X ^ { T } A X < 2 X ^ { T } X.
+\]
+\begin{proof}
+因为$A$是$n$阶实对称矩阵，$A$的特征值为$\lambda_1, \lambda_2, \dots, \lambda_n$，所以存在正交矩阵$U$，使得\[
+UAU^T = {\rm diag}\{\lambda_1, \lambda_2, \dots, \lambda_n \} = : \Lambda_n.
+\]
+任取非零实向量$X$，令$Y = UX$，则\[
+X^T AX = X^T U^T \Lambda_n UX = Y^T \Lambda_n Y = \lambda_1 y_1^2 + \lambda_2 y_2^2+ \cdots +\lambda_n y_n^2.
+\]
+因为$1<\lambda_1 \le \lambda_2 \le \cdots \le \lambda_n<2$，所以\begin{align*}
+\lambda_1 y_1^2 + \lambda_2 y_2^2+ \cdots +\lambda_n y_n^2 &\ge  \lambda_1 (y_1^2+y_2^2+\cdots+y_n^2)>y_1^2+y_2^2+\cdots+y_n^2=Y^T Y = X^T X\\
+\lambda_1 y_1^2 + \lambda_2 y_2^2+ \cdots +\lambda_n y_n^2 &\le  \lambda_n (y_1^2+y_2^2+\cdots+y_n^2)<2(y_1^2+y_2^2+\cdots+y_n^2)=2Y^T Y = 2X^T X.
+\end{align*}
+即$X^TX<X^TAX<2X^TX$。
+由$X$的任意性知，命题成立。
+\end{proof}
+
+\item[八、]
+求证: 在 $n$ 维欧式空间中，两两夹角成钝角的元素不多于 $n + 1$ 个。
+
+\begin{proof}（证明摘抄自 \cite{zhugao}）
+
+对维数 $n$ 用数学归纳法。当 $n = 1$ 时，任意向量都是单位向量$ {\boldsymbol{\varepsilon}}$ 的常数倍，考虑任意 3 个向量$ {\boldsymbol{\alpha}}_i = c_i { \boldsymbol{\varepsilon}}, (i = 1, 2, 3)$。若$c_i$中有一个为0（例如$c_1 = 0$），则至多可能$c_2c_3 < 0$，从而$( {\boldsymbol{\alpha}}_2， {\boldsymbol{\alpha}}_3) = c_2c_3( {\boldsymbol{\varepsilon}},  {\boldsymbol{\varepsilon}})= c_2c_3 < 0$，因此至多可能有一对向量夹角是钝角。若 $c_1, c_2, c_3$ 全不为0，则$c_1, c_2, c_3$中至多有两对反号。因为 $(a_i, a_j) = c_ic_j ( {\boldsymbol{\varepsilon}}, {\boldsymbol{\varepsilon}}) = c_ic_j(i \neq j; i, j = 1, 2, 3)$，因此至多有两对向量夹角是钝角。由此可知不存在 $3$ 个或 $3$ 个以上的向量，它们两两夹角都是钝角。这表明 $n=1$ 时命题成立。
+
+设对于$n-1$维欧氏空间，命题成立。考虑$n$维情形用反证法。假设存在$n+2$个向量$ {\boldsymbol{\gamma}}_k \in \mathbb{R}^n(k = 1, 2, \dots, n + 2)$，其中任意两个夹角都是钝角。令$ {V}_1$是$ {\boldsymbol{\gamma}}_1$张成的（1维）线性子空间，那么$\mathbb{R}^n =  {V}_1 +  {V}_1^{\perp}$，并且${\rm \dim}  {V}_1^{\perp} = n-1$。因为\[
+  { \boldsymbol{\gamma}}_{k}=f_{k}   { \boldsymbol{\gamma}}_{1}+{ \boldsymbol{\eta} }_{k} \quad (k = 2,3 , \dots , n + 2 )
+\]
+其中$f_k \in \mathbb{R}, {u}_k \in  {V}_i^{\perp}$（因而($ {\boldsymbol{\eta}}_k,  {\boldsymbol{\gamma}}_1) = 0$），并且对于 $k = 2, 3, \dots, n+2$， $ {\boldsymbol{\gamma}}_k$ 与 $ {\boldsymbol{\gamma}}_1$的夹角都是钝角，所以\[
+\left({\boldsymbol{\gamma}}_{k}, {\boldsymbol{\gamma} }_{1} \right) = f_{k} \left(   { \boldsymbol{\gamma}}_{1}, { \boldsymbol{\gamma}} _ { 1 } \right) + \left( {\boldsymbol{\eta}}_{k}, {\boldsymbol{\gamma}} _ { 1 } \right) = f_{k} \left( {\boldsymbol{\gamma} }_{1}, {\boldsymbol{\gamma} }_{1} \right) < 0
+\]
+从而$f_{k} < 0 ( k = 2,3 , \dots , n + 2 )$。但由\[
+\left({\boldsymbol{\gamma} } _ { i } ,  { \boldsymbol{\gamma} } _ { j } \right) = \left( f _ { i }  { \boldsymbol{\gamma} } _ { 1 } +  { \boldsymbol{\eta} } _ { i } , f _ { j }  { \boldsymbol{\gamma} } _ { 1 } +  { \boldsymbol{\eta} } _ { j } \right) = f _ { i } f _ { j } \left(  { \boldsymbol{\gamma} } _ { 1 } ,  { \boldsymbol{\gamma} } _ { 1 } \right) + \left(  { \boldsymbol{\eta} } _ { i } ,  { \boldsymbol{\eta} } _ { j } \right)
+\]
+可知当$ i , j = 2,3 , \dots , n + 2 ; i \neq j$(此时($v_i, v_j)<0)$\[
+\left(  { \boldsymbol{\eta} } _ { i } ,  { \boldsymbol{\eta} } _ { j } \right) = \left(  { \boldsymbol{\gamma} } _ { i } ,  { \boldsymbol{\gamma} } _ { j } \right) - f _ { i } f _ { j } \left(  { \boldsymbol{\gamma} } _ { 1 } ,  { \boldsymbol{\gamma} } _ { 1 } \right) < 0
+\]
+从而在 $\mathbb{R}^{n-1}$ 中存在 $n+1 = (n-1) + 2$ 个向量 $ {\boldsymbol{\gamma}}_k(k = 2, 3, \dots, n+2)$，它们两两夹角都是钝角。这与归纳假设矛盾。于是归纳证明完成。
+\end{proof}
+
+\end{enumerate}
+\endinput

@@ -1,0 +1,297 @@
+\section{2017}
+\begin{enumerate}[1~]
+\renewcommand{\labelenumi}{\textbf{\theenumi. }}
+\renewcommand{\Im}{\text{Im }}
+\item[一、]填空题 
+\begin{enumerate}[1.~]
+\item
+$$
+\left| \begin{matrix}
+	x&		0&		x&		0\\
+	1&		1&		1&		0\\
+	0&		x&		1&		3\\
+	1&		2&		3&		4\\
+\end{matrix} \right|=\left( \ \ \ \ \right).
+$$
+
+\begin{solution}
+记原行列式为 $D$，按第一行展开：\[
+D=x\left| \begin{matrix}
+	1&		1&		0\\
+	x&		1&		3\\
+	2&		3&		4\\
+\end{matrix} \right|+x\left| \begin{matrix}
+	1&		1&		0\\
+	0&		x&		3\\
+	1&		2&		4\\
+\end{matrix} \right|=x\left( 1-4x \right) +x\left( 4x-3 \right) = -2x.
+\]
+\end{solution}
+
+\item 
+设实系数多项式 $f(x), g(x)$ 的最大公因式为 $x + 1$，最小公倍式为 $(x + 1)^2(x + 2)(x + 3)$。则 $f(x)g(x) = (\ \ \ \ )$。
+\begin{proof}
+先证明一个引理。
+\begin{lemma}\label{jinbeiyin}
+设 $f(x), g(x) \in \mathbb{R}[x]$，证明：\[
+f(x)g(x)=[f(x), g(x)]\cdot (f(x), g(x)).
+\]
+\end{lemma}
+\begin{subproof}
+设 $d(x)=(f(x), g(x))$，则：\begin{align*}
+f(x)&=h_1 (x) d(x), \\
+g(x)&=h_2(x) d(x), 
+\end{align*}
+其中，$\mathrm{deg} h_1 (x) \ge 0, \mathrm{deg} h_2(x)\ge 0, (h_1(x), h_2(x))=1$。因此，\begin{align*}
+f(x)g(x)&=h_1(x)h_2(x)d^2(x),\\
+[f(x), g(x)]&=h_1 (x) h_2(x)d(x).
+\end{align*}
+所以，$f(x)g(x)=[f(x), g(x)]\cdot (f(x), g(x))$。
+\end{subproof}
+回到原题，$f(x)g(x)=(x+1)^3 (x+2) (x+3)$。
+\end{proof}
+
+\item
+关于互素问题，忘记了。
+\item
+求逆矩阵的问题, 忘记了。
+\item
+复数域上特征值全为 $1$ 的 $4$ 阶方阵, 按相似分为 （ \ \ \ \ ）类。
+\begin{solution}
+重题。
+\end{solution}
+\end{enumerate}
+
+\item[二、]
+求证 $n$ 阶行列式
+\[\left| \begin{array}{c}
+	\cos a\\
+	1\\
+	\\
+	\\
+	\\
+\end{array}\begin{array}{c}
+	1\\
+	2\cos a\\
+	\ddots\\
+	\\
+	\\
+\end{array}\begin{array}{c}
+	\\
+	1\\
+	\ddots\\
+	1\\
+	\\
+\end{array}\begin{array}{c}
+	\\
+	\\
+	\ddots\\
+	2\cos a\\
+	1\\
+\end{array}\begin{array}{c}
+	\\
+	\\
+	\\
+	1\\
+	2\cos a\\
+\end{array} \right|=\cos na.
+\]
+\begin{proof}
+记原行列式为 $D_n$，按最后一行展开得
+\begin{equation}\label{ditui}
+D_n=2\cos a D_{n-1} - D_{n-2}.
+\end{equation}
+由 \eqref{ditui} 得
+\begin{equation}\label{alpha1}
+D_n - \alpha D_{n-1} = \beta (D_{n-1} - \alpha D_{n-1}),
+\end{equation}
+其中$\alpha$，$\beta$是方程$x^2-2\cos a+1$的两个根：\[
+\alpha=\cos a-\sqrt{\cos^2a-1}, \beta=\cos a+\sqrt{\cos^2a+1}.
+\]
+从而\begin{equation}\label{alphan-2}
+D_n-\alpha D_{n-1}=\beta^{n-2}(D_2-\alpha D_1)=\beta^{n-2}(2\cos^2a-1-\alpha\cos a)=\beta^{n-2}(\cos2a-\alpha\cos a).
+\end{equation}
+由对称性，\begin{equation}\label{betan-2}
+D_n-\beta D_{n-1}=\alpha^{n-2}(D_2-\beta D_1)=\alpha^{n-2}(2\cos^2a-1-\beta\cos a)=\alpha^{n-2}(\cos2a-\beta\cos a).
+\end{equation}
+由 \eqref{alphan-2} 和 \eqref{betan-2} 得\[
+D_n=\frac{\beta^{n-1}(\cos a-\alpha\cos a)-\alpha^{n-1}(\cos a-\beta\cos a)}{\beta-\alpha}.
+\]
+其中$\alpha=\cos a-\sqrt{\cos^2a-1}, \beta=\cos a+\sqrt{\cos^2a+1}$。
+\end{proof}
+
+\item[三、]
+已知\[
+A=\left( \begin{matrix}
+	a_1&		&		&		\\
+	&		a_2&		&		\\
+	&		&		\ddots&		\\
+	&		&		&		a_n\\
+\end{matrix} \right),
+\]
+其中$a_1, a_2, \dots, a_n$ 互不相同，且$AB = BA$。证明：$B$ 为对角矩阵。
+\begin{proof}
+设$B=(b_{ij})_n$，由$AB=BA$得\[
+\left( \begin{matrix}
+	a_1b_{11}&		a_1b_{12}&		\cdots&		a_1b_{1n}\\
+	a_2b_{21}&		a_2b_{22}&		\cdots&		a_2b_{2n}\\
+	\vdots&		\vdots&		\vdots&		\vdots\\
+	a_nb_{n1}&		a_nb_{n2}&		\cdots&		a_nb_{nn}\\
+\end{matrix} \right) =\left( \begin{matrix}
+	a_1b_{11}&		a_2b_{12}&		\cdots&		a_nb_{1n}\\
+	a_1b_{21}&		a_2b_{22}&		\cdots&		a_nb_{2n}\\
+	\vdots&		\vdots&		\vdots&		\vdots\\
+	a_1b_{n1}&		a_2b_{n2}&		\cdots&		a_nb_{nn}\\
+\end{matrix} \right) .
+\]
+所以\[
+(a_i-a_j)b_{ij}=0,\ i, j=1, 2, \dots, n.
+\]
+因为$a_i\ne a_j \ (i\ne j)$，所以$b_{ij}=0\ (i\ne j)$。所以$B$为对角矩阵。
+\end{proof}
+
+\item[四、]
+若方阵$ A$ 交换 $2, 3$ 行得 $B$，$B$ 交换 $2, 3$ 列得 $C$。求证：$A$ 与 $C$ 相似且合同。
+\begin{proof}
+由题意知\[
+\left( \begin{matrix}
+	1&		0&		0\\
+	0&		0&		1\\
+	0&		1&		0\\
+\end{matrix} \right) A\left( \begin{matrix}
+	1&		0&		0\\
+	0&		0&		1\\
+	0&		1&		0\\
+\end{matrix} \right) =C.
+\]
+而\[
+\left( \begin{matrix}
+	1&		0&		0\\
+	0&		0&		1\\
+	0&		1&		0\\
+\end{matrix} \right)'=\left( \begin{matrix}
+	1&		0&		0\\
+	0&		0&		1\\
+	0&		1&		0\\
+\end{matrix} \right) ^{-1}.
+\]
+所以$A$与$C$相似且合同。
+\end{proof}
+
+\item[五、] 
+求证：二次型\[
+f(x_1, x_2, x_3) = 2x^2_1 + 2x^2_2 + 2x^2_3 + 2x_1x_2 + 2x_1x_3 + 2x_2x_3,
+\]
+是正定的。
+\begin{solution}
+二次型的矩阵为：\[
+A=\left( \begin{matrix}
+	2&		1&		1\\
+	1&		2&		1\\
+	1&		1&		2\\
+\end{matrix} \right) ,
+\]
+因为 $A$ 的$1$阶顺序主子式为 $2>0$，$2$ 阶顺序主子式为 $3>0$，$3$ 阶顺序主子式为 $4>0$，所以 $A$ 是正定矩阵，所以二次型$f(x_1, x_2, x_3)$是正定的。
+\end{solution}
+
+\item[六、]
+证明：$B$ 的列向量是方程组 $AX = 0$ 的解的充要条件是 $AB = 0$，这里 $A, B$ 分别为 $m \times n$ 和 $n \times s$ 矩阵。
+\begin{proof}
+设$B$的列向量为\[
+\boldsymbol{\beta}_1, \boldsymbol{\beta}_2, \dots , \boldsymbol{\beta}_s.
+\]
+则\begin{align*}
+B\text{的列向量是方程组}AX=0\text{的解}
+&\Leftrightarrow A\boldsymbol{\beta}_i=0\left(i=1,2,\dots , s \right) \\
+&\Leftrightarrow AB=A\left( \boldsymbol{\beta }_1,\boldsymbol{\beta }_2,\dots ,\boldsymbol{\beta}_s \right) =0
+\end{align*}
+命题成立。
+\end{proof}
+
+\item[七、]（15分）
+设$V = \{B\ \text{为二阶矩阵}| AB = BA\}$，这里\[
+A=\left( \begin{matrix}
+	1&		1\\
+	0&		1\\
+\end{matrix} \right).
+\]
+求 $V$ 的基并将 $A^{-1}$ 用 $V$ 的一组基线性表示。
+\begin{solution}
+设$B=(b_{ij})_{2\times 2}$，由$AB=BA$得
+\[
+\left( \begin{matrix}
+	b_{11}+b_{21}&		b_{12}+b_{22}\\
+	b_{21}&		b_{22}\\
+\end{matrix} \right) =\left( \begin{matrix}
+	b_{11}&		b_{11}+b_{12}\\
+	b_{21}&		b_{21}+b_{22}\\
+\end{matrix} \right) .
+\]
+因此\[
+\left\{ \begin{array}{l}
+	b_{11}=b_{22}\\
+	b_{21}=0\\
+\end{array} \right. 
+\]
+所以$B$是形如$\left( \begin{smallmatrix}
+	b_{11}&		b_{12}\\
+	0&		b_{11}\\
+\end{smallmatrix} \right) $的矩阵。因此$I=\left( \begin{smallmatrix}
+	1&		0\\
+	0&		1\\
+\end{smallmatrix} \right) 
+$和$J=\left( \begin{smallmatrix}
+	0&		1\\
+	0&		0\\
+\end{smallmatrix} \right) 
+$是$V$的一个基。\\
+$A^{-1}=\left( \begin{smallmatrix}
+	1&		-1\\
+	0&		1\\
+\end{smallmatrix} \right) =I-J
+$。
+\end{solution}
+
+\item[八、]
+纯计算题，求向量组的秩，极大线性无关组，并将其余向量用极大线性无关组线性表示。
+
+\item[九、]
+忘记了。
+
+\item[十、]
+已知$n$ 维线性空间中的线性变换 $\mathscr{A}$ 的属于特征值 $\lambda_0$ 有 $k$ 个线性无关的特征向量，求证：$\mathscr{A}$ 的特征值 $\lambda_0$ 的重数至少为 $k$。
+\begin{proof}
+先证明一个引理。
+\begin{lemma}
+设$\lambda_0$是数域$\mathbb{K}$上$n$级矩阵$A$的一个特征值，则$\lambda_0$的几何重数不超过它的代数重数。
+\end{lemma}
+\begin{subproof}
+设A的属于特征值$\lambda_0$的特征子空间$W$的维数为$r$。在$W$中取一个基$\boldsymbol { \alpha } _ { 1 } , \boldsymbol { \alpha } _ { 2 }\dots , \boldsymbol{\alpha }_ { r }$，把它扩充为$\mathbb{K}^n$的一个基$\boldsymbol { \alpha } _ { 1 } , \boldsymbol { \alpha } _ { 2 } , \dots , \boldsymbol { \alpha } _ { r }$，$ \boldsymbol { \beta } _ { 1 } , \dots , \boldsymbol { \beta } _ { n - r }$。令
+\[
+P = \left( \boldsymbol { \alpha } _ { 1 } , \boldsymbol { \alpha } _ { 2 } , \dots , \boldsymbol { \alpha } _ { r } , \boldsymbol { \beta } _ { 1 } , \dots , \boldsymbol { \beta } _ { n r } \right)
+\]
+
+则$P$是$\mathbb{K}$上的$n$级可逆矩阵，并且有\begin{align*}
+P ^ { - 1 } A P &= P ^ { - 1 } \left( A \boldsymbol { a } _ { 1 } , A \boldsymbol { \alpha } _ { 2 } , \dots , A \boldsymbol { \alpha } _ { r } , A \boldsymbol { \beta } _ { 1 } , \dots , A \boldsymbol { \beta } _ { n - r } \right)\\
+&= \left( \lambda _ { 1 } P ^ { - 1 } \boldsymbol { \alpha } _ { 1 } , \lambda _ { 1 } P ^ { - 1 } \boldsymbol { \alpha } _ { 2 } , \dots , \lambda _ { 1 } P ^ { - 1 } \boldsymbol { \alpha } _ { r } , P ^ { - 1 } A \boldsymbol { \beta } _ { 1 } , \dots , P ^ { - 1 } A \boldsymbol { \beta } _ { n - r } \right).
+\end{align*}
+
+由于$I = P ^ { - 1 } P = \left( P ^ { - 1 } \boldsymbol { \alpha } _ { 1 } , P ^ { - 1 } \boldsymbol { \alpha } _ { 2 } , \dots , P ^ { - 1 } \boldsymbol { \alpha } _ { r } , P ^ { - 1 } \boldsymbol { \beta } _ { \mathbf { l } } , \dots , P ^ { - 1 } \boldsymbol { \beta } _ { n - r } \right)$，
+因此$\boldsymbol{\varepsilon} _ { 1 } = P ^ { - 1 } \boldsymbol { \alpha } _ { 1 } , \boldsymbol { \varepsilon } _ { 2 } = P ^ { - 1 } \boldsymbol { \alpha } _ { 2 } , \dots , \boldsymbol { \varepsilon } _ { r } = P ^ { - 1 } \boldsymbol { \alpha } _ { r }$。\\
+从而
+\begin{align*}
+P ^ { - 1 } A P &= \left( \lambda _ { 1 } \boldsymbol{\varepsilon} _ { 1 } , \lambda _ { 1 } \boldsymbol{\varepsilon} _ { 2 } , \dots , \lambda _ { 1 } \boldsymbol{\varepsilon} _ { r } , P ^ { - 1 } A \boldsymbol{\beta} _ { 1 } , \dots , P ^ { - 1 } A \boldsymbol { \beta } _ { n-r } \right)\\
+&= \left( \begin{array} { c c } { \lambda _ { 1 } I , } & { B } \\ { 0 } & { C } \end{array} \right).
+\end{align*}
+由于相似的矩阵有相等的特征多项式，因此
+\begin{align*}
+| \lambda I - A | &= \left| \begin{array} { c c } { \lambda I _ { r } - \lambda _ { 1 } I _ { r } } & { - B } \\ { 0 } & { \lambda I _ { n - r } - C } \end{array} \right|\\
+&= \left| \lambda I _ { r } - \lambda _ { 1 } I _ { r } \right| \left| \lambda I _ { n - r } - C \right|\\
+&= \left( \lambda - \lambda _ { 1 } \right) ^ { r } \left| \lambda I _ { n - r } - C \right|.
+\end{align*}
+从而$\lambda_1$的代数重数大于或等于$r$，即$\lambda_1$的代数重数大于或等于$\lambda_1$的几何重数。
+\end{subproof}
+由引理立即得到：$\mathscr{A}$ 的特征值 $\lambda_0$ 的重数至少为 $k$。
+\end{proof}
+\end{enumerate}
+\endinput

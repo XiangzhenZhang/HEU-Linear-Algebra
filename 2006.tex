@@ -1,0 +1,297 @@
+\section{2006}
+\begin{enumerate}[1~]
+\renewcommand{\labelenumi}{\textbf{\theenumi. }}
+\renewcommand{\Im}{\text{Im }}
+\item[一、]
+填空题 （每小题 4 分，共 20 分）
+\begin{enumerate}[1.~]
+\item
+若$\mathbb{P}$为同时包含$\mathbb{Q}$和$\pi$的最小数域，则$\mathbb{P}$作为$\mathbb{Q}$上的线性空间的维数是（\quad）。
+\begin{solution}
+因为$\pi$是超越数，所以不存在一个有限次数的多项式以$\pi$为$\mathbb{Q}$上的根。由2005年填空题第一题知，$\mathbb{P}$作为$\mathbb{Q}$上的线性空间的维数是无穷。
+\end{solution}
+
+\item
+若$f(x)$为数域$\mathbb{P}$上的不可约多项式，则$f(x)$与$f'(x)$的关系为（\quad）。
+\begin{solution}
+互素。这是定理。
+\end{solution}
+
+\item
+设$A$为$n$阶可逆的实反对称矩阵，则$n$一定为（\quad）。
+\begin{solution}
+因为\[
+|A|=|A'|=|-A|=(-1)^n|A|.
+\]
+所以$n$为偶数。
+\end{solution}
+
+\item
+设$A$为方阵，且$A^3=0$，则$E+A+A^2$一定为（\quad）矩阵。
+\begin{solution}
+注意到\[
+(E-A)(E+A+A^2)=E.
+\]
+所以$E+A+A^2$是可逆矩阵。
+\end{solution}
+
+\item
+向量组$\boldsymbol{\alpha} _ { 1 } , \boldsymbol{\alpha} _ { 2 } , \boldsymbol{\alpha} _ { 3 } , \boldsymbol{\alpha} _ { 4 } , \boldsymbol{\alpha} _ { 5 } \in \mathbb{R} ^ { 5 }$线性无关，则向量组$\boldsymbol{\alpha} _ { 1 } + \boldsymbol{\alpha} _ { 2 } , \boldsymbol{\alpha} _ { 2 } + \boldsymbol{\alpha} _ { 3 } , \boldsymbol{\alpha} _ { 3 } + \boldsymbol{\alpha} _ { 4 } ,  \boldsymbol{\alpha} _ { 4 } + \boldsymbol{\alpha} _ { 5 },  \boldsymbol{\alpha} _ { 5 } + \boldsymbol{\alpha} _ { 1 }$的线性相关性为（\quad）。
+\begin{solution}
+因为\[
+(\boldsymbol{\alpha} _ { 1 } + \boldsymbol{\alpha} _ { 2 } , \boldsymbol{\alpha} _ { 2 } + \boldsymbol{\alpha} _ { 3 } , \boldsymbol{\alpha} _ { 3 } + \boldsymbol{\alpha} _ { 4 } ,  \boldsymbol{\alpha} _ { 4 } + \boldsymbol{\alpha} _ { 5 },  \boldsymbol{\alpha} _ { 5 } + \boldsymbol{\alpha} _ { 1 })=(\boldsymbol{\alpha} _ { 1 } , \boldsymbol{\alpha} _ { 2 } , \boldsymbol{\alpha} _ { 3 } , \boldsymbol{\alpha} _ { 4 } , \boldsymbol{\alpha} _ { 5 })\left( \begin{matrix}
+	1&		&		&		&		1\\
+	1&		1&		&		&		\\
+	&		1&		1&		&		\\
+	&		&		1&		1&		\\
+	&		&		&		1&		1\\
+\end{matrix} \right) ,
+\]
+\[
+\left| \begin{matrix}
+	1&		&		&		&		1\\
+	1&		1&		&		&		\\
+	&		1&		1&		&		\\
+	&		&		1&		1&		\\
+	&		&		&		1&		1\\
+\end{matrix} \right|=2.
+\]
+所以，向量组$\boldsymbol{\alpha} _ { 1 } + \boldsymbol{\alpha} _ { 2 } , \boldsymbol{\alpha} _ { 2 } + \boldsymbol{\alpha} _ { 3 } , \boldsymbol{\alpha} _ { 3 } + \boldsymbol{\alpha} _ { 4 } ,  \boldsymbol{\alpha} _ { 4 } + \boldsymbol{\alpha} _ { 5 },  \boldsymbol{\alpha} _ { 5 } + \boldsymbol{\alpha} _ { 1 }$线性相关。
+\end{solution}
+
+\item
+设$A$、$B$为$m\times n$矩阵，且${ r}(A)+{ r}(B)<n$，则线性方程组$AX =0$和$BX=0$的关系为（\quad）。
+\begin{solution}
+有共同的非零解。考虑 $\left( \begin{smallmatrix}
+	A\\
+	B\\
+\end{smallmatrix} \right) X=0$ 即可。
+\end{solution}
+
+\item
+设$\sigma$为$n$维线性空间$V$的线性变换，$\Ker\sigma=0$，则$\sigma$为（\quad）。
+\begin{solution}
+因为有限维空间之间的线性映射如果是单射则必是满射，所以$\sigma$是可逆的线性变换。
+\end{solution}
+
+\item
+设$A$、$B$为$n$阶方阵，且$A$可逆，则$AB$与$BA$的关系是（\quad）。
+\begin{solution}
+因为\[
+A^{-1}(AB)A=BA.
+\]
+所以$AB$相似于$BA$。
+\end{solution}
+
+\item
+若$A$、$B$为同阶正交阵，且$|AB|=-1$，则$|A+B|=$（\quad）。
+\begin{solution}
+因为\[
+|A+B|=|A||E+A^{-1}B|=|A||B^{-1}+A^{-1}||B|=-|B^T+A^T|=-|A+B|
+\]
+所以$|A+B|=0$。
+\end{solution}
+
+\item
+设$A$为$m\times n$实矩阵，${ r}(A)=m$，$\x$为非零实$m$维列向量，则$\x^T (A A^T)\x$为（\quad）。
+\begin{solution}
+因为$r(A)=m$，所以$m$元齐次线性方程组$A^T \x=0$只有零解，因此对任意的非零实$m$维向量$\x$，$A^T \x\ne0$。从而$\x^T (AA^T) \x=(A^T \x)^T A^T \x>0$。因此$\x^T (A A^T)\x$为正实数。
+\end{solution}
+\end{enumerate}
+
+\item[二、]（15分）
+设$V$为实数域$\mathbb{R}$上的三维线性空间，$\sigma$为$V$的一个线性变换，且$\sigma$在$V$的基
+$\boldsymbol{\alpha} _ { 1 } , \boldsymbol{\alpha} _ { 2 }, \boldsymbol{\alpha}_3$之下的矩阵为\[
+A = \left( \begin{array} { c c c } { 1 } & { 4 } & { - 2 } \\ { 0 } & { - 3 } & { 4 } \\ { 0 } & { 4 } & { 3 } \end{array} \right).
+\] 
+(1)求$V$的另一组基$\boldsymbol{\beta} _ { 1 } ,  \boldsymbol{\beta} _ { 2 } ,  \boldsymbol{\beta} _ { 3 }$，使$\sigma$在此基下的矩阵$B$为对角阵；\\
+(2) 求$A^k$。
+\begin{solution}
+(1) $A$的特征多项式为：\[
+|\lambda E-A|=\lambda^3-\lambda^2-25 \lambda+25=(\lambda+5)(\lambda-1)(\lambda-5).
+\]
+因此$A$的全部特征值为$-5$，1，5。\\
+解线性方程组$(-5E-A)\x=0$，得一个基础解系：\[
+\boldsymbol{\xi}_1=(5, -6, 3)'.
+\]
+解线性方程组$(E-A)\x=0$，得一个基础解系：\[
+\boldsymbol{\xi}_2=(1, 0, 0)'.
+\]
+解线性方程组$(5E-A)\x=0$，得一个基础解系：\[
+\boldsymbol{\xi}_3=(0, 1, 2)'.
+\]
+令$P=(\boldsymbol{\xi}_1, \boldsymbol{\xi}_2, \boldsymbol{\xi}_3)$，则\[
+PAP^{-1}=\left( \begin{matrix}
+	-5&		&		\\
+	&		1&		\\
+	&		&		5\\
+\end{matrix} \right):=B.
+\]
+因此\[
+\sigma(\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3)P=(\boldsymbol{\alpha}_1, \boldsymbol{\alpha}_2, \boldsymbol{\alpha}_3)PB.
+\]
+于是，令$\boldsymbol{\beta}_1=5\boldsymbol{\alpha} _1-6\boldsymbol{\alpha} _2+3\boldsymbol{\alpha} _3, \boldsymbol{\beta} _2=\boldsymbol{\alpha} _1, \boldsymbol{\beta} _3=\boldsymbol{\alpha} _2+2\boldsymbol{\alpha} _3$即可。\\
+(2) 由 (1) 知\[
+A^k=(P^{-1}BP)^k=P^{-1}\left( \begin{matrix}
+	(-5)^k&		&		\\
+	&		1&		\\
+	&		&		5^k\\
+\end{matrix} \right)P=\left(
+\begin{array}{ccc}
+ \frac{4}{5}+5^{n-1} & 0 & -\frac{2}{15}+\frac{2\ 5^{n-1}}{3} \\
+ -4-5^n+(-1)^n 5^{n+1} & (-5)^n & \frac{2}{3}-\frac{2\ 5^n}{3} \\
+ -\frac{6}{5}+6\ 5^{n-1} & 0 & \frac{1}{5}+4\ 5^{n-1} \\
+\end{array}
+\right).
+\]
+\end{solution}
+
+\item[三、]（15分）
+设
+$$
+A = \left( \begin{array} { c c c c } { 1 } & { 1 } & { 0 } & { 2 } \\ { 1 } & { - 1 } & { 1 } & { 1 } \\ { 0 } & { 1 } & { 3 } & { 4 } \\ { 1 } & { 2 } & { 4 } & { 7 } \end{array} \right).
+$$
+
+(1) 求 $r(A)$；
+
+(2) 求线性空间 $V = \left\{ \x \in \mathbb{R} ^ { 4 } | A ^ { * } \x = 0 \right\}$ 的维数和一个基。
+
+\begin{solution}
+(1) 对$A$作初等行变换，将其化为行最简形：\[
+A=\left( \begin{matrix}
+	1&		1&		0&		2\\
+	1&		-1&		1&		1\\
+	0&		1&		3&		4\\
+	1&		2&		4&		7\\
+\end{matrix} \right) \rightarrow \left( \begin{matrix}
+	1&		0&		0&		1\\
+	0&		1&		0&		1\\
+	0&		0&		1&		1\\
+	0&		0&		0&		0\\
+\end{matrix} \right) .
+\]
+因此，${r}(A)=3$。\\
+(2) 因为 ${\rm rank}(A)=1$，所以 ${\rm rank}(A^*)=1$，所以\[
+\dim V=4-{\rm rank}(A^*)=4-1=3.
+\]
+又因为 $A^* A = |A| =0$，$A$ 的前三列向量是 $A$ 的列向量组的一个极大线性无关组，所以 $V$ 的一个基为\[
+\left( \begin{array}{c}
+	1\\
+	1\\
+	0\\
+	1\\
+\end{array} \right) ,\left( \begin{array}{c}
+	1\\
+	-1\\
+	1\\
+	2\\
+\end{array} \right) ,\left( \begin{array}{c}
+	0\\
+	1\\
+	3\\
+	4\\
+\end{array} \right) .
+\]
+\end{solution}
+
+\item[四、]（15分）
+设$\sigma , \tau$为$n$维线性空间 $V$ 上的线性变换，$( \sigma + \tau ) ^ { 2 } = \sigma + \tau , \sigma ^ { 2 } = \sigma , \tau ^ { 2 } = \tau$，求证：$\sigma \tau = 0$。
+\begin{proof}
+由题意\[
+(\sigma+\tau)^2=\sigma^2+\sigma\tau+\tau\sigma+\tau^2=\sigma+\sigma\tau+\tau\sigma+\tau=\sigma+\tau.
+\]
+因此
+\begin{equation}\label{sigma-tau}
+\sigma\tau=-\tau\sigma.
+\end{equation}
+由 \eqref{sigma-tau} 式得\[
+\sigma^2\tau=\tau\sigma^2
+\]
+于是\begin{equation}\label{sigmatau}
+\sigma\tau=\tau\sigma.
+\end{equation}
+由 \eqref{sigma-tau} 式和 \eqref{sigmatau} 式得\[
+\sigma\tau=0.
+\]
+\end{proof}
+
+\item[五、]（15分）
+设$\sigma$为数域$\mathbb{P}$上的$n$维线性空间$V$上的线性变换；$f _ { 1 } ( x ) ,  f _ { 2 } ( x )$为$\mathbb{P}[x]$中两个互素多项式，$f ( x ) = f _ { 1 } ( x ) f _ { 2 } ( x )$，求证：$\Ker f ( \sigma ) = \operatorname { \Ker } f _ { 1 } ( \sigma ) \oplus \operatorname { \Ker } f _ { 2 } ( \sigma )$。
+\begin{proof}
+因为$f _ { 1 } ( x ) ,  f _ { 2 } ( x )$为$\mathbb{P}[x]$中两个互素多项式，所以存在$u(x), v(x)\in \mathbb{P}[x]$，使得\[
+u(x)f_1(x)+v(x)f_2(x)=1.
+\]
+任取$\boldsymbol{\alpha}\in \Ker f(\sigma)$，有\begin{align*}
+&u(\sigma)f_1(\sigma)\boldsymbol{\alpha}+v(\sigma)f_2(\sigma)\boldsymbol{\alpha}=\boldsymbol{\alpha}\\
+&0=f(\sigma)\boldsymbol{\alpha}=f_1(\sigma)f_2(\sigma)\boldsymbol{\alpha}
+\end{align*}
+因此\[
+u(\sigma)f_1(\sigma)\boldsymbol{\alpha}\in\Ker f_2(\sigma), v(\sigma)f_2(\sigma)\boldsymbol{\alpha}\in\Ker f_1(\sigma).
+\]
+于是\[
+\Ker f(\sigma)=\Ker f_1(\sigma)+\Ker f_2(\sigma).
+\]
+任取$\boldsymbol{\beta}\in\Ker f_1(\sigma)\cap\Ker f_2(\sigma)$，有\[
+f_1(\sigma)\boldsymbol{\alpha}=f_2(\sigma)\boldsymbol{\alpha}=0.
+\]
+所以\[
+\boldsymbol{\alpha}=u(\sigma)f_1(\sigma)\boldsymbol{\alpha}+v(\sigma)f_2(\sigma)\boldsymbol{\alpha}=0.
+\]
+故$\Ker f_1(\sigma)\cap\Ker f_2(\sigma)=0$，因此\[
+\Ker f(\sigma)=\Ker f_1(\sigma)\oplus \Ker f_2(\sigma).
+\]
+\end{proof}
+
+\item[六、]（15分）
+设$\sigma$为$n$维线性空间$V$上的线性变换，且$\sigma ^ { 2 } = \mathscr{E}$，求证$\sigma$可对角化。
+\begin{proof}
+因为\[
+\sigma ^ { 2 } = \mathscr{E}
+\]
+所以$(x-1)(x+1)$是$\sigma$的零化多项式。若$\sigma=\mathscr{E}$或$\sigma=-\mathscr{E}$，则$\sigma$显然可以对角化。若$\sigma\ne\mathscr{E}$且$\sigma\ne-\mathscr{E}$，则$(x-1)(x+1)$是$\sigma$的最小多项式，因此$\sigma$可对角化。
+\end{proof}
+
+\item[七、]（15分）
+设$A$为$n$阶方阵，$\lambda_0$为$A$的特征值，此时我们称$n-r(\lambda_0E-A)$为$\lambda_0$的几何重数，$\lambda_0$作为$A$的特征多项式$|\lambda E-A|$之根的重数称为$\lambda_0$的代数重数。求证：$\lambda_0$的几何重数不超过其代数重数。
+\begin{proof}
+设A的属于特征值$\lambda_0$的特征子空间$W$的维数为$r$，则$r=n-{\rm r}(\lambda_0 E-A)$。在$W$中取一个基$\boldsymbol{\alpha} _ { 1 } , \boldsymbol{\alpha} _ { 2 }\dots , \boldsymbol{\alpha} _ { r }$，把它扩充为$\mathbb{K}^n$的一个基$\boldsymbol{\alpha} _ { 1 } , \boldsymbol{\alpha} _ { 2 } , \dots , \boldsymbol{\alpha} _ { r } , \boldsymbol { \boldsymbol{\beta} } _ { 1 } , \dots , \boldsymbol { \boldsymbol{\beta} } _ { n - r }$。令
+\[
+P = \left( \boldsymbol{\alpha} _ { 1 } , \boldsymbol{\alpha} _ { 2 } , \dots , \boldsymbol{\alpha} _ { r } , \boldsymbol { \boldsymbol{\beta} } _ { 1 } , \dots , \boldsymbol { \boldsymbol{\beta} } _ { n r } \right)
+\]
+
+则$P$是$\mathbb{K}$上的$n$级可逆矩阵，并且有\begin{align*}
+P ^ { - 1 } A P &= P ^ { - 1 } \left( A \boldsymbol { a } _ { 1 } , A \boldsymbol{\alpha} _ { 2 } , \dots , A \boldsymbol{\alpha} _ { r } , A \boldsymbol { \boldsymbol{\beta} } _ { 1 } , \dots , A \boldsymbol { \boldsymbol{\beta} } _ { n - r } \right)\\
+&= \left( \lambda _ { 0 } P ^ { - 1 } \boldsymbol{\alpha} _ { 1 } , \lambda _ { 0 } P ^ { - 1 } \boldsymbol{\alpha} _ { 2 } , \dots , \lambda _ { 0 } P ^ { - 1 } \boldsymbol{\alpha} _ { r } , P ^ { - 1 } A \boldsymbol { \boldsymbol{\beta} } _ { 1 } , \dots , P ^ { - 1 } A \boldsymbol { \boldsymbol{\beta} } _ { n - r } \right).
+\end{align*}
+
+由于$I = P ^ { - 1 } P = \left( P ^ { - 1 } \boldsymbol{\alpha} _ { 1 } , P ^ { - 1 } \boldsymbol{\alpha} _ { 2 } , \dots , P ^ { - 1 } \boldsymbol{\alpha} _ { r } , P ^ { - 1 } \boldsymbol { \boldsymbol{\beta} } _ { \mathbf { l } } , \dots , P ^ { - 1 } \boldsymbol { \boldsymbol{\beta} } _ { n - r } \right)$，\\
+
+因此$\boldsymbol{\boldsymbol{\varepsilon}} _ { 1 } = P ^ { - 1 } \boldsymbol{\alpha} _ { 1 } , \boldsymbol { \boldsymbol{\varepsilon} } _ { 2 } = P ^ { - 1 } \boldsymbol{\alpha} _ { 2 } , \dots , \boldsymbol { \boldsymbol{\varepsilon} } _ { r } = P ^ { - 1 } \boldsymbol{\alpha} _ { r }$。\\
+从而
+\begin{align*}
+P ^ { - 1 } A P &= \left( \lambda _ { 0 } \boldsymbol{\boldsymbol{\varepsilon}} _ { 1 } , \lambda _ { 0 } \boldsymbol{\boldsymbol{\varepsilon}} _ { 2 } , \dots , \lambda _ { 0 } \boldsymbol{\boldsymbol{\varepsilon}} _ { r } , P ^ { - 1 } A \boldsymbol{\boldsymbol{\beta}} _ { 1 } , \dots , P ^ { - 1 } A \boldsymbol { \boldsymbol{\beta} } _ { n-r } \right)\\
+&= \left( \begin{array} { c c } { \lambda _ { 0 } I , } & { B } \\ { 0 } & { C } \end{array} \right).
+\end{align*}
+由于相似的矩阵有相等的特征多项式，因此
+\begin{align*}
+| \lambda I - A | &= \left| \begin{array} { c c } { \lambda I _ { r } - \lambda _ { 0 } I _ { r } } & { - B } \\ { 0 } & { \lambda I _ { n - r } - C } \end{array} \right|\\
+&= \left| \lambda I _ { r } - \lambda _ { 0 } I _ { r } \right| \left| \lambda I _ { n - r } - C \right|\\
+&= \left( \lambda - \lambda _ { 0 } \right) ^ { r } \left| \lambda I _ { n - r } - C \right|.
+\end{align*}
+从而$\lambda_0$的代数重数大于或等于$r$，即$\lambda_0$的代数重数大于或等于$\lambda_0$的几何重数。
+\end{proof}
+
+\item[八、]（15 分）
+设$A$、$B$为$n$元实对称矩阵；且$B$正定，求证：存在一个实可逆阵$P$使得$P^TAP$和$P^TBP$同时为对角阵。
+\begin{proof}
+因为$B$是正定矩阵，所以存在可逆矩阵$Q$，使得\[
+Q^TBQ=E_n.
+\]
+这时，$QAQ^T$是实对称矩阵，从而存在正交矩阵$U$，使得\[
+U^TQ^TAQU={\rm diag }\{\lambda_1, \lambda_2, \dots, \lambda_n\}:=\Lambda_n.
+\]
+其中，$\lambda_1, \lambda_2, \dots, \lambda_n$是$Q^TAQ$的全部特征值。\\
+令$P=QU$，则$P^TAP=\Lambda_n$，$P^TBP=E_n$都是对角矩阵。
+\end{proof}
+\end{enumerate}
+\endinput
