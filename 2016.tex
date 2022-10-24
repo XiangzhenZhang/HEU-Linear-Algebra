@@ -18,7 +18,12 @@ f(1)=0.
 \end{solution}
 
 \item 
-设$f ( x ) = \left| \begin{array} { c c c c } { 1 } & { 1 } & { 1 } & { 1 } \\ { 1 } & { x } & { x ^ { 2 } } & { x ^ { 3 } } \\ { 1 } & { - 2 } & { 4 } & { - 8 } \\ { 1 } & { 3 } & { 9 } & { 27 } \end{array} \right| = 0$的三个根为$x_1$， $x_2$，$x_3$，则$x_1+x_2+x_3=(\quad)$。
+设
+$$
+f ( x ) = \left| \begin{array} { c c c c } { 1 } & { 1 } & { 1 } & { 1 } \\ { 1 } & { x } & { x ^ { 2 } } & { x ^ { 3 } } \\ { 1 } & { - 2 } & { 4 } & { - 8 } \\ { 1 } & { 3 } & { 9 } & { 27 } \end{array} \right| = 0
+$$
+的三个根为 $x_1$， $x_2$，$x_3$，则 $x_1+x_2+x_3=(\quad)$。
+
 \begin{solution}
 \begin{align*}
 f\left( x \right) &=\left| \begin{matrix}
@@ -311,11 +316,15 @@ D_n=\frac{y(x-z)^n-z(x-y)^n}{y-z}.
 \end{proof}
 
 \item[五、]（15分）
-设$A=\left( \begin{smallmatrix}
+设
+$$\
+A=\left( \begin{matrix}
 	2&		1&		0\\
 	0&		2&		1\\
 	0&		0&		2\\
-\end{smallmatrix} \right) $，求证：\[
+\end{matrix} \right),
+$$
+求证：\[
 A^n=\left( \begin{matrix}
 	2^n&		2^{n-1}n&		2^{n-3}n\left( n-1 \right)\\
 	0&		2^n&		2^{n-1}n\\
@@ -325,14 +334,14 @@ A^n=\left( \begin{matrix}
 
 \begin{proof}
 因为
-\[
-A=2I+J,
-\]
-其中$J=\left( \begin{matrix}
+$$
+A=2I+J, J=\left( \begin{matrix}
 	0&		1&		0\\
 	0&		0&		1\\
 	0&		0&		0\\
-\end{matrix} \right) $。\\
+\end{matrix} \right),
+$$
+
 所以
 \begin{align*}
 A^n&=(2I+J)^n=\sum_{r=0}^n{\binom{n}{r} \left( 2I \right) ^{n-r}J^r}=\binom{n}{0} \left( 2I \right) ^nJ^0+\binom{n}{1} \left( 2I \right) ^{n-1}J^1+\binom{n}{2} \left( 2I \right) ^{n-2}J^2\\

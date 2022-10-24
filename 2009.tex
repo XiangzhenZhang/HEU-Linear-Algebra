@@ -24,7 +24,9 @@ f(x)&=x^4-10x^2+1=x^4+2x^2+1-12x^2=(x^2+1)^2-(2\sqrt{3}x)^2\\
 \end{solution}
 
 \item
-$n$ 阶行列式$\left| \begin{array} { c c c c } { 1 + x _ { 1 } ^ { 2 } } & { x _ { 2 } x _ { 1 } } & { \cdots } & { x _ { n } x _ { 1 } } \\ { x _ { 1 } x _ { 2 } } & { 1 + x _ { 2 } ^ { 2 } } & { \cdots } & { x _ { n } x _ { 2 } } \\ { \vdots } & { \vdots } & { } & { \vdots } \\ { x _ { 1 } x _ { n } } & { x _ { 2 } x _ { n } } & { \cdots } & { 1 + x _ { n } ^ { 2 } } \end{array} \right|$的值为 （\quad）。
+$n$ 阶行列式
+$$\left| \begin{array} { c c c c } { 1 + x _ { 1 } ^ { 2 } } & { x _ { 2 } x _ { 1 } } & { \cdots } & { x _ { n } x _ { 1 } } \\ { x _ { 1 } x _ { 2 } } & { 1 + x _ { 2 } ^ { 2 } } & { \cdots } & { x _ { n } x _ { 2 } } \\ { \vdots } & { \vdots } & { } & { \vdots } \\ { x _ { 1 } x _ { n } } & { x _ { 2 } x _ { n } } & { \cdots } & { 1 + x _ { n } ^ { 2 } } \end{array} \right|$$
+的值为 （\quad）。
 \begin{solution}
 \begin{align*}
 &\left| \begin{array} { c c c c } { 1 + x _ { 1 } ^ { 2 } } & { x _ { 2 } x _ { 1 } } & { \cdots } & { x _ { n } x _ { 1 } } \\ { x _ { 1 } x _ { 2 } } & { 1 + x _ { 2 } ^ { 2 } } & { \cdots } & { x _ { n } x _ { 2 } } \\ { \vdots } & { \vdots } & { } & { \vdots } \\ { x _ { 1 } x _ { n } } & { x _ { 2 } x _ { n } } & { \cdots } & { 1 + x _ { n } ^ { 2 } } \end{array} \right|
@@ -67,7 +69,7 @@ $(A^{-1})^*=(A^*)^{-1}=|A^*|^{-1}(A^*)^*=||A|A^{-1}|^{-1}A=|A|^{1-n}A$。
 \item
 令 $A \in \mathbb { R } ^ { n \times n } , A ^ { n - 1 } \neq 0 , A ^ { n } = 0$，则 $V = \{ f ( A ) | f ( x ) \in \mathbb { R } [ x ] \}$ 作为实数域上的线性空间其维数为 （\quad）。
 \begin{solution}
-易知$I, A, A^2, \dotsc, A^{n-1}$是$V$的一个基，故$\dim V=n$。
+易知$I, A, A^2, \dots, A^{n-1}$是$V$的一个基，故$\dim V=n$。
 \end{solution}
 
 \item
@@ -288,12 +290,12 @@ A\boldsymbol{\gamma}=A^2\boldsymbol{\gamma}=A\boldsymbol{\beta}=0,
 \]
 \begin{proof}
 \begin{lemma}
-对任意的$\boldsymbol{\alpha}\in V$，$\boldsymbol{\alpha}\ne0$，$\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dotsc, \mathscr{A}^{n-1}\boldsymbol{\alpha}$线性无关，从而是$V$的一个基。
+对任意的$\boldsymbol{\alpha}\in V$，$\boldsymbol{\alpha}\ne0$，$\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dots, \mathscr{A}^{n-1}\boldsymbol{\alpha}$线性无关，从而是$V$的一个基。
 \end{lemma}
 \begin{subproof}
 任取$\boldsymbol{\alpha}\in V$，$\boldsymbol{\alpha}\ne0$，设
 \begin{equation}\label{k0alpha}
-k_0\boldsymbol{\alpha}+k_1\mathscr{A}\boldsymbol{\alpha}+k_2\mathscr{A}^2\boldsymbol{\alpha}+\cdots+k_{n-1}\mathscr{A}^{n-1}\boldsymbol{\alpha}=0, k_0, k_1, k_2, \dotsc, k_{n-1}\in \mathbb{C}.
+k_0\boldsymbol{\alpha}+k_1\mathscr{A}\boldsymbol{\alpha}+k_2\mathscr{A}^2\boldsymbol{\alpha}+\cdots+k_{n-1}\mathscr{A}^{n-1}\boldsymbol{\alpha}=0, k_0, k_1, k_2, \dots, k_{n-1}\in \mathbb{C}.
 \end{equation}
 \ref{k0alpha}式两边同时用$\mathscr{A}^{n-1}$作用之，得到\[
 k_0\mathscr{A}^{n-1}\boldsymbol{\alpha}=0.
@@ -309,15 +311,15 @@ k_1\mathscr{A}^{n-1}\boldsymbol{\alpha}=0.
 从而$k_1=0$，于是\ref{k1alpha}式变为\begin{equation}\label{k2alpha}
 k_2\mathscr{A}^2\boldsymbol{\alpha}+\cdots+k_{n-1}\mathscr{A}^{n-1}\boldsymbol{\alpha}=0.
 \end{equation}
-仿照上面的步骤，依次用$\mathscr{A}^{n-3}$，$\mathscr{A}^{n-4}$，$\dotsc$，$\mathscr{A}$作用之，可得\[
+仿照上面的步骤，依次用$\mathscr{A}^{n-3}$，$\mathscr{A}^{n-4}$，$\dots$，$\mathscr{A}$作用之，可得\[
 k_0=k_1=k_2=\cdots=k_{n-1}=0.
 \]
-因此$\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dotsc, \mathscr{A}^{n-1}\boldsymbol{\alpha}$线性无关，断言成立。
+因此$\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dots, \mathscr{A}^{n-1}\boldsymbol{\alpha}$线性无关，断言成立。
 \end{subproof}
 因为\[
-\mathscr{A}(\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dotsc, \mathscr{A}^{n-1}\boldsymbol{\alpha})=(\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dotsc, \mathscr{A}^{n-1}\boldsymbol{\alpha})\left( \begin{array} { c c c c c } { 0 } & { } & { } & { } & { } \\ { 1 } & { \ddots } & { } & { } & { } \\ { } & { \ddots } & { \ddots } & { } & { } \\ { } & { } & { 1 } & { 0 } & { } \\ { } & { } & { } & { 1 } & { 0 } \end{array} \right).
+\mathscr{A}(\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dots, \mathscr{A}^{n-1}\boldsymbol{\alpha})=(\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dots, \mathscr{A}^{n-1}\boldsymbol{\alpha})\left( \begin{matrix} { 0 } & { } & { } & { } & { } \\ { 1 } & { \ddots } & { } & { } & { } \\ { } & { \ddots } & { \ddots } & { } & { } \\ { } & { } & { 1 } & { 0 } & { } \\ { } & { } & { } & { 1 } & { 0 } \end{matrix} \right).
 \]
-所以$\mathscr{A}$在基$\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dotsc, \mathscr{A}^{n-1}\boldsymbol{\alpha}$下的矩阵为$\left( \begin{array} { c c c c c } { 0 } & { } & { } & { } & { } \\ { 1 } & { \ddots } & { } & { } & { } \\ { } & { \ddots } & { \ddots } & { } & { } \\ { } & { } & { 1 } & { 0 } & { } \\ { } & { } & { } & { 1 } & { 0 } \end{array} \right)$。
+所以 $\mathscr{A}$ 在基 $\boldsymbol{\alpha}, \mathscr{A}\boldsymbol{\alpha}, \mathscr{A}^2\boldsymbol{\alpha}, \dots, \mathscr{A}^{n-1}\boldsymbol{\alpha}$ 下的矩阵为 $\left( \begin{smallmatrix} { 0 } & { } & { } & { } & { } \\ { 1 } & { \ddots } & { } & { } & { } \\ { } & { \ddots } & { \ddots } & { } & { } \\ { } & { } & { 1 } & { 0 } & { } \\ { } & { } & { } & { 1 } & { 0 } \end{smallmatrix} \right)$。
 \end{proof}
 
 \item[五、]（15分）
@@ -402,38 +404,38 @@ A \sim \left( \begin{array} { l l } { I _ { r } } & { 0 } \\ { 0 } & { 0 } \end{
  如果域$\mathbb{F}$上的$n$级矩阵$A$与$B$都是可对角化的，且$AB=BA$，那么存在域$\mathbb{F}$上一个$n$级可逆矩阵$S$，使得$S^{-1}AS$与$S^{-1}BS$都为对角矩阵。
 \end{lemma}
 \begin{subproof}
-已知$A$可对角化，设$A$的所有不同的特征值为$\lambda _ { 1 } , \lambda _ { 2 } , \dotsc , \lambda _ { s }$，
-其中$\lambda_i$的重数为$n_i, i=1, 2, \dotsc, s$。
+已知$A$可对角化，设$A$的所有不同的特征值为$\lambda _ { 1 } , \lambda _ { 2 } , \dots , \lambda _ { s }$，
+其中$\lambda_i$的重数为$n_i, i=1, 2, \dots, s$。
 于是存在域 $\mathbb{F}$ 上的一个 $n$ 级可逆矩阵 $P$，
-使得 $P ^ { - 1 } A P = \operatorname { diag } \left\{ \lambda _ { 1 } I _ { n _ { 1 }} , \lambda _ { 2 } I _ { n _ { 2 } } , \dotsc , \lambda _ { s } I _ { n _ { s } } \} \right.$。
+使得 $P ^ { - 1 } A P = \operatorname { diag } \left\{ \lambda _ { 1 } I _ { n _ { 1 }} , \lambda _ { 2 } I _ { n _ { 2 } } , \dots , \lambda _ { s } I _ { n _ { s } } \} \right.$。
 
 记 $D=P^{-1}AP$，令 $G=P^{-1}BP$，由于 $AB=BA$，因此\[
 D G = \left( P ^ { - 1 } A P \right) \left( P ^ { - 1 } B P \right) = P ^ { - 1 } A B P = P ^ { - 1 } B A P = \left( P ^ { - 1 } B P \right) \left( P ^ { - 1 } A P \right) = G D.
 \]
 
-由于 $D = \operatorname { diag } \left\{ \lambda _ { 1 } I _{ n _ { 1 } } , \lambda _ { 2 } I _ { n _ { 2 } } , \dotsc , 
+由于 $D = \operatorname { diag } \left\{ \lambda _ { 1 } I _{ n _ { 1 } } , \lambda _ { 2 } I _ { n _ { 2 } } , \dots , 
 \lambda , I _ { n _ { n } } \right\}$，且$\lambda _ { 1 } , 
-\lambda _ { 2 } , \dotsc , \lambda _ { s }$，两两不等，因此
+\lambda _ { 2 } , \dots , \lambda _ { s }$，两两不等，因此
 $G = \operatorname { diag } \left\{ B _ { 1 } , B _ { 2 } , 
-\dotsc , B _ { s } \right\}$，其中 $B_i$ 是 $n_i$ 级矩阵，
-$i=1, 2, \dotsc, s$。由于 $B$ 可对角化，因此 $G=P^{-1}BP$ 也可对角化。
+\dots , B _ { s } \right\}$，其中 $B_i$ 是 $n_i$ 级矩阵，
+$i=1, 2, \dots, s$。由于 $B$ 可对角化，因此 $G=P^{-1}BP$ 也可对角化。
 从而 $G$ 的最小多项式 $m_G(x)$在$\mathbb{F}[x]$中可以分解
-成不同的一次因式的乘积。设$B_i$的最小多项式为$m_i(\lambda), i=1, 2, \dotsc, s$，则\[
-m _ { G } ( \lambda ) = \left[ m _ { 1 } ( \lambda ) , m _ { 2 } ( \lambda ) , \dotsc , m _ { s } ( \lambda ) \right].
+成不同的一次因式的乘积。设$B_i$的最小多项式为$m_i(\lambda), i=1, 2, \dots, s$，则\[
+m _ { G } ( \lambda ) = \left[ m _ { 1 } ( \lambda ) , m _ { 2 } ( \lambda ) , \dots , m _ { s } ( \lambda ) \right].
 \]
 于是$m _ { i } ( \lambda ) \left| m _ { G } ( \lambda )
 \right.$，从而$m_i(\lambda)$在$\mathbb{F}[\lambda]$中也
 可分解成不同的一次因式的乘积，因此$B_i$可对角化，于是存在域$
-\mathbb{F}$上$n$级可逆矩阵$Q$，使得$Q_i^{-1}B_iQ_i$为
-对角矩阵，$i=1, 2, \dotsc, s$。
+\mathbb{F}$上 $n$ 级可逆矩阵$Q$，使得$Q_i^{-1}B_iQ_i$为
+对角矩阵，$i=1, 2, \dots, s$。
 令\[
- { Q } = \operatorname { diag } \left\{  { Q } _ { 1 } ,  { Q } _ { 2 } , \dotsc ,  { Q } \right\},
+ { Q } = \operatorname { diag } \left\{  { Q } _ { 1 } ,  { Q } _ { 2 } , \dots ,  { Q } \right\},
 \]
-则$Q ^ { - 1 } G Q = \operatorname { diag } \left\{ Q _ { 1 } ^ { - 1 } B _ { 1 } Q _ { 1 } , Q _ { 2 } ^ { - 1 } B _ { 2 } Q _ { 2 } , \dotsc , Q ^ { - 1 } B , Q _ { 3 } \right\}$为对角矩阵。令$S=PQ$，则\begin{align*}
+则$Q ^ { - 1 } G Q = \operatorname { diag } \left\{ Q _ { 1 } ^ { - 1 } B _ { 1 } Q _ { 1 } , Q _ { 2 } ^ { - 1 } B _ { 2 } Q _ { 2 } , \dots , Q ^ { - 1 } B , Q _ { 3 } \right\}$为对角矩阵。令$S=PQ$，则\begin{align*}
 &S ^ { - 1 } B S = Q ^ { - 1 } P ^ { - 1 } B P Q = Q ^ { - 1 } G Q\\
-&S ^ { - 1 } A S = Q ^ { - 1 } P ^ { - 1 } A P Q = Q ^ { - 1 } \operatorname { diag } \left\{ \lambda _ { 1 } I _ { n _ { 1 } } , \lambda _ { 2 } I _ { n _ { 2 } } , \dotsc , \lambda _ { i } I _ { n _ { 1 } } \right\} Q\\
-&= \operatorname { diag } \left\{ Q _ { 1 } ^ { - 1 } \left( \lambda _ { 1 } I _ { n _ { 1 } } \right) Q _ { 1 } , Q _ { 2 } ^ { - 1 } \left( \lambda _ { 2 } I _ { n _ { 2 } } \right) Q _ { 2 } , \dotsc , Q _ { s } ^ { - 1 } \left( \lambda _ { s } I _ { n _ { j } } \right) Q _ { s } \right\}\\
-&= \operatorname { diag } \left\{ \lambda _ { 1 } I _ { n _ { 1 } } , \lambda _ { 2 } I _ { n _ { 2 } } , \dotsc , \lambda , I _ { n } \right\}.
+&S ^ { - 1 } A S = Q ^ { - 1 } P ^ { - 1 } A P Q = Q ^ { - 1 } \operatorname { diag } \left\{ \lambda _ { 1 } I _ { n _ { 1 } } , \lambda _ { 2 } I _ { n _ { 2 } } , \dots , \lambda _ { i } I _ { n _ { 1 } } \right\} Q\\
+&= \operatorname { diag } \left\{ Q _ { 1 } ^ { - 1 } \left( \lambda _ { 1 } I _ { n _ { 1 } } \right) Q _ { 1 } , Q _ { 2 } ^ { - 1 } \left( \lambda _ { 2 } I _ { n _ { 2 } } \right) Q _ { 2 } , \dots , Q _ { s } ^ { - 1 } \left( \lambda _ { s } I _ { n _ { j } } \right) Q _ { s } \right\}\\
+&= \operatorname { diag } \left\{ \lambda _ { 1 } I _ { n _ { 1 } } , \lambda _ { 2 } I _ { n _ { 2 } } , \dots , \lambda , I _ { n } \right\}.
 \end{align*}
 于是$S^{-1}BS$和$S^{-1}AS$都是对角矩阵。
 \end{subproof}
